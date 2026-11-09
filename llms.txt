@@ -178,3 +178,10 @@ Email: M_N_Nik@yahoo.com
   echo "deb [arch=amd64,all] https://eminsk.github.io/ppa/ ./" | sudo tee /etc/apt/sources.list.d/eminsk.list
   sudo apt update
   ```
+
+---
+
+## Support & Sponsorship
+- **USDT (TRC-20)**: TDVbEdnpgNgoAhNcn1EwXxWHiR3RKLit5P ([Verify on TronScan](https://tronscan.org/#/address/TDVbEdnpgNgoAhNcn1EwXxWHiR3RKLit5P))
+- **GitHub Sponsors**: https://github.com/eminsk/.github
+- **Commercial & Corporate Partnership**: Priority feature triage, custom AOT compilation micro-kernels, and direct advisory. Contact Telegram @charter2029 or M_N_Nik@yahoo.com.

@@ -768,6 +768,166 @@
     .footer-links a:hover { color: #fff; }
     .footer-copy { color: #586882; font-size: 13px; font-family: var(--font-mono); }
 
+
+    /* Sponsorship Section Styling */
+    .sponsor-section {
+      border-color: rgba(255, 77, 109, 0.25);
+      background: linear-gradient(180deg, rgba(14, 20, 34, 0.85) 0%, rgba(20, 15, 30, 0.85) 100%);
+      box-shadow: 0 0 35px rgba(255, 77, 109, 0.06);
+    }
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .sponsor-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      position: relative;
+    }
+    .sponsor-card:hover {
+      border-color: rgba(255, 77, 109, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 77, 109, 0.12);
+      transform: translateY(-3px);
+    }
+    .sponsor-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .sponsor-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .icon-usdt { background: rgba(38, 161, 123, 0.15); border: 1px solid rgba(38, 161, 123, 0.35); color: #26a17b; }
+    .icon-github { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; }
+    .icon-corp { background: rgba(176, 112, 255, 0.15); border: 1px solid rgba(176, 112, 255, 0.35); color: var(--accent-purple); }
+    .sponsor-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .sponsor-card-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    .qr-container {
+      text-align: center;
+      margin: 14px 0;
+    }
+    .qr-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 145px;
+      height: 145px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      border: 3px solid rgba(38, 161, 123, 0.4);
+    }
+    .qr-box img, .qr-box svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .crypto-address-box {
+      background: #05080f;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .crypto-addr {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-green);
+      word-break: break-all;
+      user-select: all;
+    }
+    .sponsor-benefits {
+      list-style: none;
+      margin: 14px 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .sponsor-benefits li {
+      font-size: 13px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .sponsor-benefits li::before {
+      content: "✓";
+      color: var(--accent-green);
+      font-weight: bold;
+    }
+    .btn-sponsor {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      transition: var(--transition);
+      text-align: center;
+      cursor: pointer;
+    }
+    .btn-sponsor-usdt {
+      background: rgba(38, 161, 123, 0.15);
+      border: 1px solid rgba(38, 161, 123, 0.4);
+      color: #26a17b;
+    }
+    .btn-sponsor-usdt:hover {
+      background: #26a17b;
+      color: #000;
+      box-shadow: 0 0 20px rgba(38, 161, 123, 0.4);
+    }
+    .btn-sponsor-gh {
+      background: rgba(255, 77, 109, 0.15);
+      border: 1px solid rgba(255, 77, 109, 0.4);
+      color: var(--accent-rose);
+    }
+    .btn-sponsor-gh:hover {
+      background: var(--accent-rose);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255, 77, 109, 0.4);
+    }
+    .btn-sponsor-corp {
+      background: rgba(176, 112, 255, 0.15);
+      border: 1px solid rgba(176, 112, 255, 0.4);
+      color: var(--accent-purple);
+    }
+    .btn-sponsor-corp:hover {
+      background: var(--accent-purple);
+      color: #000;
+      box-shadow: 0 0 20px rgba(176, 112, 255, 0.4);
+    }
+
     /* Toast Notification */
     .toast {
       position: fixed;
@@ -806,6 +966,7 @@
         <a href="#libraries" class="nav-link" data-i18n="nav_libs">Libraries</a>
         <a href="#ppa" class="nav-link">APT PPA</a>
         <a href="#mcp" class="nav-link">MCP</a>
+        <a href="#sponsor" class="nav-link" style="color: var(--accent-rose); font-weight: 600;">💖 <span data-i18n="nav_sponsor">Sponsor</span></a>
         <a href="https://github.com/eminsk" target="_blank" class="nav-link" rel="noopener">GitHub ↗</a>
         <button id="langToggle" class="lang-btn" onclick="toggleLanguage()">
           <span id="langFlag">🇷🇺</span> <span id="langText">RU</span>
@@ -1471,6 +1632,110 @@ C = nanogemm.matmul(A, B)</code></pre>
         </div>
       </div>
     </section>
+
+    <!-- Support & Sponsorship Section -->
+    <section class="info-section sponsor-section" id="sponsor">
+      <h3>
+        <span>💖</span>
+        <span data-i18n="sponsor_title">Support & Sponsorship</span>
+      </h3>
+      <p data-i18n="sponsor_desc">
+        Empower independent, zero-dependency bare-metal systems programming, AOT compilers, and edge AI engineering. 
+        Contributions directly fund physical hardware testing (Android 15 devices with 16KB kernels, ARM64 servers, No-GIL multicore architectures), 
+        Debian APT repository hosting, and Conda-Forge packaging infrastructure.
+      </p>
+
+      <div class="sponsor-grid">
+        <!-- Tier 1: Crypto / USDT (TRC-20) -->
+        <div class="sponsor-card">
+          <div>
+            <div class="sponsor-card-header">
+              <div class="sponsor-icon-wrap icon-usdt">₮</div>
+              <div>
+                <div class="sponsor-card-title">USDT (TRC-20)</div>
+                <div class="sponsor-card-sub" data-i18n="crypto_sub">Instant • Global • Low Fee</div>
+              </div>
+            </div>
+            
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 8px;" data-i18n="crypto_desc">
+              Scan the QR code with any TRON wallet or copy the official wallet address:
+            </p>
+
+            <div class="qr-container">
+              <div class="qr-box">
+                <img src="/usdt-trc20-qr.svg" alt="USDT TRC20 QR Code" width="125" height="125" loading="lazy" />
+              </div>
+            </div>
+
+            <div class="crypto-address-box">
+              <code class="crypto-addr" id="usdtAddress">TDVbEdnpgNgoAhNcn1EwXxWHiR3RKLit5P</code>
+              <button class="copy-btn" onclick="copySpecificCmd('usdtAddress', this)" title="Copy Address">📋</button>
+            </div>
+          </div>
+
+          <a href="https://tronscan.org/#/address/TDVbEdnpgNgoAhNcn1EwXxWHiR3RKLit5P" target="_blank" rel="noopener" class="btn-sponsor btn-sponsor-usdt">
+            <span>🔍 Verify on TronScan ↗</span>
+          </a>
+        </div>
+
+        <!-- Tier 2: GitHub Sponsors & Individual -->
+        <div class="sponsor-card">
+          <div>
+            <div class="sponsor-card-header">
+              <div class="sponsor-icon-wrap icon-github">💖</div>
+              <div>
+                <div class="sponsor-card-title" data-i18n="tier_indiv_title">GitHub Sponsors</div>
+                <div class="sponsor-card-sub" data-i18n="tier_indiv_sub">Community & Individual Backers</div>
+              </div>
+            </div>
+
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;" data-i18n="tier_indiv_desc">
+              Back the ecosystem monthly or with a one-time contribution through GitHub's official sponsorship program.
+            </p>
+
+            <ul class="sponsor-benefits">
+              <li data-en="Public Sponsor Badge on GitHub Profile" data-ru="Публичный значок спонсора в профиле GitHub">Public Sponsor Badge on GitHub Profile</li>
+              <li data-en="Acknowledgment in Release Notes & Portal" data-ru="Благодарность в release notes и на портале">Acknowledgment in Release Notes & Portal</li>
+              <li data-en="Direct input on ecosystem roadmap" data-ru="Влияние на дорожную карту развития проектов">Direct input on ecosystem roadmap</li>
+              <li data-en="Keeps zero-dependency tools free & open" data-ru="Сохраняет инструменты свободными и бесплатными">Keeps zero-dependency tools free & open</li>
+            </ul>
+          </div>
+
+          <a href="https://github.com/eminsk/.github" target="_blank" rel="noopener" class="btn-sponsor btn-sponsor-gh">
+            <span>💖 Sponsor on GitHub ↗</span>
+          </a>
+        </div>
+
+        <!-- Tier 3: Corporate & Commercial Partnerships -->
+        <div class="sponsor-card">
+          <div>
+            <div class="sponsor-card-header">
+              <div class="sponsor-icon-wrap icon-corp">⚡</div>
+              <div>
+                <div class="sponsor-card-title" data-i18n="tier_corp_title">Corporate & Commercial</div>
+                <div class="sponsor-card-sub" data-i18n="tier_corp_sub">Enterprises, Startups & Trading Desks</div>
+              </div>
+            </div>
+
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;" data-i18n="tier_corp_desc">
+              Accelerate your engineering with tailored architectural support, custom compilation targets, and priority advisory.
+            </p>
+
+            <ul class="sponsor-benefits">
+              <li data-en="Priority feature requests & SLA bug triage" data-ru="Приоритетная реализация фич и быстрый triage">Priority feature requests & SLA bug triage</li>
+              <li data-en="Custom SIMD micro-kernels & AOT compilation" data-ru="Заказные SIMD микроядра и AOT-компиляция">Custom SIMD micro-kernels & AOT compilation</li>
+              <li data-en="Direct private advisory (Telegram / Email)" data-ru="Прямые приватные консультации (Telegram / Email)">Direct private advisory (Telegram / Email)</li>
+              <li data-en="Featured Company Logo on Portal & READMEs" data-ru="Размещение логотипа компании на портале и в README">Featured Company Logo on Portal & READMEs</li>
+            </ul>
+          </div>
+
+          <a href="https://t.me/charter2029" target="_blank" rel="noopener" class="btn-sponsor btn-sponsor-corp">
+            <span>💬 Discuss Partnership (@charter2029) ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Site Footer -->
@@ -1481,6 +1746,7 @@ C = nanogemm.matmul(A, B)</code></pre>
         <a href="https://pypi.org/user/eminsk/" target="_blank" rel="noopener">PyPI Index</a>
         <a href="https://anaconda.org/m_n_nik" target="_blank" rel="noopener">Anaconda Cloud</a>
         <a href="https://eminsk.github.io/ppa/">Debian PPA</a>
+        <a href="#sponsor">Sponsorship 💖</a>
         <a href="/llms.txt">llms.txt</a>
         <a href="/llms-full.txt">llms-full.txt</a>
         <a href="/sitemap.xml">Sitemap</a>
@@ -1518,7 +1784,18 @@ C = nanogemm.matmul(A, B)</code></pre>
         ppa_title: "Official Debian & Ubuntu APT Repository (PPA)",
         ppa_desc: "Install the author's open-source libraries as native Debian/Ubuntu packages with automatic GPG verification, clean dependency trees, and instant updates via apt upgrade.",
         mcp_title: "Model Context Protocol (MCP) Ecosystem",
-        mcp_desc: "Anthropic & Google Antigravity compatible MCP JSON-RPC 2.0 servers. Connect local AI tools, episodic memories, and JIT compilers directly into Claude Desktop, Cursor, Antigravity, and Windsurf."
+        mcp_desc: "Anthropic & Google Antigravity compatible MCP JSON-RPC 2.0 servers. Connect local AI tools, episodic memories, and JIT compilers directly into Claude Desktop, Cursor, Antigravity, and Windsurf.",
+        nav_sponsor: "Sponsor",
+        sponsor_title: "Support & Sponsorship",
+        sponsor_desc: "Empower independent, zero-dependency bare-metal systems programming, AOT compilers, and edge AI engineering. Contributions directly fund physical hardware testing (Android 15 devices with 16KB kernels, ARM64 servers, No-GIL multicore architectures), Debian APT repository hosting, and Conda-Forge packaging infrastructure.",
+        crypto_sub: "Instant • Global • Low Fee",
+        crypto_desc: "Scan the QR code with any TRON wallet or copy the official wallet address:",
+        tier_indiv_title: "GitHub Sponsors",
+        tier_indiv_sub: "Community & Individual Backers",
+        tier_indiv_desc: "Back the ecosystem monthly or with a one-time contribution through GitHub's official sponsorship program.",
+        tier_corp_title: "Corporate & Commercial",
+        tier_corp_sub: "Enterprises, Startups & Trading Desks",
+        tier_corp_desc: "Accelerate your engineering with tailored architectural support, custom compilation targets, and priority advisory.",
       },
       ru: {
         nav_libs: "Библиотеки",
@@ -1538,7 +1815,18 @@ C = nanogemm.matmul(A, B)</code></pre>
         ppa_title: "Официальный APT репозиторий (PPA) для Debian и Ubuntu",
         ppa_desc: "Установка всех открытых библиотек автора как нативных deb-пакетов с автоматической проверкой подписи GPG, чистыми зависимостями и обновлениями через apt upgrade.",
         mcp_title: "Экосистема Model Context Protocol (MCP)",
-        mcp_desc: "Серверы протокола MCP JSON-RPC 2.0, совместимые с Anthropic и Google Antigravity. Подключайте локальные инструменты, память и JIT-компиляторы напрямую к Claude, Cursor, Antigravity и Windsurf."
+        mcp_desc: "Серверы протокола MCP JSON-RPC 2.0, совместимые с Anthropic и Google Antigravity. Подключайте локальные инструменты, память и JIT-компиляторы напрямую к Claude, Cursor, Antigravity и Windsurf.",
+        nav_sponsor: "Спонсорство",
+        sponsor_title: "Спонсорство и поддержка разработки",
+        sponsor_desc: "Развитие независимых системных библиотек, AOT-компиляторов и высокопроизводительных Python-движков. Ваша поддержка напрямую финансирует тестирование на физическом оборудовании (устройства Android 15 с ядрами 16KB, серверы ARM64, многоядерные архитектуры No-GIL), хостинг APT-репозитория Debian/Ubuntu и инфраструктуру Conda-Forge.",
+        crypto_sub: "Мгновенно • По всему миру • Без посредников",
+        crypto_desc: "Отсканируйте QR-код в мобильном кошельке или скопируйте официальный адрес кошелька:",
+        tier_indiv_title: "GitHub Sponsors",
+        tier_indiv_sub: "Поддержка от сообщества и разработчиков",
+        tier_indiv_desc: "Поддержите развитие открытых библиотек регулярной или разовой подпиской через официальную программу GitHub Sponsors.",
+        tier_corp_title: "Корпоративное спонсорство",
+        tier_corp_sub: "Для компаний, стартапов и торговых платформ",
+        tier_corp_desc: "Ускорьте стек вашей компании с помощью приоритетной разработки фич, заказных SIMD-микроядер и архитектурных консультаций.",
       }
     };
 
