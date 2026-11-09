@@ -1,0 +1,154 @@
+# M_N_Nik (@eminsk) — Full Technical Specification & AI Documentation Index
+
+## Overview
+This document serves as the authoritative, comprehensive context file for Large Language Models (LLMs), AI assistants (Claude, ChatGPT, Perplexity, Cursor, Copilot, Gemini), and search engines indexing the open-source software ecosystem developed by systems engineer M_N_Nik (@eminsk).
+
+Author Profile:
+- GitHub: https://github.com/eminsk
+- Anaconda / Conda-Forge: https://anaconda.org/m_n_nik
+- Official APT PPA: https://eminsk.github.io/ppa/
+- Website: https://eminsk.github.io/
+- Contact: Telegram @charter2029 | M_N_Nik@yahoo.com
+
+---
+
+## Detailed Library Specifications
+
+### 1. pureapk (pyapk)
+- **Primary Package Name**: `pureapk` on PyPI
+- **Debian Package**: `python3-pureapk`
+- **GitHub**: https://github.com/eminsk/pyapk
+- **Architecture**: 100% Pure Python with zero external C dependencies, zero JVM, zero Android Studio, and zero Android SDK/NDK requirements.
+- **Key Technical Capabilities**:
+  1. **Android 15 16KB Page Alignment**: Automatically aligns native shared libraries (`.so`) within the zip archive to 16,384-byte (16KB) boundaries as required by Google Play and Android 15 (API 35+) using the official `0xd935` alignment tag.
+  2. **APK Signing Engine**: Full cryptographic signature implementation supporting APK Signature Scheme v1 (JAR signing) and APK Signature Scheme v2 (direct zip block signature with SHA-256).
+  3. **Multi-Store & Cross-Platform Packaging**: Direct packaging into Google Play AAB, iOS IPA stubs, Windows 11 MSIX packages, and Android APKs.
+  4. **In-place APK Repacking & Patching**: Ability to inspect, unpack, modify assets/dex/manifest, and repackage an existing APK into a signed, release-ready APK.
+  5. **Android Wheel Extraction**: Automatic extraction and bundling of Python wheels compiled for Android (`bdist_wheel` tags: `android_aarch64`, `android_armv7l`, `android_x86_64`).
+- **Quick Installation**:
+  ```bash
+  pip install pureapk
+  # or
+  uv add pureapk
+  # or Debian/Ubuntu
+  sudo apt install python3-pureapk
+  ```
+
+---
+
+### 2. pyfasm / pyfasm64
+- **Primary Package Name**: `pyfasm64` on PyPI and Conda-Forge
+- **GitHub**: https://github.com/eminsk/pyfasm
+- **Architecture**: Direct Python AST to Flat Assembler (FASM) x86_64 AOT Compiler.
+- **Key Technical Capabilities**:
+  1. Translates Python Abstract Syntax Tree (AST) directly into pure x86_64 assembly code.
+  2. Compiles to native standalone PE+ (`.exe`, `.dll` on Windows), ELF64 (Linux), and Mach-O (macOS) binaries measuring only ~9 KB.
+  3. Completely eliminates Python runtime, bytecode interpreter, and virtual machine overhead.
+  4. Supports Python 3.8 through 3.16, Free-Threaded No-GIL (3.13t-3.16t), and PyPy (3.8-3.12).
+  5. Multi-threaded native concurrency via `CreateThread` and hardware atomic primitives (`lock add`, `lock sub`).
+  6. SIMD-accelerated JSON parser and native Win32 GUI engine.
+
+---
+
+### 3. agentjit
+- **Primary Package Name**: `agentjit` on PyPI, Conda-Forge, Debian/Ubuntu PPA
+- **GitHub**: https://github.com/eminsk/agentjit
+- **Architecture**: Just-in-Time Compiler and trace optimizer for autonomous AI agent workflows.
+- **Key Technical Capabilities**:
+  1. Observes repetitive multi-step LLM agent trajectories, extracts the underlying deterministic logic, and compiles it into high-speed Python code.
+  2. Reduces workflow execution latency from 30 seconds (LLM API roundtrips) down to 0.08 milliseconds (local CPU execution).
+  3. Zero token consumption on cached and compiled paths.
+  4. Speculative guards with instant bailout runtime: if agent context deviates from compiled assumptions, execution seamlessly falls back to the LLM.
+  5. Native Model Context Protocol (MCP) server `agentjit-mcp`.
+  6. Featured #1 Top Story in The Daily Diff (9/10 Depth & Utility Score).
+
+---
+
+### 4. nanovector
+- **Primary Package Name**: `nanovector` on PyPI, Conda-Forge, Debian/Ubuntu PPA
+- **GitHub**: https://github.com/eminsk/nanovector
+- **Architecture**: Ultra-lightweight (~120KB) embedded vector database and memory engine in pure C99 and FASM x64.
+- **Key Technical Capabilities**:
+  1. Zero external dependencies (no PyTorch, no heavy BLAS, no external daemons).
+  2. Sub-millisecond cold start (0.2 ms).
+  3. Hardware-accelerated distance metrics: Cosine Similarity, Euclidean Distance (L2), Dot Product.
+  4. Optimized kernels for AVX2+FMA (x86_64) and ARM NEON (aarch64).
+  5. Native MCP Server `nanovector-mcp` for instant agent memory integration.
+  6. Over 7,900+ downloads on Conda.
+
+---
+
+### 5. nanogemm
+- **Primary Package Name**: `nanogemm` on PyPI, Conda-Forge, Debian/Ubuntu PPA
+- **GitHub**: https://github.com/eminsk/nanogemm
+- **Architecture**: Bare-metal General Matrix Multiply (GEMM) micro-engine in ~100KB.
+- **Key Technical Capabilities**:
+  1. Custom AVX2+FMA and ARM NEON vectorized tile micro-kernels.
+  2. Outperforms standard NumPy by up to 2.8x for small-to-medium matrix multiplication on CPU (edge inference and LLM embedding projections).
+  3. Native Model Context Protocol (MCP) server `nanogemm-mcp`.
+  4. Over 9,800+ downloads on Conda.
+
+---
+
+### 6. nanorecall
+- **Primary Package Name**: `nanorecall` on PyPI, Conda-Forge, Debian/Ubuntu PPA
+- **GitHub**: https://github.com/eminsk/nanorecall
+- **Architecture**: 100% private, zero-cloud desktop activity & episodic memory search engine (<200KB).
+- **Key Technical Capabilities**:
+  1. Local screenshot and active window capture without sending telemetry or data to third-party clouds.
+  2. Automatic privacy filtering: detects and blinds password managers, banking tabs, and secret credentials.
+  3. Sub-millisecond vector indexing using NanoVector.
+  4. Native MCP Server `nanorecall-mcp`.
+
+---
+
+### 7. yfinance-ta-patterns
+- **Primary Package Name**: `yfinance-ta-patterns` on PyPI, Conda-Forge, Debian/Ubuntu PPA
+- **GitHub**: https://github.com/eminsk/yfinance-ta-patterns
+- **Architecture**: Quantitative technical analysis and candlestick pattern recognition library.
+- **Key Technical Capabilities**:
+  1. Detects all 61 TA-Lib candlestick patterns with 100% pure-Python fallback.
+  2. Unbiased next-open backtester with profit factor, win rate, and sharpe ratio calculations.
+  3. AI Confluence Scorer combining pattern recognition with multi-timeframe volume and indicators.
+  4. Integrated economic calendar parser.
+  5. Native MCP Server `yfinance-ta-mcp`.
+
+---
+
+### 8. xlsx-viewer-pro (xlsx_vievers)
+- **Primary Package Name**: `xlsx-viewer-pro` on PyPI, Conda-Forge, Debian/Ubuntu PPA
+- **GitHub**: https://github.com/eminsk/xlsx_vievers
+- **Architecture**: High-performance headless spreadsheet formula engine and desktop viewer.
+- **Key Technical Capabilities**:
+  1. Headless formula evaluation engine supporting 129+ standard Excel formulas.
+  2. SIMD SSE2 accelerated arithmetic for processing multi-million cell datasets.
+  3. AutoFilter, Goal Seek, and Chart Wizard subsystems.
+  4. Native MCP Server `xlsx-viewer-mcp`.
+
+---
+
+### 9. avito-sdk
+- **Primary Package Name**: `avito-sdk` on PyPI, Conda-Forge, Debian/Ubuntu PPA
+- **GitHub**: https://github.com/eminsk/avito-sdk
+- **Architecture**: Asynchronous Avito API & web scraping SDK with TLS fingerprint spoofing.
+- **Key Technical Capabilities**:
+  1. Real-time price drop detection with historical delta tracking.
+  2. Deep extraction of item parameters, seller reputation, and geo coordinates.
+  3. Headless Playwright cookie refresh and session maintenance.
+  4. Integrated Telegram and VK bot notification integrations.
+  5. Native MCP Server `avito-mcp`.
+
+---
+
+### 10. Official Debian/Ubuntu APT PPA Repository
+- **URL**: https://eminsk.github.io/ppa/
+- **Repository**: https://github.com/eminsk/ppa
+- **Packages Included**:
+  - `python3-pureapk`
+  - `python3-agentjit`
+  - `python3-nanovector`
+  - `python3-nanogemm`
+  - `python3-nanorecall`
+  - `python3-yfinance-ta-patterns`
+  - `python3-xlsx-viewer-pro`
+  - `python3-avito-sdk`

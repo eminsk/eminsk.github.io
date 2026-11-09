@@ -1,0 +1,180 @@
+# M_N_Nik (@eminsk) — Open Source Ecosystem & Libraries
+> Comprehensive directory and API index of high-performance Python, C99, and Assembly libraries, compilers, AI infrastructure, and systems tools by M_N_Nik (@eminsk).
+
+Website: https://eminsk.github.io/
+GitHub: https://github.com/eminsk
+PyPI: https://pypi.org/user/eminsk/
+Conda-Forge: https://anaconda.org/conda-forge/
+APT PPA: https://eminsk.github.io/ppa/
+Telegram: @charter2029
+Email: M_N_Nik@yahoo.com
+
+---
+
+## Quick Navigation
+- [pureapk](#pureapk): Pure Python Zero-Dependency Android APK Builder & Signer (Android 15 16KB Page Alignment, Multi-Store Packager)
+- [pyfasm / pyfasm64](#pyfasm--pyfasm64): Universal Native No-GIL & PyPy to pure x86_64 FASM AOT Compiler
+- [agentjit](#agentjit): Just-In-Time Compiler for AI Agent Trajectories (compiles multi-step LLM workflows into 0.08ms Python code)
+- [nanovector](#nanovector): Embedded Vector Search & Episodic Memory for AI Agents in ~120KB (AVX2+FMA, ARM NEON, C99/FASM)
+- [nanogemm](#nanogemm): Minimalist, bare-metal SIMD & Assembly GEMM engine for Python (up to 2.8x faster than NumPy on CPU)
+- [nanorecall](#nanorecall): 100% Private, Zero-Cloud Desktop Memory & Screen Search Engine in <200KB
+- [yfinance-ta-patterns](#yfinance-ta-patterns): Institutional-grade Candlestick & Chart Pattern Scanner with AI Confluence Scoring & Backtesting
+- [xlsx-viewer-pro](#xlsx-viewer-pro): High-performance spreadsheet library with headless 129-function formula engine & SIMD math
+- [avito-sdk](#avito-sdk): High-performance headless Avito scraping & data extraction SDK with price drop tracking
+- [screenvideo](#screenvideo): High-performance screen recorder & screenshot suite with WASAPI audio & FASM native engine
+- [fasm-modern-sdk](#fasm-modern-sdk): Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG)
+- [ppa](#ppa-apt-repository): Official APT Repository for Debian/Ubuntu Linux
+
+---
+
+## 1. pureapk
+- **Description**: Zero-dependency pure Python engine for building, packaging, modifying, and signing Android APKs without Java, Android Studio, or the Android SDK/NDK. Features native Android 15 16KB ELF page alignment (`align_zip_entry` with tag `0xd935`), APK v1/v2/v3 signatures, in-place APK modification, multi-store packaging (APK, Google Play AAB, iOS IPA stub, Windows 11 MSIX), and Android wheel extraction.
+- **PyPI**: `pip install pureapk` (v1.0.1)
+- **Debian/Ubuntu**: `sudo apt install python3-pureapk`
+- **GitHub**: https://github.com/eminsk/pyapk
+- **Usage**:
+  ```python
+  from pureapk import APKBuilder, sign_apk, align_zip_entry
+
+  # Build an APK completely in pure Python
+  builder = APKBuilder("MyApp.apk")
+  builder.add_file("AndroidManifest.xml", manifest_bytes)
+  builder.add_file("classes.dex", dex_bytes)
+  builder.build()
+
+  # Sign APK with v1 + v2 schemes
+  sign_apk("MyApp.apk", "key.pk8", "cert.x509.pem")
+  ```
+
+---
+
+## 2. pyfasm / pyfasm64
+- **Description**: Universal Native No-GIL (Python 3.13t–3.16t) & PyPy to pure x86_64 Flat Assembler (FASM) Native Compiler. Translates Python AST directly into self-contained standalone PE+ (`.exe`, `.dll`), ELF64, and Mach-O binaries (~9 KB) with zero virtual machine and zero runtime overhead.
+- **PyPI**: `pip install pyfasm64`
+- **Conda-Forge**: `conda install -c conda-forge pyfasm64`
+- **GitHub**: https://github.com/eminsk/pyfasm
+- **Usage**:
+  ```bash
+  pyfasm compile main.py -o app.exe --opt-level 3 --standalone
+  ```
+
+---
+
+## 3. agentjit
+- **Description**: Just-In-Time Compiler for AI Agent Trajectories. Compiles slow, costly 30-second multi-step LLM workflows into deterministic 0.08ms Python code with zero token consumption. Includes speculative guards, automatic bailout runtime, No-GIL PEP 703 support, and a Native Model Context Protocol (MCP) server.
+- **PyPI**: `pip install agentjit`
+- **Conda-Forge**: `conda install -c conda-forge agentjit`
+- **Debian/Ubuntu**: `sudo apt install python3-agentjit`
+- **GitHub**: https://github.com/eminsk/agentjit
+- **MCP Server**: `agentjit-mcp`
+- **Usage**:
+  ```python
+  import agentjit
+
+  @agentjit.compile(guards=["schema_valid", "range_check"])
+  def agent_workflow(query: str, context: dict) -> dict:
+      return {"status": "ok", "result": process(query, context)}
+  ```
+
+---
+
+## 4. nanovector
+- **Description**: The SQLite of Vector Search & Episodic Memory for AI Agents in ~120KB. Zero external dependencies, instant 0.2ms cold start, pure C99 with AVX2+FMA, ARM NEON, and hand-crafted FASM x64 assembly kernels. Includes Native MCP Server (`nanovector-mcp`). Over 7,900+ downloads on Conda.
+- **PyPI**: `pip install nanovector`
+- **Conda-Forge**: `conda install -c conda-forge nanovector`
+- **Debian/Ubuntu**: `sudo apt install python3-nanovector`
+- **GitHub**: https://github.com/eminsk/nanovector
+- **MCP Server**: `nanovector-mcp`
+- **Usage**:
+  ```python
+  import nanovector
+
+  db = nanovector.Index(dim=384, metric="cosine")
+  db.add(vector_embeddings, ids=[1, 2, 3])
+  matches = db.search(query_vec, top_k=5)
+  ```
+
+---
+
+## 5. nanogemm
+- **Description**: Minimalist, bare-metal AVX2+FMA & ARM NEON matrix multiplication engine in ~100KB for Python. Outperforms NumPy by up to 2.8x on CPU for edge neural network inference. Includes Native MCP Server (`nanogemm-mcp`). Over 9,800+ downloads on Conda.
+- **PyPI**: `pip install nanogemm`
+- **Conda-Forge**: `conda install -c conda-forge nanogemm`
+- **Debian/Ubuntu**: `sudo apt install python3-nanogemm`
+- **GitHub**: https://github.com/eminsk/nanogemm
+- **MCP Server**: `nanogemm-mcp`
+- **Usage**:
+  ```python
+  import nanogemm
+  import numpy as np
+
+  A = np.random.randn(256, 512).astype(np.float32)
+  B = np.random.randn(512, 128).astype(np.float32)
+  C = nanogemm.matmul(A, B)
+  ```
+
+---
+
+## 6. nanorecall
+- **Description**: 100% Private, Zero-Cloud, Bare-Metal Desktop Memory & Screen Search Engine in <200KB. Runs on standard CPUs with zero telemetry, automatic privacy shielding for password managers, and sub-millisecond semantic search via NanoVector. Includes Native MCP Server (`nanorecall-mcp`).
+- **PyPI**: `pip install nanorecall`
+- **Conda-Forge**: `conda install -c conda-forge nanorecall`
+- **Debian/Ubuntu**: `sudo apt install python3-nanorecall`
+- **GitHub**: https://github.com/eminsk/nanorecall
+- **MCP Server**: `nanorecall-mcp`
+
+---
+
+## 7. yfinance-ta-patterns
+- **Description**: Institutional-grade candlestick pattern scanner (all 61 TA-Lib patterns with pure-Python fallback), unbiased next-open backtester, AI Confluence Scorer, Asset Economic Calendar, and Native MCP Server (`yfinance-ta-mcp`). Supports CPython 3.8–3.16 (No-GIL 3.13t–3.16t) & PyPy 3.8–3.12.
+- **PyPI**: `pip install yfinance-ta-patterns`
+- **Conda-Forge**: `conda install -c conda-forge yfinance-ta-patterns`
+- **Debian/Ubuntu**: `sudo apt install python3-yfinance-ta-patterns`
+- **GitHub**: https://github.com/eminsk/yfinance-ta-patterns
+- **MCP Server**: `yfinance-ta-mcp`
+
+---
+
+## 8. xlsx-viewer-pro (xlsx_vievers)
+- **Description**: High-performance headless spreadsheet library and desktop processor with a 129-function formula engine, hardware-accelerated SIMD SSE2 math, Chart Wizard, AutoFilter, Goal Seek, and Native MCP Server (`xlsx-viewer-mcp`).
+- **PyPI**: `pip install xlsx-viewer-pro`
+- **Conda-Forge**: `conda install -c conda-forge xlsx-viewer-pro`
+- **Debian/Ubuntu**: `sudo apt install python3-xlsx-viewer-pro`
+- **GitHub**: https://github.com/eminsk/xlsx_vievers
+- **MCP Server**: `xlsx-viewer-mcp`
+
+---
+
+## 9. avito-sdk
+- **Description**: High-performance headless Avito scraping & data extraction SDK with real-time price drop tracking, full item parameter extraction, Playwright cookie refresh, Telegram/VK notification bots, and Native MCP Server (`avito-mcp`).
+- **PyPI**: `pip install avito-sdk`
+- **Conda-Forge**: `conda install -c conda-forge avito-sdk`
+- **Debian/Ubuntu**: `sudo apt install python3-avito-sdk`
+- **GitHub**: https://github.com/eminsk/avito-sdk
+- **MCP Server**: `avito-mcp`
+
+---
+
+## 10. screenvideo
+- **Description**: High-performance desktop screen recorder and screenshot suite featuring WASAPI loopback audio, real-time H.264 streaming, Native MCP Server (`screenvideo-mcp`), and a standalone pure x64 Flat Assembler (FASM) native edition.
+- **GitHub**: https://github.com/eminsk/screenvideo
+- **MCP Server**: `screenvideo-mcp`
+
+---
+
+## 11. fasm-modern-sdk
+- **Description**: Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG) featuring 64-bit Windows equates, official calling conventions, and zero-configuration bindings.
+- **GitHub**: https://github.com/eminsk/fasm-modern-sdk
+
+---
+
+## 12. ppa (APT Repository)
+- **Description**: Official APT Repository for Debian and Ubuntu packaging the author's open-source libraries as native `.deb` packages with GPG integrity verification.
+- **Website**: https://eminsk.github.io/ppa/
+- **GitHub**: https://github.com/eminsk/ppa
+- **Setup**:
+  ```bash
+  curl -fsSL https://eminsk.github.io/ppa/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/eminsk-ppa.gpg
+  echo "deb [arch=amd64,all] https://eminsk.github.io/ppa/ ./" | sudo tee /etc/apt/sources.list.d/eminsk.list
+  sudo apt update
+  ```

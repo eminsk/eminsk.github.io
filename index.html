@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M_N_Nik (@eminsk) — Open Source Systems, Compilers & AI Infrastructure</title>
+  
+  <!-- SEO & Machine Indexing Meta Tags -->
+  <meta name="description" content="High-performance open-source software by M_N_Nik (@eminsk): pureapk (Android APK engine with Android 15 16KB alignment), pyfasm (Python to x86_64 FASM AOT compiler), agentjit (AI agent JIT token optimizer), nanovector, nanogemm, yfinance-ta-patterns, xlsx-viewer-pro, avito-sdk, and Debian APT PPA.">
+  <meta name="keywords" content="pureapk, pyapk, android 15 16kb page alignment, python apk builder, sign apk python, сборка apk python без android studio, zipalign python, aab packager python, pyfasm, pyfasm64, python fasm compiler, python aot compiler x86_64, agentjit, ai agent trajectory jit, ai token optimizer, nanovector, vector search python pure c, nanogemm, fast gemm avx2 python, nanorecall, private desktop memory, yfinance-ta-patterns, candlestick patterns python, xlsx-viewer-pro, avito-sdk, python no-gil 3.13t, mcp server, debian ppa eminsk">
+  <meta name="author" content="M_N_Nik (@eminsk)">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="yandex" content="index, follow">
+  <link rel="canonical" href="https://eminsk.github.io/">
+  <link rel="alternate" hreflang="x-default" href="https://eminsk.github.io/">
+  <link rel="alternate" hreflang="en" href="https://eminsk.github.io/">
+  <link rel="alternate" hreflang="ru" href="https://eminsk.github.io/">
+  <meta name="theme-color" content="#080c14">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eminsk.github.io/">
+  <meta property="og:site_name" content="M_N_Nik (@eminsk) Developer Portal">
+  <meta property="og:title" content="M_N_Nik (@eminsk) — Open Source Systems, Compilers & AI Infrastructure">
+  <meta property="og:description" content="High-performance systems programming, AOT compilers, AI agent token optimizers, zero-dependency Android APK engines, and SIMD vector math.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="M_N_Nik (@eminsk) — Open Source Systems, Compilers & AI Infrastructure">
+  <meta name="twitter:description" content="High-performance systems programming, AOT compilers, AI agent token optimizers, zero-dependency Android APK engines, and SIMD vector math.">
+  
+  <!-- AI Model Crawling Links -->
+  <link rel="help" href="https://eminsk.github.io/llms.txt" type="text/plain" title="LLMs.txt for AI crawlers">
+  <link rel="help" href="https://eminsk.github.io/llms-full.txt" type="text/plain" title="Full LLM Documentation Index">
+
+  <!-- Schema.org JSON-LD Structured Data for Search Engines & LLMs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://eminsk.github.io/#website",
+        "url": "https://eminsk.github.io/",
+        "name": "M_N_Nik (@eminsk) Developer Portal",
+        "description": "High-performance open-source systems, AOT compilers, AI agent infrastructure, and bare-metal SIMD libraries.",
+        "inLanguage": ["en", "ru"],
+        "publisher": { "@id": "https://eminsk.github.io/#author" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://eminsk.github.io/#author",
+        "name": "M_N_Nik",
+        "alternateName": ["eminsk", "charter2029"],
+        "url": "https://eminsk.github.io/",
+        "jobTitle": "Systems Engineer & Compiler Developer",
+        "sameAs": [
+          "https://github.com/eminsk",
+          "https://pypi.org/user/eminsk/",
+          "https://anaconda.org/m_n_nik",
+          "https://t.me/charter2029"
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://eminsk.github.io/#libraries",
+        "name": "Open Source Libraries & Systems by M_N_Nik",
+        "itemListElement": [
+          {
+            "@type": "SoftwareApplication",
+            "position": 1,
+            "name": "pureapk",
+            "alternateName": ["pyapk", "pure-python apk builder", "Android 15 16KB Page Alignment"],
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform (Linux, Windows, macOS, Android)",
+            "programmingLanguage": "Python",
+            "codeRepository": "https://github.com/eminsk/pyapk",
+            "downloadUrl": "https://pypi.org/project/pureapk/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Zero-dependency pure Python Android APK engine with Android 15 16KB page alignment, APK v1/v2/v3 signing, multi-store packaging (AAB, IPA, MSIX), and APK patching without Java or Android Studio."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 2,
+            "name": "pyfasm64",
+            "alternateName": ["pyfasm", "Python Flat Assembler AOT Compiler"],
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Windows, Linux, macOS",
+            "programmingLanguage": ["Python", "Assembly x86_64"],
+            "codeRepository": "https://github.com/eminsk/pyfasm",
+            "downloadUrl": "https://pypi.org/project/pyfasm64/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Universal Native No-GIL (3.13t-3.16t) & PyPy to pure x86_64 FASM AOT Compiler. Translates Python AST into standalone PE+/ELF64/Mach-O binaries (~9KB) with zero VM overhead."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 3,
+            "name": "agentjit",
+            "alternateName": ["AI Agent Trajectory JIT Compiler", "agentjit-mcp"],
+            "applicationCategory": "ArtificialIntelligence",
+            "operatingSystem": "Cross-platform",
+            "programmingLanguage": "Python",
+            "codeRepository": "https://github.com/eminsk/agentjit",
+            "downloadUrl": "https://pypi.org/project/agentjit/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Just-In-Time Compiler for AI Agent Trajectories. Compiles multi-step LLM workflows into 0.08ms deterministic Python code with zero tokens. Featured #1 in The Daily Diff."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 4,
+            "name": "nanovector",
+            "alternateName": ["nanovector-mcp", "SQLite of Vector Search"],
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "programmingLanguage": ["C99", "Python", "Assembly x86_64"],
+            "codeRepository": "https://github.com/eminsk/nanovector",
+            "downloadUrl": "https://pypi.org/project/nanovector/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Embedded vector search & episodic memory in ~120KB. Zero external dependencies, 0.2ms cold start, pure C99 with AVX2+FMA, ARM NEON, and MCP server."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 5,
+            "name": "nanogemm",
+            "alternateName": ["nanogemm-mcp", "Micro GEMM Python"],
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "programmingLanguage": ["C99", "Python", "Assembly x86_64"],
+            "codeRepository": "https://github.com/eminsk/nanogemm",
+            "downloadUrl": "https://pypi.org/project/nanogemm/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Minimalist, bare-metal SIMD & Assembly GEMM engine for Python. Sub-microsecond CPU matrix multiplication up to 2.8x faster than NumPy on CPU, with MCP server."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 6,
+            "name": "nanorecall",
+            "alternateName": ["nanorecall-mcp", "Zero-Cloud Desktop Recall"],
+            "applicationCategory": "ArtificialIntelligence",
+            "operatingSystem": "Windows, Linux, macOS",
+            "programmingLanguage": "Python",
+            "codeRepository": "https://github.com/eminsk/nanorecall",
+            "downloadUrl": "https://pypi.org/project/nanorecall/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "100% private, zero-cloud desktop memory & screen search engine in <200KB. Automatic privacy shielding and sub-millisecond semantic search."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 7,
+            "name": "yfinance-ta-patterns",
+            "alternateName": ["yfinance-ta-mcp", "TA-Lib Candlestick Scanner"],
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Cross-platform",
+            "programmingLanguage": "Python",
+            "codeRepository": "https://github.com/eminsk/yfinance-ta-patterns",
+            "downloadUrl": "https://pypi.org/project/yfinance-ta-patterns/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Institutional candlestick pattern scanner (61 TA-Lib patterns), unbiased next-open backtester, AI Confluence Scorer, and Native MCP Server."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 8,
+            "name": "xlsx-viewer-pro",
+            "alternateName": ["xlsx_vievers", "xlsx-viewer-mcp"],
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "programmingLanguage": "Python",
+            "codeRepository": "https://github.com/eminsk/xlsx_vievers",
+            "downloadUrl": "https://pypi.org/project/xlsx-viewer-pro/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Headless Excel formula engine (129+ functions), SIMD SSE2 math engine, Chart Wizard, and Native MCP Server."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 9,
+            "name": "avito-sdk",
+            "alternateName": ["avito-mcp", "Avito API Python SDK"],
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform",
+            "programmingLanguage": "Python",
+            "codeRepository": "https://github.com/eminsk/avito-sdk",
+            "downloadUrl": "https://pypi.org/project/avito-sdk/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "High-performance headless Avito scraping SDK with real-time price drops, Playwright cookies, and Native MCP Server."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #070a12;
+      --bg-card: rgba(14, 20, 34, 0.75);
+      --bg-card-hover: rgba(22, 32, 54, 0.85);
+      --bg-subtle: #0f1629;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(0, 240, 255, 0.35);
+      --text: #f0f4fc;
+      --text-muted: #8b9bb4;
+      --accent-cyan: #00f0ff;
+      --accent-green: #00ffa3;
+      --accent-purple: #b070ff;
+      --accent-amber: #fbb034;
+      --accent-rose: #ff4d6d;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, "JetBrains Mono", Consolas, Menlo, monospace;
+      --radius: 12px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      background: 
+        radial-gradient(circle at 15% 10%, rgba(0, 240, 255, 0.07) 0%, transparent 40%),
+        radial-gradient(circle at 85% 20%, rgba(176, 112, 255, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(0, 255, 163, 0.05) 0%, transparent 50%),
+        var(--bg);
+      background-attachment: fixed;
+    }
+
+    a { color: var(--accent-cyan); text-decoration: none; transition: var(--transition); }
+    a:hover { color: #fff; text-shadow: 0 0 10px rgba(0, 240, 255, 0.6); }
+
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+    /* Top Navigation */
+    header.site-header {
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+      background: rgba(7, 10, 18, 0.8);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #000;
+      font-size: 18px;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+    }
+    .brand-text h1 { font-size: 18px; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
+    .brand-text p { font-size: 12px; color: var(--text-muted); font-family: var(--font-mono); }
+
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .lang-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-btn:hover { background: rgba(0, 240, 255, 0.15); border-color: var(--accent-cyan); }
+    .nav-link {
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+    .nav-link:hover { color: #fff; background: rgba(255, 255, 255, 0.05); }
+
+    /* Hero Section */
+    .hero {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 30px;
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      color: var(--accent-cyan);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    }
+    .hero h2 {
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #fff 30%, #8b9bb4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      max-width: 820px;
+      margin: 0 auto 30px;
+      font-size: 17px;
+      color: var(--text-muted);
+    }
+    .hero-metrics {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .metric-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 22px;
+      min-width: 150px;
+    }
+    .metric-val {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--accent-green);
+      font-family: var(--font-mono);
+    }
+    .metric-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* AI Model Integration Notice Banner */
+    .ai-banner {
+      background: linear-gradient(90deg, rgba(0, 240, 255, 0.1), rgba(176, 112, 255, 0.12));
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .ai-banner-content { display: flex; align-items: center; gap: 14px; }
+    .ai-icon { font-size: 24px; }
+    .ai-text strong { color: #fff; font-size: 15px; }
+    .ai-text p { font-size: 13px; color: var(--text-muted); }
+    .ai-links { display: flex; gap: 10px; }
+    .btn-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      color: #fff;
+      font-size: 12px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+    .btn-badge:hover { background: rgba(0, 240, 255, 0.2); border-color: var(--accent-cyan); color: var(--accent-cyan); }
+
+    /* Filter & Search Bar */
+    .filter-bar {
+      margin-bottom: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .search-input-wrap {
+      position: relative;
+      width: 100%;
+    }
+    .search-input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 14px 20px 14px 48px;
+      border-radius: var(--radius);
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      transition: var(--transition);
+      font-family: var(--font-sans);
+    }
+    .search-input:focus { border-color: var(--accent-cyan); box-shadow: 0 0 15px rgba(0, 240, 255, 0.25); }
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 18px;
+    }
+    .tag-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tag-chip {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .tag-chip.active, .tag-chip:hover {
+      background: rgba(0, 240, 255, 0.15);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    /* Library Cards Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 480px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--border-hover), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.1);
+      background: var(--bg-card-hover);
+    }
+    .card:hover::before { opacity: 1; }
+
+    .card-top { margin-bottom: 16px; }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 8px;
+    }
+    .cat-badge {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+    .cat-android { background: rgba(0, 255, 163, 0.15); color: var(--accent-green); border: 1px solid rgba(0, 255, 163, 0.3); }
+    .cat-compiler { background: rgba(176, 112, 255, 0.15); color: var(--accent-purple); border: 1px solid rgba(176, 112, 255, 0.3); }
+    .cat-ai { background: rgba(0, 240, 255, 0.15); color: var(--accent-cyan); border: 1px solid rgba(0, 240, 255, 0.3); }
+    .cat-finance { background: rgba(251, 176, 52, 0.15); color: var(--accent-amber); border: 1px solid rgba(251, 176, 52, 0.3); }
+    .cat-system { background: rgba(255, 77, 109, 0.15); color: var(--accent-rose); border: 1px solid rgba(255, 77, 109, 0.3); }
+
+    .card-version {
+      font-size: 12px;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .card-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-title a { color: #fff; }
+    .card-title a:hover { color: var(--accent-cyan); }
+    .card-subtitle {
+      font-size: 13px;
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+      margin-bottom: 12px;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.55;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .feature-list li {
+      font-size: 13px;
+      color: #c0cde0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .feature-list li::before {
+      content: "▹";
+      color: var(--accent-cyan);
+      font-weight: bold;
+    }
+
+    /* Install Switcher Box */
+    .install-box {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .install-tabs {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .install-tab {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      border-bottom: 2px solid transparent;
+    }
+    .install-tab.active {
+      color: #fff;
+      border-bottom-color: var(--accent-cyan);
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .install-cmd-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+    }
+    .install-cmd {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent-green);
+      white-space: nowrap;
+      overflow-x: auto;
+      user-select: all;
+    }
+    .copy-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: var(--transition);
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+    }
+    .copy-btn:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
+    .copy-btn.copied { color: var(--accent-green); }
+
+    /* Code Snippet Collapsible */
+    details.code-details {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    details.code-details summary {
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+      transition: var(--transition);
+    }
+    details.code-details summary:hover { color: #fff; }
+    details.code-details pre {
+      padding: 12px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #cbd5e1;
+      background: #05080f;
+      overflow-x: auto;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Card Footer Links */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .link-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .link-pill:hover {
+      background: rgba(0, 240, 255, 0.15);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    /* APT & MCP Special Sections */
+    .info-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      margin-bottom: 40px;
+    }
+    .info-section h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .info-section p { color: var(--text-muted); margin-bottom: 20px; font-size: 15px; }
+
+    .mcp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .mcp-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .mcp-card strong { color: var(--accent-cyan); font-family: var(--font-mono); font-size: 14px; display: block; margin-bottom: 4px; }
+    .mcp-card span { color: var(--text-muted); font-size: 12px; }
+
+    /* Footer */
+    footer.site-footer {
+      border-top: 1px solid var(--border);
+      background: rgba(5, 8, 15, 0.95);
+      padding: 40px 0;
+      margin-top: auto;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .footer-links a { color: var(--text-muted); font-size: 14px; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { color: #586882; font-size: 13px; font-family: var(--font-mono); }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #00ffa3;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      font-family: var(--font-mono);
+      box-shadow: 0 4px 20px rgba(0, 255, 163, 0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+      z-index: 999;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="avatar">MN</div>
+        <div class="brand-text">
+          <h1>M_N_Nik <span style="color: var(--accent-cyan);">(@eminsk)</span></h1>
+          <p>Systems, Compilers & AI Infrastructure</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a href="#libraries" class="nav-link" data-i18n="nav_libs">Libraries</a>
+        <a href="#ppa" class="nav-link">APT PPA</a>
+        <a href="#mcp" class="nav-link">MCP</a>
+        <a href="https://github.com/eminsk" target="_blank" class="nav-link" rel="noopener">GitHub ↗</a>
+        <button id="langToggle" class="lang-btn" onclick="toggleLanguage()">
+          <span id="langFlag">🇷🇺</span> <span id="langText">RU</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <div class="hero-badge">
+        <span>⚡</span>
+        <span data-i18n="hero_badge">High-Performance Open-Source Ecosystem</span>
+      </div>
+      <h2 data-i18n="hero_title">Decades of Craft, Built for Extreme Speed.</h2>
+      <p class="hero-desc" data-i18n="hero_desc">
+        Zero-dependency systems engineering, native AOT compilers, AI agent execution engines, 
+        and hardware-aware SIMD kernels for Python, C99, and x86_64 Assembly.
+      </p>
+
+      <div class="hero-metrics">
+        <div class="metric-item">
+          <div class="metric-val">10+</div>
+          <div class="metric-label" data-i18n="metric_published">Core Packages</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-val">22,000+</div>
+          <div class="metric-label" data-i18n="metric_conda">Conda Downloads</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-val">0.08 ms</div>
+          <div class="metric-label" data-i18n="metric_latency">Agent JIT Latency</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-val">16 KB</div>
+          <div class="metric-label" data-i18n="metric_align">Android 15 Page Align</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Models & Search Indexing Banner -->
+    <aside class="ai-banner">
+      <div class="ai-banner-content">
+        <span class="ai-icon">🤖</span>
+        <div class="ai-text">
+          <strong data-i18n="ai_banner_title">AI & Search Engine Direct Indexing Protocol</strong>
+          <p data-i18n="ai_banner_desc">Optimized for Google, Bing, Yandex, Perplexity, Claude, ChatGPT, Cursor, DeepSeek & Apple Intelligence.</p>
+        </div>
+      </div>
+      <div class="ai-links">
+        <a href="/llms.txt" target="_blank" class="btn-badge">📄 llms.txt</a>
+        <a href="/llms-full.txt" target="_blank" class="btn-badge">📚 llms-full.txt</a>
+        <a href="/sitemap.xml" target="_blank" class="btn-badge">🗺️ sitemap.xml</a>
+      </div>
+    </aside>
+
+    <!-- Filter & Search Controls -->
+    <section class="filter-bar" id="libraries">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" 
+               placeholder="Search libraries (e.g. apk, fasm, agentjit, vector, mcp, avito, gemm)..." 
+               oninput="filterLibraries()">
+      </div>
+      <div class="tag-chips">
+        <button class="tag-chip active" onclick="setFilter('all', this)">All (11)</button>
+        <button class="tag-chip" onclick="setFilter('ai', this)">AI & LLMs</button>
+        <button class="tag-chip" onclick="setFilter('android', this)">Android & Packaging</button>
+        <button class="tag-chip" onclick="setFilter('compiler', this)">Compilers & Systems</button>
+        <button class="tag-chip" onclick="setFilter('finance', this)">Data & Finance</button>
+        <button class="tag-chip" onclick="setFilter('mcp', this)">MCP Servers</button>
+      </div>
+    </section>
+
+    <!-- Project Cards Grid -->
+    <div class="projects-grid" id="projectsGrid">
+
+      <!-- 1. pureapk (pyapk) -->
+      <article class="card" data-tags="android packaging" id="pureapk">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-android">Android & Packaging</span>
+            <span class="card-version">v1.0.1 • PyPI & APT</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/pyapk" target="_blank" rel="noopener">pureapk (pyapk)</a></h3>
+          <div class="card-subtitle">Zero-Dependency Android 15 APK Engine & Signer</div>
+          <p class="card-desc" data-en="Pure Python engine for building, modifying, repacking, and signing Android APKs without Java, Android Studio, or SDK. Includes full Android 15 16KB ELF page alignment (tag 0xd935), v1/v2/v3 signatures, and multi-store packaging."
+             data-ru="100% чистый Python-движок сборки, модификации и подписи Android APK без Java, Android Studio и SDK. Включает выравнивание 16KB для Android 15 (тег 0xd935), схемы подписи v1/v2/v3 и упаковку под магазины.">
+            Pure Python engine for building, modifying, repacking, and signing Android APKs without Java, Android Studio, or SDK. Includes full Android 15 16KB ELF page alignment (tag 0xd935), v1/v2/v3 signatures, and multi-store packaging.
+          </p>
+          <ul class="feature-list">
+            <li data-en="16KB Page Alignment for Android 15 (API 35+ Google Play compliance)"
+                data-ru="Выравнивание страниц 16KB для Android 15 (требование Google Play API 35+)">16KB Page Alignment for Android 15 (API 35+ Google Play compliance)</li>
+            <li data-en="Zero JVM, zero Android SDK/NDK, zero native tool requirements"
+                data-ru="Никакой Java, Android SDK/NDK или внешних компиляторов">Zero JVM, zero Android SDK/NDK, zero native tool requirements</li>
+            <li data-en="Multi-Store packager: APK, Google Play AAB, iOS IPA stub, Windows 11 MSIX"
+                data-ru="Мультиплатформенная сборка: APK, Google Play AAB, iOS IPA stub, MSIX">Multi-Store packager: APK, Google Play AAB, iOS IPA stub, Windows 11 MSIX</li>
+            <li data-en="In-place APK modification, wheel extraction, and release-ready signing"
+                data-ru="Модификация готовых APK, распаковка wheels и готовая подпись">In-place APK modification, wheel extraction, and release-ready signing</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install pureapk')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'uv add pureapk')">uv</button>
+              <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-pureapk')">apt</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">pip install pureapk</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+
+          <details class="code-details">
+            <summary data-i18n="show_code">Show Code Example</summary>
+            <pre><code>from pureapk import APKBuilder, sign_apk, align_zip_entry
+
+# Build APK in pure Python with 16KB page alignment
+builder = APKBuilder("app.apk")
+builder.add_file("AndroidManifest.xml", manifest_bytes)
+builder.add_file("classes.dex", dex_bytes)
+builder.build()
+
+# Sign with APK Signature Scheme v1 + v2
+sign_apk("app.apk", "key.pk8", "cert.x509.pem")</code></pre>
+          </details>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/pyapk" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://pypi.org/project/pureapk/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
+          <a href="https://eminsk.github.io/ppa/" target="_blank" class="link-pill">Debian PPA</a>
+        </div>
+      </article>
+
+      <!-- 2. pyfasm / pyfasm64 -->
+      <article class="card" data-tags="compiler system" id="pyfasm">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-compiler">Compilers & Systems</span>
+            <span class="card-version">v0.1.24 • PyPI & Conda</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/pyfasm" target="_blank" rel="noopener">pyfasm / pyfasm64</a></h3>
+          <div class="card-subtitle">Universal Python AST to x86_64 FASM AOT Compiler</div>
+          <p class="card-desc" data-en="Translates Python AST directly into self-contained standalone PE+ (.exe, .dll), ELF64, and Mach-O binaries (~9KB). Zero virtual machine, zero Python runtime overhead. True multi-threaded concurrency (CreateThread)."
+             data-ru="Транслирует AST Python напрямую в чистый ассемблер FASM x86_64 в автономные PE+ (.exe, .dll), ELF64 и Mach-O (~9КБ) без виртуальной машины и оверхеда Python. Настоящие No-GIL потоки ОС.">
+            Translates Python AST directly into self-contained standalone PE+ (.exe, .dll), ELF64, and Mach-O binaries (~9KB). Zero virtual machine, zero Python runtime overhead. True multi-threaded concurrency (CreateThread).
+          </p>
+          <ul class="feature-list">
+            <li data-en="Produces pure 9KB native binaries without Python DLL or interpreter"
+                data-ru="Генерирует нативные бинарники 9КБ без Python DLL и интерпретатора">Produces pure 9KB native binaries without Python DLL or interpreter</li>
+            <li data-en="Supports Python 3.8–3.16, Free-Threaded No-GIL (3.13t-3.16t) & PyPy"
+                data-ru="Поддержка Python 3.8–3.16, No-GIL (3.13t-3.16t) и PyPy">Supports Python 3.8–3.16, Free-Threaded No-GIL (3.13t-3.16t) & PyPy</li>
+            <li data-en="True hardware multi-core parallelism with lock-free atomic primitives"
+                data-ru="Истинная параллельность на ядрах CPU с атомарными lock-free примитивами">True hardware multi-core parallelism with lock-free atomic primitives</li>
+            <li data-en="SIMD JSON parser and native Win32/GDI assembly GUI engine"
+                data-ru="SIMD парсер JSON и нативный графический Win32 GUI движок">SIMD JSON parser and native Win32/GDI assembly GUI engine</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install pyfasm64')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'conda install -c conda-forge pyfasm64')">conda</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">pip install pyfasm64</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+
+          <details class="code-details">
+            <summary data-i18n="show_code">Show Code Example</summary>
+            <pre><code># CLI Compilation to standalone native binary
+pyfasm compile main.py -o app.exe --opt-level 3 --standalone
+
+# Result: 9 KB standalone PE+ binary with 0 dependencies</code></pre>
+          </details>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/pyfasm" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://pypi.org/project/pyfasm64/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
+          <a href="https://anaconda.org/conda-forge/pyfasm64" target="_blank" class="link-pill" rel="noopener">Conda-Forge</a>
+        </div>
+      </article>
+
+      <!-- 3. agentjit -->
+      <article class="card" data-tags="ai mcp" id="agentjit">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-ai">AI & LLMs</span>
+            <span class="card-version">PyPI • Conda • APT • MCP</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/agentjit" target="_blank" rel="noopener">agentjit</a></h3>
+          <div class="card-subtitle">JIT Compiler for AI Agent Trajectories (0.08ms)</div>
+          <p class="card-desc" data-en="Compiles repetitive 30-second multi-step LLM agent trajectories into 0.08ms deterministic Python code with zero token consumption. Speculative guards, automatic bailout runtime, and native MCP server."
+             data-ru="Компилирует медленные 30-секундные цепочки LLM-агентов в детерминированный код на Python за 0.08 мс с нулевым расходом токенов. Спекулятивные гарды, моментальный fallback и MCP сервер.">
+            Compiles repetitive 30-second multi-step LLM agent trajectories into 0.08ms deterministic Python code with zero token consumption. Speculative guards, automatic bailout runtime, and native MCP server.
+          </p>
+          <ul class="feature-list">
+            <li data-en="Featured #1 Top Story in The Daily Diff (9/10 Depth & Utility Score)"
+                data-ru="#1 Top Story в The Daily Diff (оценка полезности 9/10)">Featured #1 Top Story in The Daily Diff (9/10 Depth & Utility Score)</li>
+            <li data-en="Zero tokens used on compiled repetitive execution paths"
+                data-ru="Нулевой расход токенов на скомпилированных путях выполнения">Zero tokens used on compiled repetitive execution paths</li>
+            <li data-en="Speculative guards with instant graceful LLM bailout"
+                data-ru="Спекулятивные гарды с прозрачным возвратом к LLM при отклонениях">Speculative guards with instant graceful LLM bailout</li>
+            <li data-en="Free-threaded No-GIL PEP 703 & Model Context Protocol server"
+                data-ru="Поддержка No-GIL (PEP 703) и встроенный сервер MCP">Free-threaded No-GIL PEP 703 & Model Context Protocol server</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install agentjit')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'conda install -c conda-forge agentjit')">conda</button>
+              <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-agentjit')">apt</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">pip install agentjit</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+
+          <details class="code-details">
+            <summary data-i18n="show_code">Show Code Example</summary>
+            <pre><code>import agentjit
+
+@agentjit.compile(guards=["schema_valid"])
+def process_agent_task(prompt: str, context: dict):
+    # Compiles 30s LLM roundtrips into 0.08ms local CPU execution
+    return run_optimized_pipeline(prompt, context)</code></pre>
+          </details>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/agentjit" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://pypi.org/project/agentjit/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
+          <a href="https://anaconda.org/conda-forge/agentjit" target="_blank" class="link-pill" rel="noopener">Conda-Forge</a>
+        </div>
+      </article>
+
+      <!-- 4. nanovector -->
+      <article class="card" data-tags="ai mcp system" id="nanovector">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-ai">AI & LLMs</span>
+            <span class="card-version">7.9k+ Conda • MCP</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/nanovector" target="_blank" rel="noopener">nanovector</a></h3>
+          <div class="card-subtitle">The SQLite of Vector Search & Memory (~120KB)</div>
+          <p class="card-desc" data-en="Zero-dependency vector search & episodic memory for AI agents in ~120KB. Instant 0.2ms cold start, pure C99 with AVX2+FMA, ARM NEON, and hand-crafted FASM x64 kernels. Native MCP Server."
+             data-ru="Векторный поиск и эпизодическая память для ИИ-агентов размером ~120КБ без внешних зависимостей. Холодный старт 0.2 мс, чистый C99 с AVX2+FMA, ARM NEON и FASM x64 ассемблером. Встроенный MCP.">
+            Zero-dependency vector search & episodic memory for AI agents in ~120KB. Instant 0.2ms cold start, pure C99 with AVX2+FMA, ARM NEON, and hand-crafted FASM x64 kernels. Native MCP Server.
+          </p>
+          <ul class="feature-list">
+            <li data-en="7,900+ downloads on Conda-Forge; instant sub-millisecond search"
+                data-ru="7,900+ скачиваний на Conda-Forge; суб-миллисекундный поиск">7,900+ downloads on Conda-Forge; instant sub-millisecond search</li>
+            <li data-en="Cosine similarity, Euclidean (L2), and Dot Product with AVX2/NEON"
+                data-ru="Косинусная близость, Евклидово (L2) расстояние и Dot Product">Cosine similarity, Euclidean (L2), and Dot Product with AVX2/NEON</li>
+            <li data-en="Zero heavyweight dependencies (no PyTorch, no bloated BLAS)"
+                data-ru="Ноль тяжелых зависимостей (без PyTorch и раздутых библиотек)">Zero heavyweight dependencies (no PyTorch, no bloated BLAS)</li>
+            <li data-en="Native MCP Server (nanovector-mcp) for Claude, Cursor, Windsurf"
+                data-ru="Нативный MCP сервер (nanovector-mcp) для Claude, Cursor, Windsurf">Native MCP Server (nanovector-mcp) for Claude, Cursor, Windsurf</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install nanovector')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'conda install -c conda-forge nanovector')">conda</button>
+              <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-nanovector')">apt</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">pip install nanovector</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+
+          <details class="code-details">
+            <summary data-i18n="show_code">Show Code Example</summary>
+            <pre><code>import nanovector
+
+# Initialize in 0.2ms with cosine metric
+index = nanovector.Index(dim=384, metric="cosine")
+index.add(embeddings, ids=[1, 2, 3])
+top_matches = index.search(query_vector, top_k=5)</code></pre>
+          </details>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/nanovector" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://pypi.org/project/nanovector/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
+          <a href="https://anaconda.org/conda-forge/nanovector" target="_blank" class="link-pill" rel="noopener">Conda-Forge</a>
+        </div>
+      </article>
+
+      <!-- 5. nanogemm -->
+      <article class="card" data-tags="ai compiler mcp" id="nanogemm">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-compiler">Compilers & Systems</span>
+            <span class="card-version">9.8k+ Conda • MCP</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/nanogemm" target="_blank" rel="noopener">nanogemm</a></h3>
+          <div class="card-subtitle">Bare-Metal SIMD Matrix Multiplication in ~100KB</div>
+          <p class="card-desc" data-en="Minimalist, bare-metal AVX2+FMA & ARM NEON GEMM engine in ~100KB for Python. Outperforms NumPy by up to 2.8x on CPU for edge neural network inference. Native MCP Server."
+             data-ru="Минималистичный bare-metal GEMM-движок на AVX2+FMA и ARM NEON в ~100КБ для Python. Опережает NumPy до 2.8x на CPU для локального инференса нейросетей. Встроенный MCP.">
+            Minimalist, bare-metal AVX2+FMA & ARM NEON GEMM engine in ~100KB for Python. Outperforms NumPy by up to 2.8x on CPU for edge neural network inference. Native MCP Server.
+          </p>
+          <ul class="feature-list">
+            <li data-en="9,800+ Conda downloads; featured in The Daily Diff (9/10 Depth Score)"
+                data-ru="9,800+ скачиваний на Conda; статья в The Daily Diff (оценка 9/10)">9,800+ Conda downloads; featured in The Daily Diff (9/10 Depth Score)</li>
+            <li data-en="Custom vectorized tile micro-kernels in pure C99 and assembly"
+                data-ru="Векторные микроядра тайлинга на чистом C99 и ассемблере">Custom vectorized tile micro-kernels in pure C99 and assembly</li>
+            <li data-en="Up to 2.8x faster than standard NumPy CPU matrix multiplication"
+                data-ru="До 2.8 раз быстрее стандартного NumPy matmul на CPU">Up to 2.8x faster than standard NumPy CPU matrix multiplication</li>
+            <li data-en="Native MCP Server (nanogemm-mcp)"
+                data-ru="Встроенный MCP сервер (nanogemm-mcp)">Native MCP Server (nanogemm-mcp)</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install nanogemm')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'conda install -c conda-forge nanogemm')">conda</button>
+              <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-nanogemm')">apt</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">pip install nanogemm</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+
+          <details class="code-details">
+            <summary data-i18n="show_code">Show Code Example</summary>
+            <pre><code>import nanogemm
+import numpy as np
+
+# Ultra-fast CPU GEMM for edge AI
+A = np.random.randn(256, 512).astype(np.float32)
+B = np.random.randn(512, 128).astype(np.float32)
+C = nanogemm.matmul(A, B)</code></pre>
+          </details>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/nanogemm" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://pypi.org/project/nanogemm/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
+          <a href="https://anaconda.org/conda-forge/nanogemm" target="_blank" class="link-pill" rel="noopener">Conda-Forge</a>
+        </div>
+      </article>
+
+      <!-- 6. nanorecall -->
+      <article class="card" data-tags="ai mcp" id="nanorecall">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-ai">AI & LLMs</span>
+            <span class="card-version">PyPI • Conda • APT • MCP</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/nanorecall" target="_blank" rel="noopener">nanorecall</a></h3>
+          <div class="card-subtitle">100% Private Zero-Cloud Desktop Memory (&lt;200KB)</div>
+          <p class="card-desc" data-en="100% private, zero-cloud desktop memory & screen search engine in <200KB. Runs entirely local on CPU with zero telemetry. Automatic privacy shielding for passwords and banking. Native MCP Server."
+             data-ru="100% приватная память и локальный поиск по экрану <200КБ без облака. Работает локально на CPU без телеметрии. Автоматическая цензура паролей и банковских вкладок. Встроенный MCP.">
+            100% private, zero-cloud desktop memory & screen search engine in <200KB. Runs entirely local on CPU with zero telemetry. Automatic privacy shielding for passwords and banking. Native MCP Server.
+          </p>
+          <ul class="feature-list">
+            <li data-en="Zero cloud transmission, 100% local encrypted storage"
+                data-ru="Ни байта в облако, 100% локальное шифрованное хранение">Zero cloud transmission, 100% local encrypted storage</li>
+            <li data-en="Automatic privacy masking for 1Password, Bitwarden, banks"
+                data-ru="Автоматическое сокрытие паролей и финансовых данных">Automatic privacy masking for 1Password, Bitwarden, banks</li>
+            <li data-en="Sub-millisecond semantic search powered by NanoVector"
+                data-ru="Суб-миллисекундный семантический поиск на NanoVector">Sub-millisecond semantic search powered by NanoVector</li>
+            <li data-en="Native MCP Server (nanorecall-mcp)"
+                data-ru="Нативный MCP сервер (nanorecall-mcp)">Native MCP Server (nanorecall-mcp)</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install nanorecall')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'conda install -c conda-forge nanorecall')">conda</button>
+              <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-nanorecall')">apt</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">pip install nanorecall</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/nanorecall" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://pypi.org/project/nanorecall/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
+          <a href="https://anaconda.org/conda-forge/nanorecall" target="_blank" class="link-pill" rel="noopener">Conda-Forge</a>
+        </div>
+      </article>
+
+      <!-- 7. yfinance-ta-patterns -->
+      <article class="card" data-tags="finance mcp" id="yfinance-ta-patterns">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-finance">Data & Finance</span>
+            <span class="card-version">1.9k+ Conda • MCP</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/yfinance-ta-patterns" target="_blank" rel="noopener">yfinance-ta-patterns</a></h3>
+          <div class="card-subtitle">Institutional Candlestick Scanner & Backtester</div>
+          <p class="card-desc" data-en="Institutional candlestick pattern scanner (all 61 TA-Lib patterns with pure-Python fallback), unbiased next-open backtester, AI Confluence Scorer, and Native MCP Server. Supports No-GIL (3.13t-3.16t) & PyPy."
+             data-ru="Институциональный сканер 61 свечного паттерна TA-Lib (со 100% pure-Python фоллбеком), объективный тестер на открытии следующей свечи, ИИ-скоринг конфлюенса и MCP сервер. No-GIL & PyPy.">
+            Institutional candlestick pattern scanner (all 61 TA-Lib patterns with pure-Python fallback), unbiased next-open backtester, AI Confluence Scorer, and Native MCP Server. Supports No-GIL (3.13t-3.16t) & PyPy.
+          </p>
+          <ul class="feature-list">
+            <li data-en="All 61 TA-Lib candlestick recognition patterns supported"
+                data-ru="Все 61 паттерн свечного анализа TA-Lib с чистым Python">All 61 TA-Lib candlestick recognition patterns supported</li>
+            <li data-en="Unbiased next-open backtester with profit factor & win rate"
+                data-ru="Честный бэктестер по ценам открытия без заглядывания вперед">Unbiased next-open backtester with profit factor & win rate</li>
+            <li data-en="Asset Economic Calendar and AI Confluence Scoring"
+                data-ru="Встроенный экономический календарь и скоринг конфлюенса">Asset Economic Calendar and AI Confluence Scoring</li>
+            <li data-en="Native MCP Server (yfinance-ta-mcp)"
+                data-ru="Нативный MCP сервер (yfinance-ta-mcp)">Native MCP Server (yfinance-ta-mcp)</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install yfinance-ta-patterns')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'conda install -c conda-forge yfinance-ta-patterns')">conda</button>
+              <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-yfinance-ta-patterns')">apt</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">pip install yfinance-ta-patterns</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/yfinance-ta-patterns" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://pypi.org/project/yfinance-ta-patterns/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
+          <a href="https://anaconda.org/conda-forge/yfinance-ta-patterns" target="_blank" class="link-pill" rel="noopener">Conda-Forge</a>
+        </div>
+      </article>
+
+      <!-- 8. xlsx-viewer-pro (xlsx_vievers) -->
+      <article class="card" data-tags="finance mcp" id="xlsx-viewer-pro">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-finance">Data & Finance</span>
+            <span class="card-version">PyPI • Conda • APT • MCP</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/xlsx_vievers" target="_blank" rel="noopener">xlsx-viewer-pro</a></h3>
+          <div class="card-subtitle">Headless Excel Formula Engine & SIMD Math</div>
+          <p class="card-desc" data-en="High-performance spreadsheet library with a headless 129-function formula calculation engine, hardware-accelerated SIMD SSE2 math, Chart Wizard, AutoFilter, Goal Seek, and Native MCP Server."
+             data-ru="Высокопроизводительная табличная библиотека с headless-движком вычисления 129+ формул Excel, аппаратным SIMD SSE2 ускорением, мастером графиков, фильтрами и нативным сервером MCP.">
+            High-performance spreadsheet library with a headless 129-function formula calculation engine, hardware-accelerated SIMD SSE2 math, Chart Wizard, AutoFilter, Goal Seek, and Native MCP Server.
+          </p>
+          <ul class="feature-list">
+            <li data-en="129+ standard Excel formulas evaluated headlessly in pure code"
+                data-ru="Вычисление 129+ формул Excel без запуска сторонних офисных программ">129+ standard Excel formulas evaluated headlessly in pure code</li>
+            <li data-en="Hardware-accelerated SIMD SSE2 math engine for massive datasets"
+                data-ru="Аппаратное SSE2 SIMD ускорение для миллионов ячеек данных">Hardware-accelerated SIMD SSE2 math engine for massive datasets</li>
+            <li data-en="Goal Seek, AutoFilter, and Chart Wizard subsystems"
+                data-ru="Подбор параметров (Goal Seek), автофильтры и генерация диаграмм">Goal Seek, AutoFilter, and Chart Wizard subsystems</li>
+            <li data-en="Native MCP Server (xlsx-viewer-mcp)"
+                data-ru="Нативный MCP сервер (xlsx-viewer-mcp)">Native MCP Server (xlsx-viewer-mcp)</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install xlsx-viewer-pro')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'conda install -c conda-forge xlsx-viewer-pro')">conda</button>
+              <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-xlsx-viewer-pro')">apt</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">pip install xlsx-viewer-pro</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/xlsx_vievers" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://pypi.org/project/xlsx-viewer-pro/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
+          <a href="https://anaconda.org/conda-forge/xlsx-viewer-pro" target="_blank" class="link-pill" rel="noopener">Conda-Forge</a>
+        </div>
+      </article>
+
+      <!-- 9. avito-sdk -->
+      <article class="card" data-tags="finance mcp" id="avito-sdk">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-finance">Data & Finance</span>
+            <span class="card-version">PyPI • Conda • APT • MCP</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/avito-sdk" target="_blank" rel="noopener">avito-sdk</a></h3>
+          <div class="card-subtitle">Async Avito Data SDK & Price Drop Tracker</div>
+          <p class="card-desc" data-en="High-performance headless Avito scraping and data extraction SDK with real-time price drop tracking, full item parameter extraction, Playwright cookie refresh, and Native MCP Server."
+             data-ru="Высокопроизводительный асинхронный SDK для сбора данных Avito с отслеживанием снижения цен в реальном времени, извлечением параметров объявлений, Playwright и MCP сервером.">
+            High-performance headless Avito scraping and data extraction SDK with real-time price drop tracking, full item parameter extraction, Playwright cookie refresh, and Native MCP Server.
+          </p>
+          <ul class="feature-list">
+            <li data-en="Real-time price drop tracking and historical price delta"
+                data-ru="Отслеживание падения цен и сохранение истории изменения">Real-time price drop tracking and historical price delta</li>
+            <li data-en="Complete parameter extraction: dimensions, tech specs, sellers"
+                data-ru="Глубокое извлечение характеристик, параметров и профилей продавцов">Complete parameter extraction: dimensions, tech specs, sellers</li>
+            <li data-en="Headless Playwright session refresh & TLS anti-bot handling"
+                data-ru="Обновление кук Playwright и защита от блокировок">Headless Playwright session refresh & TLS anti-bot handling</li>
+            <li data-en="Native MCP Server (avito-mcp)"
+                data-ru="Нативный MCP сервер (avito-mcp)">Native MCP Server (avito-mcp)</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install avito-sdk')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'conda install -c conda-forge avito-sdk')">conda</button>
+              <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-avito-sdk')">apt</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">pip install avito-sdk</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/avito-sdk" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://pypi.org/project/avito-sdk/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
+          <a href="https://anaconda.org/conda-forge/avito-sdk" target="_blank" class="link-pill" rel="noopener">Conda-Forge</a>
+        </div>
+      </article>
+
+      <!-- 10. screenvideo -->
+      <article class="card" data-tags="system compiler mcp" id="screenvideo">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-system">Systems & Video</span>
+            <span class="card-version">v2.0 • Pure FASM x64</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/screenvideo" target="_blank" rel="noopener">screenvideo</a></h3>
+          <div class="card-subtitle">WASAPI Audio & FASM Native Screen Recorder</div>
+          <p class="card-desc" data-en="Desktop screen recorder and screenshot suite featuring WASAPI loopback audio capture, real-time H.264 streaming, Native MCP Server, and a standalone pure x64 Flat Assembler native edition."
+             data-ru="Высокопроизводительный экранный рекордер с захватом звука WASAPI loopback, H.264 стримингом, сервером MCP и автономной версией на чистом ассемблере FASM x64.">
+            Desktop screen recorder and screenshot suite featuring WASAPI loopback audio capture, real-time H.264 streaming, Native MCP Server, and a standalone pure x64 Flat Assembler native edition.
+          </p>
+          <ul class="feature-list">
+            <li data-en="Direct WASAPI loopback system audio recording with zero drift"
+                data-ru="Прямой захват системного аудио WASAPI без задержек">Direct WASAPI loopback system audio recording with zero drift</li>
+            <li data-en="Includes pure x64 Flat Assembler (FASM) Native Edition"
+                data-ru="Включает нативную сборку на чистом ассемблере FASM x64">Includes pure x64 Flat Assembler (FASM) Native Edition</li>
+            <li data-en="Native MCP Server (screenvideo-mcp)"
+                data-ru="Встроенный MCP сервер (screenvideo-mcp)">Native MCP Server (screenvideo-mcp)</li>
+          </ul>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/screenvideo" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://github.com/eminsk/screenvideo/releases/tag/v2.0.0" target="_blank" class="link-pill" rel="noopener">Release v2.0.0</a>
+        </div>
+      </article>
+
+      <!-- 11. fasm-modern-sdk -->
+      <article class="card" data-tags="compiler system" id="fasm-modern-sdk">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-compiler">Compilers & Systems</span>
+            <span class="card-version">SDK • Headers</span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/fasm-modern-sdk" target="_blank" rel="noopener">fasm-modern-sdk</a></h3>
+          <div class="card-subtitle">Modern Toolchain & Equates for Flat Assembler</div>
+          <p class="card-desc" data-en="Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG) featuring 64-bit Windows equates, official calling conventions, and zero-configuration bindings."
+             data-ru="Современный SDK и набор заголовков для Flat Assembler (FASM v1.73 / FASMG) с 64-битными Windows equates, официальными соглашениями вызовов и чистыми биндингами.">
+            Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG) featuring 64-bit Windows equates, official calling conventions, and zero-configuration bindings.
+          </p>
+          <ul class="feature-list">
+            <li data-en="Standardized Microsoft x64 ABI macros and 16-byte stack alignments"
+                data-ru="Стандартизированные макросы Microsoft x64 ABI с выравниванием стека">Standardized Microsoft x64 ABI macros and 16-byte stack alignments</li>
+            <li data-en="Comprehensive Win32/Win64 API header definitions"
+                data-ru="Полные определения заголовков Win32/Win64 API">Comprehensive Win32/Win64 API header definitions</li>
+          </ul>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/fasm-modern-sdk" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Official APT PPA Section -->
+    <section class="info-section" id="ppa">
+      <h3><span>📦</span> <span data-i18n="ppa_title">Official Debian & Ubuntu APT Repository (PPA)</span></h3>
+      <p data-i18n="ppa_desc">
+        Install the author's open-source libraries as native Debian/Ubuntu packages with automatic GPG verification, clean dependency trees, and instant updates via <code>apt upgrade</code>.
+      </p>
+
+      <div class="install-box" style="margin-bottom: 20px;">
+        <div class="install-cmd-wrap">
+          <code class="install-cmd" id="aptCmd">curl -fsSL https://eminsk.github.io/ppa/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/eminsk-ppa.gpg && echo "deb [arch=amd64,all] https://eminsk.github.io/ppa/ ./" | sudo tee /etc/apt/sources.list.d/eminsk.list && sudo apt update</code>
+          <button class="copy-btn" onclick="copySpecificCmd('aptCmd', this)" title="Copy Command">📋</button>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="https://eminsk.github.io/ppa/" target="_blank" class="link-pill">Explore PPA Web Directory ↗</a>
+        <a href="https://github.com/eminsk/ppa" target="_blank" class="link-pill">PPA GitHub Repository ↗</a>
+      </div>
+    </section>
+
+    <!-- Model Context Protocol (MCP) Section -->
+    <section class="info-section" id="mcp">
+      <h3><span>🔌</span> <span data-i18n="mcp_title">Model Context Protocol (MCP) Ecosystem</span></h3>
+      <p data-i18n="mcp_desc">
+        Anthropic & Google Antigravity compatible MCP JSON-RPC 2.0 servers. Connect local AI tools, episodic memories, and JIT compilers directly into Claude Desktop, Cursor, Antigravity, and Windsurf.
+      </p>
+
+      <div class="mcp-grid">
+        <div class="mcp-card">
+          <strong>agentjit-mcp</strong>
+          <span>JIT compile agent traces into native code</span>
+        </div>
+        <div class="mcp-card">
+          <strong>nanovector-mcp</strong>
+          <span>Instant episodic vector search for agents</span>
+        </div>
+        <div class="mcp-card">
+          <strong>nanogemm-mcp</strong>
+          <span>CPU matrix multiplication micro-engine</span>
+        </div>
+        <div class="mcp-card">
+          <strong>nanorecall-mcp</strong>
+          <span>Private local desktop screen memory</span>
+        </div>
+        <div class="mcp-card">
+          <strong>yfinance-ta-mcp</strong>
+          <span>61 candlestick patterns & economic calendar</span>
+        </div>
+        <div class="mcp-card">
+          <strong>xlsx-viewer-mcp</strong>
+          <span>Headless 129 Excel formula evaluation</span>
+        </div>
+        <div class="mcp-card">
+          <strong>avito-mcp</strong>
+          <span>Avito price drops & ad parameter parser</span>
+        </div>
+        <div class="mcp-card">
+          <strong>screenvideo-mcp</strong>
+          <span>Screen capture & WASAPI loopback audio</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://github.com/eminsk" target="_blank" rel="noopener">GitHub Profile</a>
+        <a href="https://pypi.org/user/eminsk/" target="_blank" rel="noopener">PyPI Index</a>
+        <a href="https://anaconda.org/m_n_nik" target="_blank" rel="noopener">Anaconda Cloud</a>
+        <a href="https://eminsk.github.io/ppa/">Debian PPA</a>
+        <a href="/llms.txt">llms.txt</a>
+        <a href="/llms-full.txt">llms-full.txt</a>
+        <a href="/sitemap.xml">Sitemap</a>
+        <a href="https://t.me/charter2029" target="_blank" rel="noopener">Telegram (@charter2029)</a>
+        <a href="mailto:M_N_Nik@yahoo.com">Email</a>
+      </div>
+      <p class="footer-copy">
+        © 2026 M_N_Nik (@eminsk). Built with zero bloated frameworks. Pure HTML5 / CSS3 / ES6.
+      </p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast">Command Copied!</div>
+
+  <!-- Interactive Search, Filter, Copy, and Bilingual Logic -->
+  <script>
+    let currentLang = 'en';
+
+    const translations = {
+      en: {
+        nav_libs: "Libraries",
+        hero_badge: "High-Performance Open-Source Ecosystem",
+        hero_title: "Decades of Craft, Built for Extreme Speed.",
+        hero_desc: "Zero-dependency systems engineering, native AOT compilers, AI agent execution engines, and hardware-aware SIMD kernels for Python, C99, and x86_64 Assembly.",
+        metric_published: "Core Packages",
+        metric_conda: "Conda Downloads",
+        metric_latency: "Agent JIT Latency",
+        metric_align: "Android 15 Page Align",
+        ai_banner_title: "AI & Search Engine Direct Indexing Protocol",
+        ai_banner_desc: "Optimized for Google, Bing, Yandex, Perplexity, Claude, ChatGPT, Cursor, DeepSeek & Apple Intelligence.",
+        show_code: "Show Code Example",
+        ppa_title: "Official Debian & Ubuntu APT Repository (PPA)",
+        ppa_desc: "Install the author's open-source libraries as native Debian/Ubuntu packages with automatic GPG verification, clean dependency trees, and instant updates via apt upgrade.",
+        mcp_title: "Model Context Protocol (MCP) Ecosystem",
+        mcp_desc: "Anthropic & Google Antigravity compatible MCP JSON-RPC 2.0 servers. Connect local AI tools, episodic memories, and JIT compilers directly into Claude Desktop, Cursor, Antigravity, and Windsurf."
+      },
+      ru: {
+        nav_libs: "Библиотеки",
+        hero_badge: "Высокопроизводительная экосистема Open-Source",
+        hero_title: "Десятилетия инженерного мастерства и экстремальная скорость.",
+        hero_desc: "Системное программирование без сторонних зависимостей, нативные AOT компиляторы, движки выполнения для ИИ-агентов и SIMD ядра для Python, C99 и x86_64 Ассемблера.",
+        metric_published: "Ключевых пакетов",
+        metric_conda: "Скачиваний на Conda",
+        metric_latency: "Задержка Agent JIT",
+        metric_align: "Android 15 Выравнивание",
+        ai_banner_title: "Прямой протокол индексации для ИИ и Поисковых систем",
+        ai_banner_desc: "Максимальная оптимизация для Google, Яндекс, Bing, Perplexity, Claude, ChatGPT, Cursor, DeepSeek и Apple Intelligence.",
+        show_code: "Показать пример кода",
+        ppa_title: "Официальный APT репозиторий (PPA) для Debian и Ubuntu",
+        ppa_desc: "Установка всех открытых библиотек автора как нативных deb-пакетов с автоматической проверкой подписи GPG, чистыми зависимостями и обновлениями через apt upgrade.",
+        mcp_title: "Экосистема Model Context Protocol (MCP)",
+        mcp_desc: "Серверы протокола MCP JSON-RPC 2.0, совместимые с Anthropic и Google Antigravity. Подключайте локальные инструменты, память и JIT-компиляторы напрямую к Claude, Cursor, Antigravity и Windsurf."
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'ru' : 'en';
+      document.getElementById('langFlag').textContent = currentLang === 'en' ? '🇷🇺' : '🇬🇧';
+      document.getElementById('langText').textContent = currentLang === 'en' ? 'RU' : 'EN';
+      document.documentElement.lang = currentLang;
+
+      // Update static text elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+          el.textContent = translations[currentLang][key];
+        }
+      });
+
+      // Update descriptions and lists with data-en / data-ru
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = currentLang === 'ru' ? el.getAttribute('data-ru') : el.getAttribute('data-en');
+      });
+    }
+
+    function switchInstall(btn, cmd) {
+      const box = btn.closest('.install-box');
+      box.querySelectorAll('.install-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      const cmdEl = box.querySelector('.install-cmd');
+      cmdEl.textContent = cmd;
+    }
+
+    function copyCmd(btn) {
+      const box = btn.closest('.install-box');
+      const text = box.querySelector('.install-cmd').textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("Copied: " + text);
+        btn.classList.add('copied');
+        btn.textContent = '✓';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.textContent = '📋';
+        }, 2000);
+      });
+    }
+
+    function copySpecificCmd(id, btn) {
+      const text = document.getElementById(id).textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("Copied APT Command!");
+        btn.textContent = '✓';
+        setTimeout(() => { btn.textContent = '📋'; }, 2000);
+      });
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => { t.classList.remove('show'); }, 2500);
+    }
+
+    let activeFilter = 'all';
+    function setFilter(filter, btn) {
+      activeFilter = filter;
+      document.querySelectorAll('.tag-chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      filterLibraries();
+    }
+
+    function filterLibraries() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.card');
+
+      cards.forEach(card => {
+        const tags = card.getAttribute('data-tags') || '';
+        const text = card.textContent.toLowerCase();
+
+        const matchesTag = (activeFilter === 'all') || tags.includes(activeFilter);
+        const matchesQuery = !query || text.includes(query);
+
+        if (matchesTag && matchesQuery) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
