@@ -73,14 +73,26 @@
             "@type": "SoftwareApplication",
             "position": 1,
             "name": "pureapk",
-            "alternateName": ["pyapk", "pure-python apk builder", "Android 15 16KB Page Alignment"],
+            "alternateName": ["pyapk", "pure-python apk builder", "Android 15 16KB Page Alignment", "Crash Telemetry & Diagnostics"],
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform (Linux, Windows, macOS, Android)",
             "programmingLanguage": "Python",
             "codeRepository": "https://github.com/eminsk/pyapk",
             "downloadUrl": "https://pypi.org/project/pureapk/",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-            "description": "Zero-dependency pure Python Android APK engine with Android 15 16KB page alignment, APK v1/v2/v3 signing, multi-store packaging (AAB, IPA, MSIX), and APK patching without Java or Android Studio."
+            "description": "Zero-dependency pure Python Android APK engine with Android 15 16KB page alignment, APK v1/v2/v3 signing, built-in crash telemetry and diagnostics, native Python 3.10 runtime seeding, multi-store packaging (AAB, IPA, MSIX), and APK patching without Java or Android Studio."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 2,
+            "name": "QR Code Studio",
+            "alternateName": ["org.eminsk.qrcode", "Mobile AI QR Scanner"],
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Android",
+            "programmingLanguage": "Python",
+            "codeRepository": "https://github.com/eminsk/qrcode",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Mobile AI camera QR scanner with animated laser reticle frame, haptic vibration feedback, encrypted RSA-2048 QR certificates, and multi-format generators built with pureapk."
           },
           {
             "@type": "SoftwareApplication",
@@ -1042,7 +1054,7 @@
                oninput="filterLibraries()">
       </div>
       <div class="tag-chips">
-        <button class="tag-chip active" onclick="setFilter('all', this)">All (11)</button>
+        <button class="tag-chip active" onclick="setFilter('all', this)">All (12)</button>
         <button class="tag-chip" onclick="setFilter('ai', this)">AI & LLMs</button>
         <button class="tag-chip" onclick="setFilter('android', this)">Android & Packaging</button>
         <button class="tag-chip" onclick="setFilter('compiler', this)">Compilers & Systems</button>
@@ -1059,24 +1071,26 @@
         <div class="card-top">
           <div class="card-meta">
             <span class="cat-badge cat-android">Android & Packaging</span>
-            <span class="card-version">v1.0.2 • PyPI & APT</span>
+            <span class="card-version">v1.14.0 • PyPI, APT & Runtime</span>
             <span class="repo-star-badge" data-repo="pyapk">⭐ <span class="star-num">0</span></span>
           </div>
           <h3 class="card-title"><a href="https://github.com/eminsk/pyapk" target="_blank" rel="noopener">pureapk (pyapk)</a></h3>
-          <div class="card-subtitle">Zero-Dependency Android 15 APK Engine & Signer</div>
-          <p class="card-desc" data-en="Pure Python engine for building, modifying, repacking, and signing Android APKs without Java, Android Studio, or SDK. Includes full Android 15 16KB ELF page alignment (tag 0xd935), v1/v2/v3 signatures, and multi-store packaging."
-             data-ru="100% чистый Python-движок сборки, модификации и подписи Android APK без Java, Android Studio и SDK. Включает выравнивание 16KB для Android 15 (тег 0xd935), схемы подписи v1/v2/v3 и упаковку под магазины.">
-            Pure Python engine for building, modifying, repacking, and signing Android APKs without Java, Android Studio, or SDK. Includes full Android 15 16KB ELF page alignment (tag 0xd935), v1/v2/v3 signatures, and multi-store packaging.
+          <div class="card-subtitle">Zero-Dependency Android 15 (16KB) APK Engine, Native Runtime & Crash Telemetry</div>
+          <p class="card-desc" data-en="Pure Python engine for building, modifying, repacking, and signing Android APKs without Java, Android Studio, or SDK. Includes full Android 15 16KB ELF page alignment (tag 0xd935), v1/v2/v3 signatures, built-in crash telemetry & diagnostics, native Python 3.10 runtime seeding, and multi-store packaging."
+             data-ru="100% чистый Python-движок сборки, модификации и подписи Android APK без Java, Android Studio и SDK. Включает выравнивание 16KB для Android 15 (тег 0xd935), схемы подписи v1/v2, встроенную телеметрию сбоев, внедрение нативного рантайма Python 3.10 и упаковку под сторы.">
+            Pure Python engine for building, modifying, repacking, and signing Android APKs without Java, Android Studio, or SDK. Includes full Android 15 16KB ELF page alignment (tag 0xd935), v1/v2/v3 signatures, built-in crash telemetry & diagnostics, native Python 3.10 runtime seeding, and multi-store packaging.
           </p>
           <ul class="feature-list">
-            <li data-en="16KB Page Alignment for Android 15 (API 35+ Google Play compliance)"
-                data-ru="Выравнивание страниц 16KB для Android 15 (требование Google Play API 35+)">16KB Page Alignment for Android 15 (API 35+ Google Play compliance)</li>
-            <li data-en="Zero JVM, zero Android SDK/NDK, zero native tool requirements"
-                data-ru="Никакой Java, Android SDK/NDK или внешних компиляторов">Zero JVM, zero Android SDK/NDK, zero native tool requirements</li>
-            <li data-en="Multi-Store packager: APK, Google Play AAB, iOS IPA stub, Windows 11 MSIX"
-                data-ru="Мультиплатформенная сборка: APK, Google Play AAB, iOS IPA stub, MSIX">Multi-Store packager: APK, Google Play AAB, iOS IPA stub, Windows 11 MSIX</li>
-            <li data-en="In-place APK modification, wheel extraction, and release-ready signing"
-                data-ru="Модификация готовых APK, распаковка wheels и готовая подпись">In-place APK modification, wheel extraction, and release-ready signing</li>
+            <li data-en="16KB Page Alignment for Android 15 (API 35+ Google Play compliance, tag 0xd935)"
+                data-ru="Выравнивание страниц 16KB для Android 15 (требование Google Play API 35+, тег 0xd935)">16KB Page Alignment for Android 15 (API 35+ Google Play compliance, tag 0xd935)</li>
+            <li data-en="Built-in Crash Telemetry & Diagnostics (auto-logs to /sdcard/Download/app_crash.log + emergency UI)"
+                data-ru="Встроенная телеметрия и диагностика сбоев (авто-лог в /sdcard/Download/app_crash.log + аварийный экран)">Built-in Crash Telemetry & Diagnostics (auto-logs to /sdcard/Download/app_crash.log + emergency UI)</li>
+            <li data-en="Native Python 3.10 Runtime Seeding (prepare-runtime) & Multi-DEX Dalvik packaging"
+                data-ru="Внедрение нативного рантайма Python 3.10 (prepare-runtime) и Multi-DEX упаковка">Native Python 3.10 Runtime Seeding (prepare-runtime) & Multi-DEX Dalvik packaging</li>
+            <li data-en="Android 10+ Hardware Protection (DPI AliasProperty) & PyJNIus Cython 3 compatibility"
+                data-ru="Защита оборудования Android 10+ (DPI AliasProperty) и совместимость с PyJNIus Cython 3">Android 10+ Hardware Protection (DPI AliasProperty) & PyJNIus Cython 3 compatibility</li>
+            <li data-en="Multi-Store packager: APK, Google Play AAB, iOS IPA stub, Windows 11 MSIX, Chinese stores"
+                data-ru="Мультиплатформенная сборка: APK, Google Play AAB, iOS IPA stub, MSIX, китайские сторы (--channel)">Multi-Store packager: APK, Google Play AAB, iOS IPA stub, Windows 11 MSIX, Chinese stores</li>
           </ul>
 
           <div class="install-box">
@@ -1094,15 +1108,19 @@
           <details class="code-details">
             <summary data-i18n="show_code">Show Code Example</summary>
             <pre><code>from pureapk import APKBuilder, sign_apk, align_zip_entry
+from pureapk.frameworks import KivyAppHelper
 
-# Build APK in pure Python with 16KB page alignment
-builder = APKBuilder("app.apk")
-builder.add_file("AndroidManifest.xml", manifest_bytes)
-builder.add_file("classes.dex", dex_bytes)
-builder.build()
+# 1. Seed complete native Python 3.10 + SDL2 + Kivy runtime
+KivyAppHelper.prepare_runtime("base_runtime.apk", "./my_project")
 
-# Sign with APK Signature Scheme v1 + v2
-sign_apk("app.apk", "key.pk8", "cert.x509.pem")</code></pre>
+# 2. Build production-signed Android 15 ready APK with crash telemetry
+KivyAppHelper.pack_app(
+    source_dir="./my_project",
+    output_apk="dist/my_app.apk",
+    package_name="org.example.app",
+    app_title="My Production App",
+    release=True,
+)</code></pre>
           </details>
         </div>
 
@@ -1110,6 +1128,67 @@ sign_apk("app.apk", "key.pk8", "cert.x509.pem")</code></pre>
           <a href="https://github.com/eminsk/pyapk" target="_blank" class="link-pill" rel="noopener">GitHub</a>
           <a href="https://pypi.org/project/pureapk/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
           <a href="https://eminsk.github.io/ppa/" target="_blank" class="link-pill">Debian PPA</a>
+          <a href="https://github.com/eminsk/pyapk/blob/main/README_RU.md" target="_blank" class="link-pill">Документация 📖</a>
+        </div>
+      </article>
+
+      <!-- 2. QR Code Studio (qrcode) -->
+      <article class="card" data-tags="android packaging ai" id="qrcode">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-android">Android Mobile App</span>
+            <span class="card-version">v1.0.0 • Signed Release APK</span>
+            <span class="repo-star-badge" data-repo="qrcode">⭐ <span class="star-num">0</span></span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/qrcode" target="_blank" rel="noopener">QR Code Studio</a></h3>
+          <div class="card-subtitle">Mobile AI Camera Scanner, Animated Reticle & Offline Crypto Suite</div>
+          <p class="card-desc" data-en="Production-ready mobile application built entirely with pureapk, Python 3.10, and Kivy. Features live AI camera scanning with an animated laser reticle frame, haptic vibration feedback on lock, encrypted QR certificates, Wi-Fi/vCard/Crypto generators, and zero-cloud offline security."
+             data-ru="Готовое мобильное приложение на Python 3.10, Kivy и pureapk. Сканирование с камеры в реальном времени с анимированным лазерным прицелом и рамкой захвата, тактильная виброотдача, криптографическая подпись QR-сертификатов, генерация Wi-Fi/vCard/USDT и 100% автономная безопасность.">
+            Production-ready mobile application built entirely with pureapk, Python 3.10, and Kivy. Features live AI camera scanning with an animated laser reticle frame, haptic vibration feedback on lock, encrypted QR certificates, Wi-Fi/vCard/Crypto generators, and zero-cloud offline security.
+          </p>
+          <ul class="feature-list">
+            <li data-en="Live Camera Reticle with Animated Laser Frame & emerald visual lock on detection"
+                data-ru="Видоискатель с прицельной рамкой, анимированным лазером и изумрудной фиксацией">Live Camera Reticle with Animated Laser Frame & emerald visual lock on detection</li>
+            <li data-en="Haptic vibration feedback upon successful QR code detection"
+                data-ru="Тактильный виброотклик телефона при успешном захвате QR-кода">Haptic vibration feedback upon successful QR code detection</li>
+            <li data-en="Multi-format Generator: URL, Wi-Fi (WPA2/WPA3), vCard, SMS, Email, Geo, Crypto (USDT/BTC)"
+                data-ru="Генерация 10+ типов: ссылки, Wi-Fi сеть, визитки vCard, криптокошельки USDT/BTC, геометки">Multi-format Generator: URL, Wi-Fi (WPA2/WPA3), vCard, SMS, Email, Geo, Crypto (USDT/BTC)</li>
+            <li data-en="RSA-2048 Cryptographic QR Signing & Verification for tamper-proof digital passes"
+                data-ru="Цифровая подпись и проверка QR-кодов ключами RSA-2048 для защиты от подделок">RSA-2048 Cryptographic QR Signing & Verification for tamper-proof digital passes</li>
+            <li data-en="Packaged and signed with pureapk: 16KB page aligned, dual v1+v2 RSA signatures, 0 Android Studio"
+                data-ru="Собрано на pureapk: выравнивание 16KB под Android 15, подписи v1+v2, без Android Studio">Packaged and signed with pureapk: 16KB page aligned, dual v1+v2 RSA signatures, 0 Android Studio</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'adb install qrcode_release_full.apk')">adb</button>
+              <button class="install-tab" onclick="switchInstall(this, 'git clone https://github.com/eminsk/qrcode')">git</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">adb install qrcode_release_full.apk</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+
+          <details class="code-details">
+            <summary data-i18n="show_code">Show Code Example</summary>
+            <pre><code># Build and sign QR Code Studio using pureapk in one command
+from pureapk.frameworks import KivyAppHelper
+
+# Packages full native Android 15 ready APK with camera & vibrate permissions
+KivyAppHelper.pack_app(
+    source_dir="./qrcode",
+    output_apk="dist/qrcode_release_full.apk",
+    package_name="org.eminsk.qrcode",
+    app_title="QR Code Studio",
+    release=True,
+)</code></pre>
+          </details>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/qrcode" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://github.com/eminsk/pyapk" target="_blank" class="link-pill" rel="noopener">Built with pureapk ⚡</a>
         </div>
       </article>
 

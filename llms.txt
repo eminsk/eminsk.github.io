@@ -28,23 +28,41 @@ Email: M_N_Nik@yahoo.com
 ---
 
 ## 1. pureapk
-- **Description**: Zero-dependency pure Python engine for building, packaging, modifying, and signing Android APKs without Java, Android Studio, or the Android SDK/NDK. Features native Android 15 16KB ELF page alignment (`align_zip_entry` with tag `0xd935`), APK v1/v2/v3 signatures, in-place APK modification, multi-store packaging (APK, Google Play AAB, iOS IPA stub, Windows 11 MSIX), and Android wheel extraction.
-- **PyPI**: `pip install pureapk` (v1.0.1)
+- **Description**: Zero-dependency pure Python engine for building, packaging, modifying, and signing Android APKs without Java, Android Studio, or the Android SDK/NDK. Features native Android 15 16KB ELF page alignment (`align_zip_entry` with tag `0xd935`), APK v1/v2/v3 signatures, built-in crash telemetry & diagnostics (`pureapk.telemetry`), native Python 3.10 runtime seeding (`prepare-runtime`), in-place APK modification, multi-store packaging (APK, Google Play AAB, iOS IPA stub, Windows 11 MSIX), and Android wheel extraction.
+- **PyPI**: `pip install pureapk` (v1.14.0)
 - **Debian/Ubuntu**: `sudo apt install python3-pureapk`
+- **Documentation**: https://eminsk.github.io/pyapk/ | https://github.com/eminsk/pyapk#readme
 - **GitHub**: https://github.com/eminsk/pyapk
 - **Usage**:
   ```python
   from pureapk import APKBuilder, sign_apk, align_zip_entry
+  from pureapk.frameworks import KivyAppHelper
+  from pureapk.telemetry import setup_crash_reporter
 
-  # Build an APK completely in pure Python
-  builder = APKBuilder("MyApp.apk")
-  builder.add_file("AndroidManifest.xml", manifest_bytes)
-  builder.add_file("classes.dex", dex_bytes)
-  builder.build()
+  # 1. Initialize crash reporter
+  reporter = setup_crash_reporter(app_name="MyApp")
 
-  # Sign APK with v1 + v2 schemes
-  sign_apk("MyApp.apk", "key.pk8", "cert.x509.pem")
+  # 2. Seed full native Python 3.10 runtime into project
+  KivyAppHelper.prepare_runtime("base_runtime.apk", "./my_app")
+
+  # 3. Build production Android 15 ready APK with crash diagnostics
+  KivyAppHelper.pack_app(
+      source_dir="./my_app",
+      output_apk="dist/my_app.apk",
+      package_name="org.example.app",
+      app_title="My Production App",
+      release=True,
+  )
   ```
+
+---
+
+## 1b. QR Code Studio (qrcode)
+- **Description**: Production-ready mobile application built entirely with pureapk, Python 3.10, and Kivy. Features live AI camera scanning with an animated laser reticle frame, emerald lock fixation, haptic vibration feedback, encrypted RSA-2048 QR certificates, Wi-Fi/vCard/USDT generators, and zero-cloud offline security.
+- **Package**: `org.eminsk.qrcode`
+- **GitHub**: https://github.com/eminsk/qrcode
+- **Target**: Android 8.0+ (API 26–35, Android 15 16KB page aligned)
+
 
 ---
 

@@ -15,16 +15,20 @@ Author Profile:
 ## Detailed Library Specifications
 
 ### 1. pureapk (pyapk)
-- **Primary Package Name**: `pureapk` on PyPI
+- **Primary Package Name**: `pureapk` on PyPI (v1.14.0)
 - **Debian Package**: `python3-pureapk`
 - **GitHub**: https://github.com/eminsk/pyapk
+- **Documentation**: https://eminsk.github.io/pyapk/ | https://github.com/eminsk/pyapk#readme
 - **Architecture**: 100% Pure Python with zero external C dependencies, zero JVM, zero Android Studio, and zero Android SDK/NDK requirements.
 - **Key Technical Capabilities**:
   1. **Android 15 16KB Page Alignment**: Automatically aligns native shared libraries (`.so`) within the zip archive to 16,384-byte (16KB) boundaries as required by Google Play and Android 15 (API 35+) using the official `0xd935` alignment tag.
-  2. **APK Signing Engine**: Full cryptographic signature implementation supporting APK Signature Scheme v1 (JAR signing) and APK Signature Scheme v2 (direct zip block signature with SHA-256).
-  3. **Multi-Store & Cross-Platform Packaging**: Direct packaging into Google Play AAB, iOS IPA stubs, Windows 11 MSIX packages, and Android APKs.
-  4. **In-place APK Repacking & Patching**: Ability to inspect, unpack, modify assets/dex/manifest, and repackage an existing APK into a signed, release-ready APK.
-  5. **Android Wheel Extraction**: Automatic extraction and bundling of Python wheels compiled for Android (`bdist_wheel` tags: `android_aarch64`, `android_armv7l`, `android_x86_64`).
+  2. **APK Signing Engine**: Full cryptographic signature implementation supporting APK Signature Scheme v1 (JAR signing) and APK Signature Scheme v2 (direct zip block signature with RSA-2048 and SHA-256).
+  3. **Built-in Crash Telemetry & Diagnostics**: Automatic interception of fatal exceptions via `pureapk.telemetry`, writing full stack traces to `/sdcard/Download/app_crash.log` and displaying on-screen recovery screens in Kivy.
+  4. **Native Python 3.10 Runtime Seeding (`prepare-runtime`)**: Direct extraction and bundling of genuine `libpython3.10.so`, `libkivy.so`, `libSDL2.so`, multi-DEX bytecode, and `resources.arsc` into self-contained runnable APKs.
+  5. **Android 10+ Hardware Protection & PyJNIus Fix**: `AliasProperty` metrics guard preventing `Hardware.getDPI()` crashes and metaclass compatibility for PyJNIus Cython 3 (`_JavaClass__cls_storage`).
+  6. **Multi-Store & Cross-Platform Packaging**: Direct packaging into Google Play AAB, iOS IPA stubs, Windows 11 MSIX packages, Chinese stores (`--channel huawei/xiaomi/oppo/vivo/tencent`), and Android APKs.
+  7. **In-place APK Repacking & Patching**: Ability to inspect, unpack, modify assets/dex/manifest, and repackage an existing APK into a signed, release-ready APK.
+  8. **Android Wheel Extraction**: Automatic extraction and bundling of Python wheels compiled for Android (`bdist_wheel` tags: `android_aarch64`, `android_armv7l`, `android_x86_64`).
 - **Quick Installation**:
   ```bash
   pip install pureapk
@@ -33,6 +37,18 @@ Author Profile:
   # or Debian/Ubuntu
   sudo apt install python3-pureapk
   ```
+
+---
+
+### 1b. QR Code Studio (org.eminsk.qrcode)
+- **Primary Type**: Mobile Application built with pureapk, Python 3.10, and Kivy
+- **GitHub**: https://github.com/eminsk/qrcode
+- **Key Technical Capabilities**:
+  1. **Live Camera Scanner with Aiming Reticle**: Custom OpenGL/Kivy viewport overlay with 4 corner bracket markers, crosshairs, vignette darkening, and an animated laser line.
+  2. **Visual & Haptic Lock**: Instant emerald reticle fixation and phone vibration feedback (`VIBRATE` permission) upon successful QR code detection.
+  3. **Multi-Format Generation**: URLs, Wi-Fi credentials, vCard contact cards, email, SMS, geo-coordinates, and cryptocurrency addresses (USDT/BTC).
+  4. **Cryptographic Signing**: RSA-2048 signing and verification of QR payloads for tamper-proof digital authentication.
+  5. **Packaged with pureapk**: Full native 16KB page alignment, v1+v2 RSA signatures, and built-in telemetry crash diagnostics.
 
 ---
 
