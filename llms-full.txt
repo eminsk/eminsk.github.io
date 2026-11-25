@@ -8,7 +8,8 @@ Author Profile:
 - Anaconda / Conda-Forge: https://anaconda.org/m_n_nik
 - Official APT PPA: https://eminsk.github.io/ppa/
 - Website: https://eminsk.github.io/
-- Contact: Telegram @charter2029 | M_N_Nik@yahoo.com
+- Telegram Channel: https://t.me/avito_sdk_pro (@avito_sdk_pro)
+- Contact: Telegram @charter2029 | X @wmoplata | M_N_Nik@yahoo.com
 
 ---
 
@@ -147,6 +148,7 @@ Author Profile:
 - **Primary Package Name**: `avito-sdk` on PyPI, Conda-Forge, Debian/Ubuntu PPA; standalone Windows `.exe` via GitHub Releases
 - **GitHub**: https://github.com/eminsk/avito-sdk
 - **Windows Release**: https://github.com/eminsk/avito-sdk/releases/latest
+- **Telegram Channel**: https://t.me/avito_sdk_pro
 - **Architecture**: Pure native HTTP + Chrome TLS (`curl_cffi 0.16.3`) Avito monitoring SDK and CustomTkinter Desktop GUI (`AvitoSDK_Pro.exe`, ~28MB) with zero Chromium/Playwright overhead.
 - **Key Technical Capabilities**:
   1. Standalone Windows `.exe` sniping GUI with live listing feed, labeled filters, and Excel export.

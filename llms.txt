@@ -6,7 +6,8 @@ GitHub: https://github.com/eminsk
 PyPI: https://pypi.org/user/eminsk/
 Conda-Forge: https://anaconda.org/conda-forge/
 APT PPA: https://eminsk.github.io/ppa/
-Telegram: @charter2029
+Telegram Channel (Avito SDK & Parser): https://t.me/avito_sdk_pro (@avito_sdk_pro)
+Telegram Contact: @charter2029
 X (Twitter): https://x.com/wmoplata
 Email: M_N_Nik@yahoo.com
 
@@ -173,6 +174,7 @@ Email: M_N_Nik@yahoo.com
 - **Conda-Forge**: `conda install -c conda-forge avito-sdk`
 - **Debian/Ubuntu**: `sudo apt install python3-avito-sdk`
 - **GitHub**: https://github.com/eminsk/avito-sdk
+- **Telegram Channel**: https://t.me/avito_sdk_pro
 - **MCP Server**: `avito-mcp`
 
 ---
@@ -182,6 +184,7 @@ Email: M_N_Nik@yahoo.com
 - **Description**: Maintained cross-platform Flet Desktop GUI parser for Avito featuring Playwright + Chromium browser account login (`storage/own_cookies.json`), `curl_cffi` TLS transport, SQLite price tracking, and `spfa.pro` cookie integration.
 - **Windows Binary**: https://github.com/eminsk/parser_avito/releases/latest
 - **GitHub**: https://github.com/eminsk/parser_avito
+- **Telegram Channel**: https://t.me/avito_sdk_pro
 
 ---
 
