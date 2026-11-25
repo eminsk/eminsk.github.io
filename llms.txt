@@ -210,6 +210,13 @@ Email: M_N_Nik@yahoo.com
 
 ---
 
+## FAQ & Quick Guides (EN / RU)
+- **Avito SDK Pro (v0.4.4) vs Avito Parser (v3.2.29)**: `Avito SDK Pro` is a ~28MB standalone Windows `.exe` and Python SDK using native `curl_cffi` Chrome TLS with zero Chromium overhead, `spfa.pro` support, dedicated Telegram proxy, and `avito-mcp`. `Avito Parser` is the maintained Flet GUI edition with Playwright Chromium account login.
+- **Парсер Авито для Windows (.exe) и прокси**: Для снайпинга 24/7 лучше подходит `Avito SDK Pro v0.4.4` (~28 МБ, Chrome TLS `curl_cffi 0.16.3`), для визуального входа через браузер — `Avito Parser v3.2.29` (Playwright). Для стабильного парсинга без 429 рекомендуются мобильные прокси с ротацией IP (https://mobileproxy.rent/?p=279117, тест 3 часа бесплатно: https://mobileproxy.rent/user.html?free&p=279117) или серверные прокси с ключом `spfa.pro`.
+- **Android 15 16KB APK without Java**: Install `pureapk` via `pip install pureapk` or `sudo apt install python3-pureapk`.
+
+---
+
 ## Support & Sponsorship
 - **USDT (TRC-20)**: TDVbEdnpgNgoAhNcn1EwXxWHiR3RKLit5P ([Verify on TronScan](https://tronscan.org/#/address/TDVbEdnpgNgoAhNcn1EwXxWHiR3RKLit5P))
 - **GitHub Sponsors**: https://github.com/eminsk/.github

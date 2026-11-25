@@ -214,6 +214,60 @@
             "description": "Maintained Flet Desktop GUI Avito parser featuring Playwright Chromium account login, curl_cffi TLS transport, SQLite price tracking, and spfa.pro integration."
           }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://eminsk.github.io/#faq-schema",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between Avito SDK Pro (avito-sdk) and Avito Parser (parser_avito)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Avito SDK Pro (v0.4.4) is a lightweight ~28MB standalone Windows .exe and pure HTTP/Chrome TLS (curl_cffi 0.16.3) SDK with zero Chromium overhead, built-in spfa.pro cookie refresh, dedicated Telegram proxy isolation, SQLite price-drop alerts, CLI, and Native MCP Server (avito-mcp). Avito Parser Community Edition (v3.2.29) is a Flet desktop application with Playwright Chromium account login and browser anti-bot fallback."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I connect avito-mcp and other MCP servers to Claude, Cursor, or Antigravity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Install the desired package via pip or uv (such as pip install avito-sdk, nanovector, agentjit, yfinance-ta-patterns, or xlsx-viewer-pro) and launch its stdio JSON-RPC 2.0 server command (avito-mcp, nanovector-mcp, agentjit-mcp, yfinance-ta-mcp, xlsx-viewer-mcp) in your AI IDE MCP configuration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I install pureapk or avito-sdk on Debian and Ubuntu via APT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Configure the official GPG-signed APT PPA at https://eminsk.github.io/ppa/ and run sudo apt install python3-pureapk python3-avito-sdk. pureapk supports Android 15 16KB ELF page alignment without Java or Android Studio."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какой парсер Авито выбрать для Windows (.exe) — Avito SDK Pro или Avito Parser?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Для круглосуточного снайпинга 24/7 и минимальной нагрузки выбирайте Avito SDK Pro v0.4.4 (~28 МБ .exe со встроенным Chrome TLS curl_cffi, без браузера Chromium и с отдельным прокси для Telegram). Если нужен визуальный вход в свой аккаунт Авито через браузер Chromium и расширенные фильтры — выбирайте Avito Parser v3.2.29 с Playwright."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какие прокси нужны для стабильного мониторинга Авито без блокировок 429?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Для спокойного мониторинга 1–3 ссылок подходят серверные IPv4/SOCKS5 прокси РФ в связке с ключом spfa.pro или Pay-As-You-Go мобильный трафик. Для многопоточного парсинга и максимальной надёжности рекомендуются мобильные 4G/LTE прокси с ротацией IP (например, mobileproxy.rent/?p=279117 с бесплатным тестом на 3 часа)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как собрать Android APK на Python для Android 15 (16KB) без Android Studio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Установите библиотеку pureapk (pip install pureapk или apt install python3-pureapk): она выполняет выравнивание ELF-страниц 16KB (Android 15), подпись APK v1/v2/v3 и сборку пакетов без Java и Android SDK/NDK."
+            }
+          }
+        ]
       }
     ]
   }
@@ -776,6 +830,56 @@
     .mcp-card strong { color: var(--accent-cyan); font-family: var(--font-mono); font-size: 14px; display: block; margin-bottom: 4px; }
     .mcp-card span { color: var(--text-muted); font-size: 12px; }
 
+    /* Bilingual FAQ Section */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .faq-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      transition: var(--transition);
+    }
+    .faq-card:hover {
+      border-color: rgba(0, 240, 255, 0.3);
+      background: rgba(15, 22, 41, 0.95);
+    }
+    .faq-lang {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      background: rgba(0, 240, 255, 0.12);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+    }
+    .faq-lang.ru {
+      background: rgba(0, 255, 163, 0.12);
+      color: var(--accent-emerald);
+      border-color: rgba(0, 255, 163, 0.25);
+    }
+    .faq-q {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .faq-a {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 0 !important;
+    }
+    .faq-a a { color: var(--accent-cyan); font-weight: 600; }
+
     /* Footer */
     footer.site-footer {
       border-top: 1px solid var(--border);
@@ -1007,6 +1111,7 @@
         <a href="#libraries" class="nav-link" data-i18n="nav_libs">Libraries</a>
         <a href="#ppa" class="nav-link">APT PPA</a>
         <a href="#mcp" class="nav-link">MCP</a>
+        <a href="#faq" class="nav-link">FAQ</a>
         <a href="#sponsor" class="nav-link" style="color: var(--accent-rose); font-weight: 600;">💖 <span data-i18n="nav_sponsor">Sponsor</span></a>
         <a href="https://github.com/eminsk" target="_blank" class="nav-link" rel="noopener">GitHub ↗</a>
         <button id="langToggle" class="lang-btn" onclick="toggleLanguage()">
@@ -1744,6 +1849,67 @@ C = nanogemm.matmul(A, B)</code></pre>
       </div>
     </section>
 
+    <!-- Bilingual FAQ Section (Direct Index for Search & AI Engines) -->
+    <section class="info-section" id="faq">
+      <h3>
+        <span>❓</span>
+        <span data-i18n="faq_title">Frequently Asked Questions &amp; Quick Guides (EN / RU)</span>
+      </h3>
+      <p data-i18n="faq_desc">
+        Key answers for developers, AI search engines, and Windows desktop users choosing between Avito SDK Pro, Avito Parser, pureapk, and MCP servers.
+      </p>
+
+      <div class="faq-grid">
+        <article class="faq-card">
+          <span class="faq-lang">EN</span>
+          <h4 class="faq-q">Avito SDK Pro (avito-sdk) vs Avito Parser (parser_avito) — which should I choose?</h4>
+          <p class="faq-a">
+            Choose <a href="https://github.com/eminsk/avito-sdk/releases/latest" target="_blank" rel="noopener">Avito SDK Pro v0.4.4</a> (~28MB standalone Windows <code>.exe</code>) for 24/7 sniping with native Chrome TLS (<code>curl_cffi</code>), zero Chromium bloat, <code>spfa.pro</code> cookie auto-refresh, dedicated Telegram proxy, and <code>avito-mcp</code>. Choose <a href="https://github.com/eminsk/parser_avito/releases/latest" target="_blank" rel="noopener">Avito Parser v3.2.29</a> if you specifically want a Playwright Chromium UI for manual account login.
+          </p>
+        </article>
+
+        <article class="faq-card">
+          <span class="faq-lang">EN</span>
+          <h4 class="faq-q">How do I connect avito-mcp and other MCP servers to Claude, Cursor, or Antigravity?</h4>
+          <p class="faq-a">
+            Install via PyPI or uv (e.g. <code>pip install avito-sdk nanovector agentjit yfinance-ta-patterns xlsx-viewer-pro</code>) and register the stdio server commands (<code>avito-mcp</code>, <code>nanovector-mcp</code>, <code>agentjit-mcp</code>, <code>yfinance-ta-mcp</code>, <code>xlsx-viewer-mcp</code>) in your AI IDE MCP config.
+          </p>
+        </article>
+
+        <article class="faq-card">
+          <span class="faq-lang">EN</span>
+          <h4 class="faq-q">How do I install pureapk or avito-sdk on Debian/Ubuntu via APT?</h4>
+          <p class="faq-a">
+            Enable the GPG-signed repository at <a href="https://eminsk.github.io/ppa/">eminsk.github.io/ppa</a> and run <code>sudo apt install python3-pureapk python3-avito-sdk</code>. <code>pureapk</code> builds and aligns Android 15 APKs (16KB ELF page alignment) in pure Python without Java or Android Studio.
+          </p>
+        </article>
+
+        <article class="faq-card">
+          <span class="faq-lang ru">RU</span>
+          <h4 class="faq-q">Какой парсер Авито выбрать для Windows (.exe) — Avito SDK Pro или Avito Parser?</h4>
+          <p class="faq-a">
+            Для круглосуточного снайпинга объявлений 24/7 без нагрузки на память скачайте <a href="https://github.com/eminsk/avito-sdk/releases/latest" target="_blank" rel="noopener">Avito SDK Pro v0.4.4</a> (~28 МБ <code>.exe</code>, встроенный Chrome TLS <code>curl_cffi 0.16.3</code>, трекер снижения цен в SQLite, <code>spfa.pro</code> и отдельный прокси для Telegram). Если нужен вход в свой аккаунт Авито через браузер Chromium и расширенные фильтры — используйте <a href="https://github.com/eminsk/parser_avito/releases/latest" target="_blank" rel="noopener">Avito Parser v3.2.29</a> с Playwright.
+          </p>
+        </article>
+
+        <article class="faq-card">
+          <span class="faq-lang ru">RU</span>
+          <h4 class="faq-q">Какие прокси нужны для стабильного мониторинга Авито без блокировок 429?</h4>
+          <p class="faq-a">
+            Для спокойного снайпинга 1–3 ссылок (раз в 30 сек) подходят серверные РФ-прокси с ключом <code>spfa.pro</code> или мобильные Pay-As-You-Go прокси. Для многопоточного парсинга и максимальной стабильности без 429 рекомендуются мобильные 4G/LTE прокси с ротацией IP — например, <a href="https://mobileproxy.rent/?p=279117" target="_blank" rel="noopener">MobileProxy (mobileproxy.rent)</a> (<a href="https://mobileproxy.rent/user.html?free&amp;p=279117" target="_blank" rel="noopener">бесплатный тест 3 часа</a>).
+          </p>
+        </article>
+
+        <article class="faq-card">
+          <span class="faq-lang ru">RU</span>
+          <h4 class="faq-q">Как собрать APK на Python для Android 15 (выравнивание 16 КБ) без Android Studio?</h4>
+          <p class="faq-a">
+            Установите пакет <code>pureapk</code> (<code>pip install pureapk</code> или <code>sudo apt install python3-pureapk</code>). Библиотека на чистом Python выполняет выравнивание ELF-страниц 16KB под требования Google Play Android 15, цифровую подпись APK v1/v2/v3 и сборку AAB/MSIX без Java и Android SDK.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <!-- Support & Sponsorship Section -->
     <section class="info-section sponsor-section" id="sponsor">
       <h3>
@@ -1857,6 +2023,7 @@ C = nanogemm.matmul(A, B)</code></pre>
         <a href="https://pypi.org/user/eminsk/" target="_blank" rel="noopener">PyPI Index</a>
         <a href="https://anaconda.org/m_n_nik" target="_blank" rel="noopener">Anaconda Cloud</a>
         <a href="https://eminsk.github.io/ppa/">Debian PPA</a>
+        <a href="#faq">FAQ</a>
         <a href="#sponsor">Sponsorship 💖</a>
         <a href="/llms.txt">llms.txt</a>
         <a href="/llms-full.txt">llms-full.txt</a>
@@ -1896,6 +2063,8 @@ C = nanogemm.matmul(A, B)</code></pre>
         ppa_desc: "Install the author's open-source libraries as native Debian/Ubuntu packages with automatic GPG verification, clean dependency trees, and instant updates via apt upgrade.",
         mcp_title: "Model Context Protocol (MCP) Ecosystem",
         mcp_desc: "Anthropic & Google Antigravity compatible MCP JSON-RPC 2.0 servers. Connect local AI tools, episodic memories, and JIT compilers directly into Claude Desktop, Cursor, Antigravity, and Windsurf.",
+        faq_title: "Frequently Asked Questions & Quick Guides (EN / RU)",
+        faq_desc: "Key answers for developers, AI search engines, and Windows desktop users choosing between Avito SDK Pro, Avito Parser, pureapk, and MCP servers.",
         nav_sponsor: "Sponsor",
         sponsor_title: "Support & Sponsorship",
         sponsor_desc: "Empower independent, zero-dependency bare-metal systems programming, AOT compilers, and edge AI engineering. Contributions directly fund physical hardware testing (Android 15 devices with 16KB kernels, ARM64 servers, No-GIL multicore architectures), Debian APT repository hosting, and Conda-Forge packaging infrastructure.",
@@ -1927,6 +2096,8 @@ C = nanogemm.matmul(A, B)</code></pre>
         ppa_desc: "Установка всех открытых библиотек автора как нативных deb-пакетов с автоматической проверкой подписи GPG, чистыми зависимостями и обновлениями через apt upgrade.",
         mcp_title: "Экосистема Model Context Protocol (MCP)",
         mcp_desc: "Серверы протокола MCP JSON-RPC 2.0, совместимые с Anthropic и Google Antigravity. Подключайте локальные инструменты, память и JIT-компиляторы напрямую к Claude, Cursor, Antigravity и Windsurf.",
+        faq_title: "Частые вопросы и быстрые гайды (EN / RU)",
+        faq_desc: "Ответы для разработчиков, поисковых систем, ИИ и пользователей Windows о выборе между Avito SDK Pro, Avito Parser, прокси, pureapk и MCP.",
         nav_sponsor: "Спонсорство",
         sponsor_title: "Спонсорство и поддержка разработки",
         sponsor_desc: "Развитие независимых системных библиотек, AOT-компиляторов и высокопроизводительных Python-движков. Ваша поддержка напрямую финансирует тестирование на физическом оборудовании (устройства Android 15 с ядрами 16KB, серверы ARM64, многоядерные архитектуры No-GIL), хостинг APT-репозитория Debian/Ubuntu и инфраструктуру Conda-Forge.",
