@@ -268,6 +268,22 @@
               "@type": "Answer",
               "text": "Установите библиотеку pureapk (pip install pureapk или apt install python3-pureapk): она выполняет выравнивание ELF-страниц 16KB (Android 15), подпись APK v1/v2/v3 и сборку пакетов без Java и Android SDK/NDK."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Как подключить парсер Авито к ИИ (Claude, Cursor, Antigravity) через avito-mcp?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Установите avito-sdk (pip install avito-sdk) и укажите команду avito-mcp в конфигурации MCP вашей среды разработки. Нейросеть получит три готовых инструмента: avito_search для поиска и выгрузки в Excel, avito_get_item для разбора карточки продавца и характеристик, и avito_price_drops для анализа снижения цен в SQLite."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как настроить уведомления Авито в Telegram из РФ, если провайдер ограничивает доступ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "В Avito SDK Pro и Avito Parser предусмотрено отдельное поле для прокси Telegram: парсер продолжает опрашивать Авито через основной канал или мобильный 4G-модем, а алерты в бот или группу доставляются независимо. Свежие сборки и готовые инструкции публикуются в канале https://t.me/avito_sdk_pro."
+            }
           }
         ]
       }
@@ -1908,6 +1924,22 @@ C = nanogemm.matmul(A, B)</code></pre>
           <h4 class="faq-q">Как собрать APK на Python для Android 15 (выравнивание 16 КБ) без Android Studio?</h4>
           <p class="faq-a">
             Установите пакет <code>pureapk</code> (<code>pip install pureapk</code> или <code>sudo apt install python3-pureapk</code>). Библиотека на чистом Python выполняет выравнивание ELF-страниц 16KB под требования Google Play Android 15, цифровую подпись APK v1/v2/v3 и сборку AAB/MSIX без Java и Android SDK.
+          </p>
+        </article>
+
+        <article class="faq-card">
+          <span class="faq-lang ru">RU</span>
+          <h4 class="faq-q">Как подключить парсер Авито к ИИ (Claude, Cursor, Antigravity) через avito-mcp?</h4>
+          <p class="faq-a">
+            Установите <code>avito-sdk</code> (<code>pip install avito-sdk</code>) и пропишите команду запуска <code>avito-mcp</code> в настройках MCP. Агент сможет вызывать инструменты <code>avito_search</code> (с экспортом в Excel), <code>avito_get_item</code> (характеристики и продавец) и <code>avito_price_drops</code> по локальной SQLite-базе.
+          </p>
+        </article>
+
+        <article class="faq-card">
+          <span class="faq-lang ru">RU</span>
+          <h4 class="faq-q">Как получать уведомления Авито в Telegram-канал или группу и обойти блокировки из РФ?</h4>
+          <p class="faq-a">
+            Укажите токен бота от <code>@BotFather</code> и выберите отдельный прокси во вкладке Telegram — отправка алертов работает изолированно от прокси парсинга Авито. За свежими релизами <code>.exe</code> и помощью с настройкой заходите в канал <a href="https://t.me/avito_sdk_pro" target="_blank" rel="noopener">@avito_sdk_pro</a>.
           </p>
         </article>
       </div>
