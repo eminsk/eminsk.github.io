@@ -169,15 +169,15 @@ Author Profile:
 ---
 
 ### 9c. wb-sdk-pro (WB SDK Pro v2.2.0)
-- **Primary Package Name**: `wb-sdk-pro` on PyPI and Debian/Ubuntu APT (`python3-wb-sdk-pro`)
+- **Primary Package Name**: `wb-sdk-pro` on PyPI (`[gui]`, `[tls]`, `[dataframe]`, `[pandas]`, `[all]` extras) and Debian/Ubuntu APT (`python3-wb-sdk-pro` for core SDK, CLI & MCP)
 - **GitHub**: https://github.com/eminsk/wildberries_parser
-- **Runtime Compatibility**: Pure-Python core compatible with CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t), with thread-safe `BaseModel` and transport fallbacks (`httpx` / `requests`).
+- **Runtime Compatibility**: Pure-Python core (`wb_parser._model`, `curl_cffi` Chrome 124 TLS if `[tls]` installed → `httpx[http2]` → `requests` fallback) compatible with CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
 - **Key Technical Capabilities**:
-  1. Direct `wbbasket.ru` CDN `card.json` extraction (zero WBAAS blocks), dynamic `basket-01..65+` upstreams syncing, `.webp` media resolution, and `feedbacks1/2` routing (`root_id % 100 >= 50`).
+  1. Direct `wbbasket.ru` CDN `card.json` & `price-history.json` extraction (zero WBAAS blocks), dynamic `basket-01..65+` upstreams syncing, `.webp` media resolution, and `feedbacks1/2` routing (`root_id % 100 >= 50` with alternate-shard fallback).
   2. Live WB Wallet & WB Club discount calculation (`default-payment.json` + `settings-front.json` thresholds via `ROUND_FLOOR`).
-  3. Search Rank Tracker (`wb_rank`) with SQLite history deltas and styled `.xlsx` exports.
-  4. Smart Review Analyzer (`wb_smart_review`) with color filtering (`nm_id` vs `root_id`), instant zero-API offline pros/cons/size-fit extraction, and optional OpenAI-compatible LLM summarization.
-  5. 7-Tab CustomTkinter Desktop GUI (`wb-gui`), CLI (`wb-parser` / `wb-sdk`), and Native MCP Server (`wb-mcp`, 8 tools).
+  3. Search Rank Tracker (`wb_rank`) supporting `popular`/`pricedown`/`priceup`/`rate`/`newly` sorts, batch checking (`check_batch`), SQLite history deltas, and styled `.xlsx` exports.
+  4. Smart Review Analyzer (`wb_smart_review`) with color filtering (`nm_id` auto-falling back to `root_id`), instant zero-API offline pros/cons/size-fit/tags extraction, and optional OpenAI-compatible LLM summarization (`OpenAI`/`DeepSeek`/`ProxyAPI`/`Ollama`).
+  5. Sync & Async clients (`WBClient`, `AsyncWBClient`, `ParseWB` compat), SQLite price tracking, JSON/TOML `WBConfig`, isolated Telegram alerts (`TelegramNotifier`), multi-format export (`.xlsx`, `.csv`, `.json`, `.jsonl`, `DataFrame`), 11-command CLI (`wb-parser`/`wb-sdk`), optional 7-Tab CustomTkinter Desktop GUI (`uvx --from "wb-sdk-pro[gui]" wb-gui`), and Native MCP Server (`wb-mcp`, 8 tools, protocols `2025-11-25`/`2025-06-18`/`2024-11-05`).
 
 ---
 

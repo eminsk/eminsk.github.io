@@ -219,7 +219,7 @@
             "@type": "SoftwareApplication",
             "position": 11,
             "name": "WB SDK Pro (wb-sdk-pro)",
-            "alternateName": ["wb-sdk-pro", "wildberries_parser", "wb-mcp", "wb-gui", "WB Wallet & Rank SDK"],
+            "alternateName": ["wb-sdk-pro", "wildberries_parser", "wb-mcp", "wb-parser", "wb-sdk", "wb-gui", "WB Wallet & Rank SDK"],
             "softwareVersion": "2.2.0",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform (Linux, Windows, macOS)",
@@ -227,7 +227,7 @@
             "codeRepository": "https://github.com/eminsk/wildberries_parser",
             "downloadUrl": "https://pypi.org/project/wb-sdk-pro/",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-            "description": "All-in-One Wildberries Python SDK, 7-Tab Desktop GUI (wb-gui), CLI (wb-parser), and MCP Server (wb-mcp): CDN card extraction, dynamic basket-01..65+ sharding, feedbacks1/2 routing, live WB Wallet pricing, Search Rank Tracker, and Smart Review Analyzer. Pure Python supporting 3.8-3.16, PyPy, and No-GIL."
+            "description": "All-in-One Wildberries Sync/Async Python SDK, 11-command CLI (wb-parser / wb-sdk), 8-tool MCP Server (wb-mcp), and optional 7-Tab Desktop GUI ([gui] extra): CDN card extraction, dynamic basket-01..65+ sharding, feedbacks1/2 routing, live WB Wallet & WB Club pricing, Search Rank Tracker, Smart Review Analyzer, SQLite drops, Telegram alerts, and Excel/CSV/JSON export. Pure Python supporting 3.8-3.16, PyPy, and No-GIL."
           }
         ]
       },
@@ -1769,27 +1769,27 @@ C = nanogemm.matmul(A, B)</code></pre>
             <span class="repo-star-badge" data-repo="wildberries_parser">⭐ <span class="star-num">0</span></span>
           </div>
           <h3 class="card-title"><a href="https://github.com/eminsk/wildberries_parser" target="_blank" rel="noopener">wb-sdk-pro (WB SDK Pro)</a></h3>
-          <div class="card-subtitle">All-in-One Wildberries SDK, Wallet Pricing, Rank Tracker &amp; Smart Reviews</div>
-          <p class="card-desc" data-en="Unified 3-in-1 Wildberries Python SDK (merging wildberries_parser, wb_rank, and wb_smart_review), 7-Tab Desktop GUI (wb-gui), CLI (wb-parser), and Native MCP Server (wb-mcp). Pure-Python core supporting CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t)."
-             data-ru="Единая 3-в-1 экосистема для Wildberries на Python (объединение wildberries_parser, wb_rank и wb_smart_review): библиотека wb-sdk-pro, 7-вкладочный Desktop GUI (wb-gui), CLI и MCP-сервер (wb-mcp). Ядро на чистом Python с поддержкой CPython 3.8–3.16, PyPy и No-GIL (3.13t–3.16t).">
-            Unified 3-in-1 Wildberries Python SDK (merging wildberries_parser, wb_rank, and wb_smart_review), 7-Tab Desktop GUI (wb-gui), CLI (wb-parser), and Native MCP Server (wb-mcp). Pure-Python core supporting CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
+          <div class="card-subtitle">All-in-One Wildberries Sync/Async SDK, CLI, Wallet, Rank, Reviews &amp; MCP</div>
+          <p class="card-desc" data-en="Unified 3-in-1 Wildberries Python SDK (merging wildberries_parser + ParseWB, wb_rank, and wb_smart_review), 11-command CLI (wb-parser / wb-sdk), 8-tool MCP Server (wb-mcp), and optional 7-Tab Desktop GUI ([gui] extra). Pure-Python core supporting CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t)."
+             data-ru="Единая 3-в-1 экосистема для Wildberries (объединение wildberries_parser + ParseWB, wb_rank и wb_smart_review): Sync/Async SDK, CLI на 11 команд (wb-parser / wb-sdk), MCP-сервер (wb-mcp, 8 инструментов) и опциональный 7-вкладочный GUI ([gui]). Ядро на чистом Python для CPython 3.8–3.16, PyPy 3.8–3.12 и No-GIL (3.13t–3.16t).">
+            Unified 3-in-1 Wildberries Python SDK (merging wildberries_parser + ParseWB, wb_rank, and wb_smart_review), 11-command CLI (wb-parser / wb-sdk), 8-tool MCP Server (wb-mcp), and optional 7-Tab Desktop GUI ([gui] extra). Pure-Python core supporting CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
           </p>
           <ul class="feature-list">
-            <li data-en="Direct wbbasket.ru CDN extraction (basket-01..65+), .webp links &amp; feedbacks1/2 sharding"
-                data-ru="Прямой сбор с CDN wbbasket.ru (корзины 01..65+), фото .webp и маршрутизация feedbacks1/2">Direct wbbasket.ru CDN extraction (basket-01..65+), .webp links &amp; feedbacks1/2 sharding</li>
-            <li data-en="Live WB Wallet &amp; WB Club checkout price calculator via ROUND_FLOOR thresholds"
-                data-ru="Живой калькулятор цены по WB Кошельку и ВБ Клубу с учётом порогов wlt1DiscountDisplayMaxPrice">Live WB Wallet &amp; WB Club checkout price calculator via ROUND_FLOOR thresholds</li>
-            <li data-en="Search Rank Tracker (SQLite deltas, .xlsx) &amp; Smart Review Analyzer (offline + LLM)"
-                data-ru="Мониторинг позиций (Rank Tracker + Excel) и Умные отзывы (плюсы/минусы/размерность оффлайн и LLM)">Search Rank Tracker (SQLite deltas, .xlsx) &amp; Smart Review Analyzer (offline + LLM)</li>
-            <li data-en="7-Tab CustomTkinter Desktop GUI (wb-gui) &amp; 8-Tool Native MCP Server (wb-mcp)"
-                data-ru="7-вкладочный тёмный Desktop GUI (wb-gui) и нативный MCP-сервер (wb-mcp, 8 инструментов)">7-Tab CustomTkinter Desktop GUI (wb-gui) &amp; 8-Tool Native MCP Server (wb-mcp)</li>
+            <li data-en="Direct wbbasket.ru CDN cards (basket-01..65+), .webp links, price history &amp; feedbacks1/2 sharding"
+                data-ru="Прямой сбор с CDN wbbasket.ru (корзины 01..65+), фото .webp, история цен и feedbacks1/2">Direct wbbasket.ru CDN cards (basket-01..65+), .webp links, price history &amp; feedbacks1/2 sharding</li>
+            <li data-en="Live WB Wallet &amp; WB Club pricing (ROUND_FLOOR) + SQLite drops, Telegram &amp; Excel/CSV/JSON/DataFrame"
+                data-ru="Расчёт WB Кошелька и ВБ Клуба + трекер цен в SQLite, Telegram и экспорт в Excel/CSV/JSON">Live WB Wallet &amp; WB Club pricing (ROUND_FLOOR) + SQLite drops, Telegram &amp; Excel/CSV/JSON/DataFrame</li>
+            <li data-en="Search Rank Tracker (SQLite deltas, .xlsx) &amp; Smart Review Analyzer (offline + OpenAI/DeepSeek/Ollama)"
+                data-ru="Мониторинг позиций (Rank + Excel) и Умные отзывы (плюсы/минусы/размерность оффлайн и LLM)">Search Rank Tracker (SQLite deltas, .xlsx) &amp; Smart Review Analyzer (offline + OpenAI/DeepSeek/Ollama)</li>
+            <li data-en="Sync/Async clients (WBClient, AsyncWBClient), 11-command CLI, optional 7-Tab GUI ([gui]) &amp; 8-tool MCP"
+                data-ru="WBClient и AsyncWBClient, 11 команд CLI (wb-parser), опциональный 7-вкладочный GUI ([gui]) и MCP wb-mcp">Sync/Async clients (WBClient, AsyncWBClient), 11-command CLI, optional 7-Tab GUI ([gui]) &amp; 8-tool MCP</li>
           </ul>
 
           <div class="install-box">
             <div class="install-tabs">
               <button class="install-tab active" onclick="switchInstall(this, 'pip install wb-sdk-pro')">pip</button>
               <button class="install-tab" onclick="switchInstall(this, 'uv add wb-sdk-pro')">uv</button>
-              <button class="install-tab" onclick="switchInstall(this, 'uvx --from wb-sdk-pro wb-gui')">gui</button>
+              <button class="install-tab" onclick="switchInstall(this, 'uvx --from &quot;wb-sdk-pro[gui]&quot; wb-gui')">gui</button>
               <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-wb-sdk-pro')">apt</button>
             </div>
             <div class="install-cmd-wrap">
@@ -1983,7 +1983,7 @@ with WBClient() as wb:
           <span class="faq-lang ru">RU</span>
           <h4 class="faq-q">Что умеет WB SDK Pro (wb-sdk-pro) для Wildberries и какие версии Python поддерживаются?</h4>
           <p class="faq-a">
-            <a href="https://github.com/eminsk/wildberries_parser" target="_blank" rel="noopener">wb-sdk-pro v2.2.0</a> объединяет прямой CDN-парсер карточек (корзины <code>01..65+</code>, <code>feedbacks1/2</code>), калькулятор цены по WB Кошельку, трекер поисковых позиций (<code>wb_rank</code>), умный анализ отзывов (<code>wb_smart_review</code> оффлайн или LLM), 7-вкладочный GUI (<code>wb-gui</code>) и MCP-сервер (<code>wb-mcp</code>). Поддерживаются все версии Python 3.8–3.16, PyPy 3.8–3.12 и Free-Threaded No-GIL (3.13t–3.16t), установка через <code>uv add wb-sdk-pro</code> или <code>sudo apt install python3-wb-sdk-pro</code>.
+            <a href="https://github.com/eminsk/wildberries_parser" target="_blank" rel="noopener">wb-sdk-pro v2.2.0</a> объединяет прямой CDN-парсер карточек (корзины <code>01..65+</code>, <code>feedbacks1/2</code>), sync/async клиент (<code>WBClient</code>, <code>AsyncWBClient</code>, <code>ParseWB</code>), калькулятор WB Кошелька и ВБ Клуба, трекер позиций (<code>wb_rank</code>), умный анализ отзывов (<code>wb_smart_review</code> оффлайн или LLM), 11 команд CLI (<code>wb-parser</code> / <code>wb-sdk</code>), 8 инструментов MCP (<code>wb-mcp</code>) и опциональный 7-вкладочный GUI (<code>uvx --from "wb-sdk-pro[gui]" wb-gui</code>). Ядро работает на Python 3.8–3.16, PyPy 3.8–3.12 и No-GIL (3.13t–3.16t); ставится через <code>uv add wb-sdk-pro</code> или <code>sudo apt install python3-wb-sdk-pro</code> (для SDK/CLI/MCP).
           </p>
         </article>
 
