@@ -24,7 +24,7 @@ Email: M_N_Nik@yahoo.com
 - [xlsx-viewer-pro](#xlsx-viewer-pro): High-performance spreadsheet library with headless 129-function formula engine & SIMD math
 - [avito-sdk (Avito SDK Pro)](#avito-sdk): Standalone Windows Desktop GUI (~28MB .exe), Pure Chrome TLS (curl_cffi) Avito Scraping SDK & MCP Server (v0.4.4)
 - [parser_avito (Avito Parser Community Edition)](https://github.com/eminsk/parser_avito): Flet Desktop GUI Avito Parser with Playwright Chromium Login & Anti-Bot Fallback (v3.2.29)
-- [wb-sdk-pro (WB SDK Pro)](#wb-sdk-pro): All-in-One Wildberries Sync/Async SDK (Catalog + WB Wallet + Rank Tracker + Smart Reviews + 11-Command CLI + 8-Tool MCP Server + Optional 7-Tab GUI, v2.2.0, Python 3.8–3.16 / PyPy / No-GIL)
+- [wb-sdk-pro (WB SDK Pro)](#wb-sdk-pro): All-in-One Wildberries Sync/Async SDK (Catalog + WB Wallet + Rank Tracker + Smart Reviews + 11-Command CLI + 8-Tool MCP Server + Optional 7-Tab GUI, v2.2.1, Python 3.8–3.16 / PyPy / No-GIL)
 - [screenvideo](#screenvideo): High-performance screen recorder & screenshot suite with WASAPI audio & FASM native engine
 - [fasm-modern-sdk](#fasm-modern-sdk): Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG)
 - [ppa](#ppa-apt-repository): Official APT Repository for Debian/Ubuntu Linux
@@ -190,7 +190,7 @@ Email: M_N_Nik@yahoo.com
 ---
 
 ## 9c. wb-sdk-pro (WB SDK Pro)
-- **Version**: v2.2.0
+- **Version**: v2.2.1
 - **Description**: Unified 3-in-1 Wildberries Sync/Async Python SDK (`WBClient`, `AsyncWBClient`, drop-in `ParseWB` compat), 11-command CLI (`wb-parser` / `wb-sdk`), 8-tool MCP Server (`wb-mcp`), and optional 7-Tab CustomTkinter Desktop GUI (`[gui]` extra: `wb-gui`). Features direct `wbbasket.ru` CDN card & price-history extraction without WBAAS blocks, dynamic `basket-01..65+` sharding, `feedbacks1/2` routing (`root_id % 100 >= 50`), live WB Wallet & WB Club discount calculation (`ROUND_FLOOR`), SQLite price-drop tracking, Telegram notifications with proxy isolation, multi-format export (`.xlsx`, UTF-8 BOM `.csv`, `.json`, `.jsonl`, `pandas.DataFrame` via `[dataframe]`), search rank tracking (`wb_rank`), and offline/LLM Smart Review summarization (`wb_smart_review`). Supports CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
 - **PyPI**: `pip install wb-sdk-pro` or `uv add wb-sdk-pro` (optional extras: `[gui]`, `[tls]`, `[dataframe]`, `[pandas]`, `[all]`; ephemeral GUI: `uvx --from "wb-sdk-pro[gui]" wb-gui`)
 - **Debian/Ubuntu**: `sudo apt install python3-wb-sdk-pro` (core SDK, CLI & MCP server)

@@ -168,7 +168,7 @@ Author Profile:
 
 ---
 
-### 9c. wb-sdk-pro (WB SDK Pro v2.2.0)
+### 9c. wb-sdk-pro (WB SDK Pro v2.2.1)
 - **Primary Package Name**: `wb-sdk-pro` on PyPI (`[gui]`, `[tls]`, `[dataframe]`, `[pandas]`, `[all]` extras) and Debian/Ubuntu APT (`python3-wb-sdk-pro` for core SDK, CLI & MCP)
 - **GitHub**: https://github.com/eminsk/wildberries_parser
 - **Runtime Compatibility**: Pure-Python core (`wb_parser._model`, `curl_cffi` Chrome 124 TLS if `[tls]` installed → `httpx[http2]` → `requests` fallback) compatible with CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
