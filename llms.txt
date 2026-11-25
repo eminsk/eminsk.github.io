@@ -7,6 +7,7 @@ PyPI: https://pypi.org/user/eminsk/
 Conda-Forge: https://anaconda.org/conda-forge/
 APT PPA: https://eminsk.github.io/ppa/
 Telegram: @charter2029
+X (Twitter): https://x.com/wmoplata
 Email: M_N_Nik@yahoo.com
 
 ---
