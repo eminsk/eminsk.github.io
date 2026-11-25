@@ -6,8 +6,8 @@
   <title>M_N_Nik (@eminsk) — Open Source Systems, Compilers & AI Infrastructure</title>
   
   <!-- SEO & Machine Indexing Meta Tags -->
-  <meta name="description" content="High-performance open-source software by M_N_Nik (@eminsk): pureapk (Android APK engine with Android 15 16KB alignment), pyfasm (Python to x86_64 FASM AOT compiler), agentjit (AI agent JIT token optimizer), nanovector, nanogemm, yfinance-ta-patterns, xlsx-viewer-pro, Avito SDK Pro (avito-sdk v0.4.4 Desktop GUI & MCP), Avito Parser (Playwright edition v3.2.29), and Debian APT PPA.">
-  <meta name="keywords" content="pureapk, pyapk, android 15 16kb page alignment, python apk builder, sign apk python, сборка apk python без android studio, zipalign python, aab packager python, pyfasm, pyfasm64, python fasm compiler, python aot compiler x86_64, agentjit, ai agent trajectory jit, ai token optimizer, nanovector, vector search python pure c, nanogemm, fast gemm avx2 python, nanorecall, private desktop memory, yfinance-ta-patterns, candlestick patterns python, xlsx-viewer-pro, avito-sdk, avito sdk pro, avito parser windows exe, curl_cffi avito, python no-gil 3.13t, mcp server avito-mcp, debian ppa eminsk">
+  <meta name="description" content="High-performance open-source software by M_N_Nik (@eminsk): pureapk (Android APK engine with Android 15 16KB alignment), pyfasm (Python to x86_64 FASM AOT compiler), agentjit (AI agent JIT token optimizer), nanovector, nanogemm, yfinance-ta-patterns, xlsx-viewer-pro, Avito SDK Pro (avito-sdk v0.4.4 Desktop GUI & MCP), WB SDK Pro (wb-sdk-pro v2.2.0 Wildberries SDK, Wallet, Rank & MCP), Avito Parser (Playwright edition v3.2.29), and Debian APT PPA.">
+  <meta name="keywords" content="pureapk, pyapk, android 15 16kb page alignment, python apk builder, sign apk python, сборка apk python без android studio, zipalign python, aab packager python, pyfasm, pyfasm64, python fasm compiler, python aot compiler x86_64, agentjit, ai agent trajectory jit, ai token optimizer, nanovector, vector search python pure c, nanogemm, fast gemm avx2 python, nanorecall, private desktop memory, yfinance-ta-patterns, candlestick patterns python, xlsx-viewer-pro, avito-sdk, avito sdk pro, avito parser windows exe, curl_cffi avito, wb-sdk-pro, wb sdk pro, wildberries parser python, wb wallet, wb rank tracker, wb smart review, wb-mcp, python no-gil 3.13t, mcp server avito-mcp, debian ppa eminsk">
   <meta name="author" content="M_N_Nik (@eminsk)">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow">
@@ -214,6 +214,20 @@
             "downloadUrl": "https://github.com/eminsk/parser_avito/releases/latest",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
             "description": "Maintained Flet Desktop GUI Avito parser featuring Playwright Chromium account login, curl_cffi TLS transport, SQLite price tracking, and spfa.pro integration."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 11,
+            "name": "WB SDK Pro (wb-sdk-pro)",
+            "alternateName": ["wb-sdk-pro", "wildberries_parser", "wb-mcp", "wb-gui", "WB Wallet & Rank SDK"],
+            "softwareVersion": "2.2.0",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Cross-platform (Linux, Windows, macOS)",
+            "programmingLanguage": "Python",
+            "codeRepository": "https://github.com/eminsk/wildberries_parser",
+            "downloadUrl": "https://pypi.org/project/wb-sdk-pro/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "All-in-One Wildberries Python SDK, 7-Tab Desktop GUI (wb-gui), CLI (wb-parser), and MCP Server (wb-mcp): CDN card extraction, dynamic basket-01..65+ sharding, feedbacks1/2 routing, live WB Wallet pricing, Search Rank Tracker, and Smart Review Analyzer. Pure Python supporting 3.8-3.16, PyPy, and No-GIL."
           }
         ]
       },
@@ -231,18 +245,18 @@
           },
           {
             "@type": "Question",
-            "name": "How do I connect avito-mcp and other MCP servers to Claude, Cursor, or Antigravity?",
+            "name": "How do I connect avito-mcp, wb-mcp, and other MCP servers to Claude, Cursor, or Antigravity?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Install the desired package via pip or uv (such as pip install avito-sdk, nanovector, agentjit, yfinance-ta-patterns, or xlsx-viewer-pro) and launch its stdio JSON-RPC 2.0 server command (avito-mcp, nanovector-mcp, agentjit-mcp, yfinance-ta-mcp, xlsx-viewer-mcp) in your AI IDE MCP configuration."
+              "text": "Install the desired package via pip or uv (such as pip install avito-sdk wb-sdk-pro nanovector agentjit yfinance-ta-patterns xlsx-viewer-pro) and launch its stdio JSON-RPC 2.0 server command (avito-mcp, wb-mcp, nanovector-mcp, agentjit-mcp, yfinance-ta-mcp, xlsx-viewer-mcp) in your AI IDE MCP configuration."
             }
           },
           {
             "@type": "Question",
-            "name": "How do I install pureapk or avito-sdk on Debian and Ubuntu via APT?",
+            "name": "How do I install pureapk, avito-sdk, or wb-sdk-pro on Debian and Ubuntu via APT?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Configure the official GPG-signed APT PPA at https://eminsk.github.io/ppa/ and run sudo apt install python3-pureapk python3-avito-sdk. pureapk supports Android 15 16KB ELF page alignment without Java or Android Studio."
+              "text": "Configure the official GPG-signed APT PPA at https://eminsk.github.io/ppa/ and run sudo apt install python3-pureapk python3-avito-sdk python3-wb-sdk-pro. pureapk supports Android 15 16KB ELF page alignment without Java or Android Studio, while python3-wb-sdk-pro provides a pure-Python Wildberries SDK compatible with CPython 3.8-3.16, PyPy, and No-GIL."
             }
           },
           {
@@ -1202,11 +1216,11 @@
       <div class="search-input-wrap">
         <span class="search-icon">🔍</span>
         <input type="text" id="searchInput" class="search-input" 
-               placeholder="Search libraries (e.g. apk, fasm, agentjit, vector, mcp, avito, gemm)..." 
+               placeholder="Search libraries (e.g. apk, fasm, agentjit, vector, mcp, avito, wildberries, gemm)..." 
                oninput="filterLibraries()">
       </div>
       <div class="tag-chips">
-        <button class="tag-chip active" onclick="setFilter('all', this)">All (12)</button>
+        <button class="tag-chip active" onclick="setFilter('all', this)">All (13)</button>
         <button class="tag-chip" onclick="setFilter('ai', this)">AI & LLMs</button>
         <button class="tag-chip" onclick="setFilter('android', this)">Android & Packaging</button>
         <button class="tag-chip" onclick="setFilter('compiler', this)">Compilers & Systems</button>
@@ -1746,6 +1760,64 @@ C = nanogemm.matmul(A, B)</code></pre>
         </div>
       </article>
 
+      <!-- 9b. wb-sdk-pro -->
+      <article class="card" data-tags="finance mcp" id="wb-sdk-pro">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="cat-badge cat-finance">Data &amp; Desktop GUI</span>
+            <span class="card-version">v2.2.0 • PyPI • APT • Py 3.8–3.16 / PyPy / No-GIL • MCP</span>
+            <span class="repo-star-badge" data-repo="wildberries_parser">⭐ <span class="star-num">0</span></span>
+          </div>
+          <h3 class="card-title"><a href="https://github.com/eminsk/wildberries_parser" target="_blank" rel="noopener">wb-sdk-pro (WB SDK Pro)</a></h3>
+          <div class="card-subtitle">All-in-One Wildberries SDK, Wallet Pricing, Rank Tracker &amp; Smart Reviews</div>
+          <p class="card-desc" data-en="Unified 3-in-1 Wildberries Python SDK (merging wildberries_parser, wb_rank, and wb_smart_review), 7-Tab Desktop GUI (wb-gui), CLI (wb-parser), and Native MCP Server (wb-mcp). Pure-Python core supporting CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t)."
+             data-ru="Единая 3-в-1 экосистема для Wildberries на Python (объединение wildberries_parser, wb_rank и wb_smart_review): библиотека wb-sdk-pro, 7-вкладочный Desktop GUI (wb-gui), CLI и MCP-сервер (wb-mcp). Ядро на чистом Python с поддержкой CPython 3.8–3.16, PyPy и No-GIL (3.13t–3.16t).">
+            Unified 3-in-1 Wildberries Python SDK (merging wildberries_parser, wb_rank, and wb_smart_review), 7-Tab Desktop GUI (wb-gui), CLI (wb-parser), and Native MCP Server (wb-mcp). Pure-Python core supporting CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
+          </p>
+          <ul class="feature-list">
+            <li data-en="Direct wbbasket.ru CDN extraction (basket-01..65+), .webp links &amp; feedbacks1/2 sharding"
+                data-ru="Прямой сбор с CDN wbbasket.ru (корзины 01..65+), фото .webp и маршрутизация feedbacks1/2">Direct wbbasket.ru CDN extraction (basket-01..65+), .webp links &amp; feedbacks1/2 sharding</li>
+            <li data-en="Live WB Wallet &amp; WB Club checkout price calculator via ROUND_FLOOR thresholds"
+                data-ru="Живой калькулятор цены по WB Кошельку и ВБ Клубу с учётом порогов wlt1DiscountDisplayMaxPrice">Live WB Wallet &amp; WB Club checkout price calculator via ROUND_FLOOR thresholds</li>
+            <li data-en="Search Rank Tracker (SQLite deltas, .xlsx) &amp; Smart Review Analyzer (offline + LLM)"
+                data-ru="Мониторинг позиций (Rank Tracker + Excel) и Умные отзывы (плюсы/минусы/размерность оффлайн и LLM)">Search Rank Tracker (SQLite deltas, .xlsx) &amp; Smart Review Analyzer (offline + LLM)</li>
+            <li data-en="7-Tab CustomTkinter Desktop GUI (wb-gui) &amp; 8-Tool Native MCP Server (wb-mcp)"
+                data-ru="7-вкладочный тёмный Desktop GUI (wb-gui) и нативный MCP-сервер (wb-mcp, 8 инструментов)">7-Tab CustomTkinter Desktop GUI (wb-gui) &amp; 8-Tool Native MCP Server (wb-mcp)</li>
+          </ul>
+
+          <div class="install-box">
+            <div class="install-tabs">
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install wb-sdk-pro')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'uv add wb-sdk-pro')">uv</button>
+              <button class="install-tab" onclick="switchInstall(this, 'uvx --from wb-sdk-pro wb-gui')">gui</button>
+              <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-wb-sdk-pro')">apt</button>
+            </div>
+            <div class="install-cmd-wrap">
+              <code class="install-cmd">pip install wb-sdk-pro</code>
+              <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
+            </div>
+          </div>
+
+          <details class="code-details">
+            <summary data-i18n="show_code">Show Code Example</summary>
+            <pre><code>from wb_parser import WBClient
+
+with WBClient() as wb:
+    item = wb.get_product(141217830)
+    wallet = wb.wallet_price(item.price)
+    summary = wb.analyze_reviews(141217830, only_this_color=True, limit=100)
+    print(item.name, f"WB Wallet: {wallet.wallet_price} ₽", "Pros:", summary.top_pros)</code></pre>
+          </details>
+        </div>
+
+        <div class="card-footer">
+          <a href="https://github.com/eminsk/wildberries_parser" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://pypi.org/project/wb-sdk-pro/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
+          <a href="https://eminsk.github.io/ppa/" target="_blank" class="link-pill">Debian PPA</a>
+          <a href="https://github.com/eminsk/wildberries_parser/blob/master/README_RU.md" target="_blank" class="link-pill">Документация 📖</a>
+        </div>
+      </article>
+
       <!-- 10. screenvideo -->
       <article class="card" data-tags="system compiler mcp" id="screenvideo">
         <div class="card-top">
@@ -1862,6 +1934,10 @@ C = nanogemm.matmul(A, B)</code></pre>
           <span>Avito monitoring, price drops &amp; Chrome TLS parser</span>
         </div>
         <div class="mcp-card">
+          <strong>wb-mcp</strong>
+          <span>Wildberries cards, WB Wallet, rank &amp; smart reviews</span>
+        </div>
+        <div class="mcp-card">
           <strong>screenvideo-mcp</strong>
           <span>Screen capture & WASAPI loopback audio</span>
         </div>
@@ -1875,7 +1951,7 @@ C = nanogemm.matmul(A, B)</code></pre>
         <span data-i18n="faq_title">Frequently Asked Questions &amp; Quick Guides (EN / RU)</span>
       </h3>
       <p data-i18n="faq_desc">
-        Key answers for developers, AI search engines, and Windows desktop users choosing between Avito SDK Pro, Avito Parser, pureapk, and MCP servers.
+        Key answers for developers, AI search engines, and desktop users choosing between Avito SDK Pro, WB SDK Pro, Avito Parser, pureapk, and MCP servers.
       </p>
 
       <div class="faq-grid">
@@ -1889,17 +1965,25 @@ C = nanogemm.matmul(A, B)</code></pre>
 
         <article class="faq-card">
           <span class="faq-lang">EN</span>
-          <h4 class="faq-q">How do I connect avito-mcp and other MCP servers to Claude, Cursor, or Antigravity?</h4>
+          <h4 class="faq-q">How do I connect avito-mcp, wb-mcp, and other MCP servers to Claude, Cursor, or Antigravity?</h4>
           <p class="faq-a">
-            Install via PyPI or uv (e.g. <code>pip install avito-sdk nanovector agentjit yfinance-ta-patterns xlsx-viewer-pro</code>) and register the stdio server commands (<code>avito-mcp</code>, <code>nanovector-mcp</code>, <code>agentjit-mcp</code>, <code>yfinance-ta-mcp</code>, <code>xlsx-viewer-mcp</code>) in your AI IDE MCP config.
+            Install via PyPI or uv (e.g. <code>pip install avito-sdk wb-sdk-pro nanovector agentjit yfinance-ta-patterns xlsx-viewer-pro</code>) and register the stdio server commands (<code>avito-mcp</code>, <code>wb-mcp</code>, <code>nanovector-mcp</code>, <code>agentjit-mcp</code>, <code>yfinance-ta-mcp</code>, <code>xlsx-viewer-mcp</code>) in your AI IDE MCP config.
           </p>
         </article>
 
         <article class="faq-card">
           <span class="faq-lang">EN</span>
-          <h4 class="faq-q">How do I install pureapk or avito-sdk on Debian/Ubuntu via APT?</h4>
+          <h4 class="faq-q">How do I install pureapk, avito-sdk, or wb-sdk-pro on Debian/Ubuntu via APT?</h4>
           <p class="faq-a">
-            Enable the GPG-signed repository at <a href="https://eminsk.github.io/ppa/">eminsk.github.io/ppa</a> and run <code>sudo apt install python3-pureapk python3-avito-sdk</code>. <code>pureapk</code> builds and aligns Android 15 APKs (16KB ELF page alignment) in pure Python without Java or Android Studio.
+            Enable the GPG-signed repository at <a href="https://eminsk.github.io/ppa/">eminsk.github.io/ppa</a> and run <code>sudo apt install python3-pureapk python3-avito-sdk python3-wb-sdk-pro</code>. <code>pureapk</code> builds and aligns Android 15 APKs (16KB ELF page alignment) in pure Python, and <code>python3-wb-sdk-pro</code> runs cleanly across Python 3.8–3.16, PyPy, and No-GIL.
+          </p>
+        </article>
+
+        <article class="faq-card">
+          <span class="faq-lang ru">RU</span>
+          <h4 class="faq-q">Что умеет WB SDK Pro (wb-sdk-pro) для Wildberries и какие версии Python поддерживаются?</h4>
+          <p class="faq-a">
+            <a href="https://github.com/eminsk/wildberries_parser" target="_blank" rel="noopener">wb-sdk-pro v2.2.0</a> объединяет прямой CDN-парсер карточек (корзины <code>01..65+</code>, <code>feedbacks1/2</code>), калькулятор цены по WB Кошельку, трекер поисковых позиций (<code>wb_rank</code>), умный анализ отзывов (<code>wb_smart_review</code> оффлайн или LLM), 7-вкладочный GUI (<code>wb-gui</code>) и MCP-сервер (<code>wb-mcp</code>). Поддерживаются все версии Python 3.8–3.16, PyPy 3.8–3.12 и Free-Threaded No-GIL (3.13t–3.16t), установка через <code>uv add wb-sdk-pro</code> или <code>sudo apt install python3-wb-sdk-pro</code>.
           </p>
         </article>
 
@@ -2101,7 +2185,7 @@ C = nanogemm.matmul(A, B)</code></pre>
         mcp_title: "Model Context Protocol (MCP) Ecosystem",
         mcp_desc: "Anthropic & Google Antigravity compatible MCP JSON-RPC 2.0 servers. Connect local AI tools, episodic memories, and JIT compilers directly into Claude Desktop, Cursor, Antigravity, and Windsurf.",
         faq_title: "Frequently Asked Questions & Quick Guides (EN / RU)",
-        faq_desc: "Key answers for developers, AI search engines, and Windows desktop users choosing between Avito SDK Pro, Avito Parser, pureapk, and MCP servers.",
+        faq_desc: "Key answers for developers, AI search engines, and desktop users choosing between Avito SDK Pro, WB SDK Pro, Avito Parser, pureapk, and MCP servers.",
         nav_sponsor: "Sponsor",
         sponsor_title: "Support & Sponsorship",
         sponsor_desc: "Empower independent, zero-dependency bare-metal systems programming, AOT compilers, and edge AI engineering. Contributions directly fund physical hardware testing (Android 15 devices with 16KB kernels, ARM64 servers, No-GIL multicore architectures), Debian APT repository hosting, and Conda-Forge packaging infrastructure.",
@@ -2134,7 +2218,7 @@ C = nanogemm.matmul(A, B)</code></pre>
         mcp_title: "Экосистема Model Context Protocol (MCP)",
         mcp_desc: "Серверы протокола MCP JSON-RPC 2.0, совместимые с Anthropic и Google Antigravity. Подключайте локальные инструменты, память и JIT-компиляторы напрямую к Claude, Cursor, Antigravity и Windsurf.",
         faq_title: "Частые вопросы и быстрые гайды (EN / RU)",
-        faq_desc: "Ответы для разработчиков, поисковых систем, ИИ и пользователей Windows о выборе между Avito SDK Pro, Avito Parser, прокси, pureapk и MCP.",
+        faq_desc: "Ответы для разработчиков, поисковых систем, ИИ и пользователей о выборе между Avito SDK Pro, WB SDK Pro, Avito Parser, прокси, pureapk и MCP.",
         nav_sponsor: "Спонсорство",
         sponsor_title: "Спонсорство и поддержка разработки",
         sponsor_desc: "Развитие независимых системных библиотек, AOT-компиляторов и высокопроизводительных Python-движков. Ваша поддержка напрямую финансирует тестирование на физическом оборудовании (устройства Android 15 с ядрами 16KB, серверы ARM64, многоядерные архитектуры No-GIL), хостинг APT-репозитория Debian/Ubuntu и инфраструктуру Conda-Forge.",

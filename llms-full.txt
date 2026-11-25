@@ -168,6 +168,19 @@ Author Profile:
 
 ---
 
+### 9c. wb-sdk-pro (WB SDK Pro v2.2.0)
+- **Primary Package Name**: `wb-sdk-pro` on PyPI and Debian/Ubuntu APT (`python3-wb-sdk-pro`)
+- **GitHub**: https://github.com/eminsk/wildberries_parser
+- **Runtime Compatibility**: Pure-Python core compatible with CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t), with thread-safe `BaseModel` and transport fallbacks (`httpx` / `requests`).
+- **Key Technical Capabilities**:
+  1. Direct `wbbasket.ru` CDN `card.json` extraction (zero WBAAS blocks), dynamic `basket-01..65+` upstreams syncing, `.webp` media resolution, and `feedbacks1/2` routing (`root_id % 100 >= 50`).
+  2. Live WB Wallet & WB Club discount calculation (`default-payment.json` + `settings-front.json` thresholds via `ROUND_FLOOR`).
+  3. Search Rank Tracker (`wb_rank`) with SQLite history deltas and styled `.xlsx` exports.
+  4. Smart Review Analyzer (`wb_smart_review`) with color filtering (`nm_id` vs `root_id`), instant zero-API offline pros/cons/size-fit extraction, and optional OpenAI-compatible LLM summarization.
+  5. 7-Tab CustomTkinter Desktop GUI (`wb-gui`), CLI (`wb-parser` / `wb-sdk`), and Native MCP Server (`wb-mcp`, 8 tools).
+
+---
+
 ### 10. Official Debian/Ubuntu APT PPA Repository
 - **URL**: https://eminsk.github.io/ppa/
 - **Repository**: https://github.com/eminsk/ppa
@@ -180,3 +193,4 @@ Author Profile:
   - `python3-yfinance-ta-patterns`
   - `python3-xlsx-viewer-pro`
   - `python3-avito-sdk`
+  - `python3-wb-sdk-pro`

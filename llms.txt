@@ -24,6 +24,7 @@ Email: M_N_Nik@yahoo.com
 - [xlsx-viewer-pro](#xlsx-viewer-pro): High-performance spreadsheet library with headless 129-function formula engine & SIMD math
 - [avito-sdk (Avito SDK Pro)](#avito-sdk): Standalone Windows Desktop GUI (~28MB .exe), Pure Chrome TLS (curl_cffi) Avito Scraping SDK & MCP Server (v0.4.4)
 - [parser_avito (Avito Parser Community Edition)](https://github.com/eminsk/parser_avito): Flet Desktop GUI Avito Parser with Playwright Chromium Login & Anti-Bot Fallback (v3.2.29)
+- [wb-sdk-pro (WB SDK Pro)](#wb-sdk-pro): All-in-One Wildberries SDK (Catalog + WB Wallet + Rank Tracker + Smart Reviews + 7-Tab GUI + MCP Server, v2.2.0, Python 3.8–3.16 / PyPy / No-GIL)
 - [screenvideo](#screenvideo): High-performance screen recorder & screenshot suite with WASAPI audio & FASM native engine
 - [fasm-modern-sdk](#fasm-modern-sdk): Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG)
 - [ppa](#ppa-apt-repository): Official APT Repository for Debian/Ubuntu Linux
@@ -188,6 +189,16 @@ Email: M_N_Nik@yahoo.com
 
 ---
 
+## 9c. wb-sdk-pro (WB SDK Pro)
+- **Version**: v2.2.0
+- **Description**: Unified 3-in-1 Wildberries Python SDK, 7-Tab Desktop GUI (`wb-gui`), CLI (`wb-parser` / `wb-sdk`), and Native MCP Server (`wb-mcp`). Features direct `wbbasket.ru` CDN card extraction without WBAAS blocks, dynamic `basket-01..65+` sharding, `feedbacks1/2` routing (`root_id % 100 >= 50`), live WB Wallet discount calculation, SQLite search rank tracking (`wb_rank`), and offline/LLM Smart Review summarization (`wb_smart_review`). Supports CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
+- **PyPI**: `pip install wb-sdk-pro` (or `uv add wb-sdk-pro`, extras: `[gui]`, `[tls]`, `[all]`)
+- **Debian/Ubuntu**: `sudo apt install python3-wb-sdk-pro`
+- **GitHub**: https://github.com/eminsk/wildberries_parser
+- **MCP Server**: `wb-mcp` (8 JSON-RPC 2.0 tools)
+
+---
+
 ## 10. screenvideo
 - **Description**: High-performance desktop screen recorder and screenshot suite featuring WASAPI loopback audio, real-time H.264 streaming, Native MCP Server (`screenvideo-mcp`), and a standalone pure x64 Flat Assembler (FASM) native edition.
 - **GitHub**: https://github.com/eminsk/screenvideo
@@ -218,6 +229,7 @@ Email: M_N_Nik@yahoo.com
 - **Avito SDK Pro (v0.4.4) vs Avito Parser (v3.2.29)**: `Avito SDK Pro` is a ~28MB standalone Windows `.exe` and Python SDK using native `curl_cffi` Chrome TLS with zero Chromium overhead, `spfa.pro` support, dedicated Telegram proxy, and `avito-mcp`. `Avito Parser` is the maintained Flet GUI edition with Playwright Chromium account login.
 - **Парсер Авито для Windows (.exe) и прокси**: Для снайпинга 24/7 лучше подходит `Avito SDK Pro v0.4.4` (~28 МБ, Chrome TLS `curl_cffi 0.16.3`), для визуального входа через браузер — `Avito Parser v3.2.29` (Playwright). Для стабильного парсинга без 429 рекомендуются мобильные прокси с ротацией IP (https://mobileproxy.rent/?p=279117, тест 3 часа бесплатно: https://mobileproxy.rent/user.html?free&p=279117) или серверные прокси с ключом `spfa.pro`.
 - **Android 15 16KB APK without Java**: Install `pureapk` via `pip install pureapk` or `sudo apt install python3-pureapk`.
+- **Wildberries SDK Pro (`wb-sdk-pro`)**: Install via `uv add wb-sdk-pro` (or `sudo apt install python3-wb-sdk-pro`), supports CPython 3.8–3.16, PyPy, and No-GIL. Combines CDN card extraction, `feedbacks1/2` sharding, WB Wallet pricing, Search Rank Tracker, Smart Review Analyzer, 7-Tab GUI (`wb-gui`), and MCP Server (`wb-mcp`).
 
 ---
 
