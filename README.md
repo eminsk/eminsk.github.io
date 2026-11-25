@@ -18,7 +18,8 @@ Official Developer Portal & Open-Source Software Directory for [M_N_Nik (@eminsk
 6. **[nanorecall](https://github.com/eminsk/nanorecall)** — 100% Private, Zero-Cloud Desktop Memory & Screen Search Engine in <200KB.
 7. **[yfinance-ta-patterns](https://github.com/eminsk/yfinance-ta-patterns)** — Institutional candlestick pattern scanner (61 TA-Lib patterns), unbiased backtester, AI Confluence Scorer, Native MCP Server.
 8. **[xlsx-viewer-pro](https://github.com/eminsk/xlsx_vievers)** — Headless Excel formula engine (129+ functions), SSE2 SIMD, Chart Wizard, Native MCP Server.
-9. **[avito-sdk](https://github.com/eminsk/avito-sdk)** — High-performance headless Avito scraping & data extraction SDK with price drop tracking, Playwright cookies, Native MCP Server.
-10. **[screenvideo](https://github.com/eminsk/screenvideo)** — Desktop screen recorder with WASAPI loopback audio, real-time H.264 streaming, Native MCP Server, and pure x64 FASM native edition.
-11. **[fasm-modern-sdk](https://github.com/eminsk/fasm-modern-sdk)** — Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG).
-12. **[ppa](https://github.com/eminsk/ppa)** — Official APT Repository for Debian and Ubuntu Linux.
+9. **[avito-sdk (Avito SDK Pro v0.4.4)](https://github.com/eminsk/avito-sdk)** — Standalone Windows Desktop GUI (`~28MB .exe`) & pure HTTP/Chrome TLS (`curl_cffi`) Avito scraping SDK with price-drop tracking, `spfa.pro`, Telegram proxy isolation, CLI, and Native MCP Server (`avito-mcp`).
+10. **[parser_avito (Avito Parser v3.2.29)](https://github.com/eminsk/parser_avito)** — Maintained Flet Desktop GUI parser for Avito featuring Playwright Chromium browser login and anti-bot fallback.
+11. **[screenvideo](https://github.com/eminsk/screenvideo)** — Desktop screen recorder with WASAPI loopback audio, real-time H.264 streaming, Native MCP Server, and pure x64 FASM native edition.
+12. **[fasm-modern-sdk](https://github.com/eminsk/fasm-modern-sdk)** — Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG).
+13. **[ppa](https://github.com/eminsk/ppa)** — Official APT Repository for Debian and Ubuntu Linux.

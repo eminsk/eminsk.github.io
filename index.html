@@ -6,8 +6,8 @@
   <title>M_N_Nik (@eminsk) — Open Source Systems, Compilers & AI Infrastructure</title>
   
   <!-- SEO & Machine Indexing Meta Tags -->
-  <meta name="description" content="High-performance open-source software by M_N_Nik (@eminsk): pureapk (Android APK engine with Android 15 16KB alignment), pyfasm (Python to x86_64 FASM AOT compiler), agentjit (AI agent JIT token optimizer), nanovector, nanogemm, yfinance-ta-patterns, xlsx-viewer-pro, avito-sdk, and Debian APT PPA.">
-  <meta name="keywords" content="pureapk, pyapk, android 15 16kb page alignment, python apk builder, sign apk python, сборка apk python без android studio, zipalign python, aab packager python, pyfasm, pyfasm64, python fasm compiler, python aot compiler x86_64, agentjit, ai agent trajectory jit, ai token optimizer, nanovector, vector search python pure c, nanogemm, fast gemm avx2 python, nanorecall, private desktop memory, yfinance-ta-patterns, candlestick patterns python, xlsx-viewer-pro, avito-sdk, python no-gil 3.13t, mcp server, debian ppa eminsk">
+  <meta name="description" content="High-performance open-source software by M_N_Nik (@eminsk): pureapk (Android APK engine with Android 15 16KB alignment), pyfasm (Python to x86_64 FASM AOT compiler), agentjit (AI agent JIT token optimizer), nanovector, nanogemm, yfinance-ta-patterns, xlsx-viewer-pro, Avito SDK Pro (avito-sdk v0.4.4 Desktop GUI & MCP), Avito Parser (Playwright edition v3.2.29), and Debian APT PPA.">
+  <meta name="keywords" content="pureapk, pyapk, android 15 16kb page alignment, python apk builder, sign apk python, сборка apk python без android studio, zipalign python, aab packager python, pyfasm, pyfasm64, python fasm compiler, python aot compiler x86_64, agentjit, ai agent trajectory jit, ai token optimizer, nanovector, vector search python pure c, nanogemm, fast gemm avx2 python, nanorecall, private desktop memory, yfinance-ta-patterns, candlestick patterns python, xlsx-viewer-pro, avito-sdk, avito sdk pro, avito parser windows exe, curl_cffi avito, python no-gil 3.13t, mcp server avito-mcp, debian ppa eminsk">
   <meta name="author" content="M_N_Nik (@eminsk)">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow">
@@ -188,15 +188,30 @@
           {
             "@type": "SoftwareApplication",
             "position": 9,
-            "name": "avito-sdk",
-            "alternateName": ["avito-mcp", "Avito API Python SDK"],
+            "name": "Avito SDK Pro (avito-sdk)",
+            "alternateName": ["avito-sdk", "avito-mcp", "Avito SDK Pro", "Avito API Python SDK"],
+            "softwareVersion": "0.4.4",
             "applicationCategory": "DeveloperApplication",
-            "operatingSystem": "Cross-platform",
+            "operatingSystem": "Cross-platform (Windows .exe, Linux, macOS)",
             "programmingLanguage": "Python",
             "codeRepository": "https://github.com/eminsk/avito-sdk",
-            "downloadUrl": "https://pypi.org/project/avito-sdk/",
+            "downloadUrl": "https://github.com/eminsk/avito-sdk/releases/latest",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-            "description": "High-performance headless Avito scraping SDK with real-time price drops, Playwright cookies, and Native MCP Server."
+            "description": "Standalone Windows Desktop GUI (~28MB .exe) and pure HTTP/Chrome TLS (curl_cffi) Avito scraping SDK with zero Chromium overhead, real-time price-drop tracking, spfa.pro cookie refresh, rotating 4G mobile proxy support, Telegram proxy isolation, and Native MCP Server (avito-mcp)."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 10,
+            "name": "Avito Parser Community Edition",
+            "alternateName": ["parser_avito", "AvitoParser"],
+            "softwareVersion": "3.2.29",
+            "applicationCategory": "DesktopApplication",
+            "operatingSystem": "Cross-platform (Windows .exe, Linux, macOS)",
+            "programmingLanguage": "Python",
+            "codeRepository": "https://github.com/eminsk/parser_avito",
+            "downloadUrl": "https://github.com/eminsk/parser_avito/releases/latest",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "Maintained Flet Desktop GUI Avito parser featuring Playwright Chromium account login, curl_cffi TLS transport, SQLite price tracking, and spfa.pro integration."
           }
         ]
       }
@@ -1549,35 +1564,36 @@ C = nanogemm.matmul(A, B)</code></pre>
       <article class="card" data-tags="finance mcp" id="avito-sdk">
         <div class="card-top">
           <div class="card-meta">
-            <span class="cat-badge cat-finance">Data & Finance</span>
-            <span class="card-version">PyPI • Conda • APT • MCP</span>
+            <span class="cat-badge cat-finance">Data &amp; Desktop GUI</span>
+            <span class="card-version">v0.4.4 • Win .exe • PyPI • Conda • MCP</span>
             <span class="repo-star-badge" data-repo="avito-sdk">⭐ <span class="star-num">4</span></span>
           </div>
-          <h3 class="card-title"><a href="https://github.com/eminsk/avito-sdk" target="_blank" rel="noopener">avito-sdk</a></h3>
-          <div class="card-subtitle">Async Avito Data SDK & Price Drop Tracker</div>
-          <p class="card-desc" data-en="High-performance headless Avito scraping and data extraction SDK with real-time price drop tracking, full item parameter extraction, Playwright cookie refresh, and Native MCP Server."
-             data-ru="Высокопроизводительный асинхронный SDK для сбора данных Avito с отслеживанием снижения цен в реальном времени, извлечением параметров объявлений, Playwright и MCP сервером.">
-            High-performance headless Avito scraping and data extraction SDK with real-time price drop tracking, full item parameter extraction, Playwright cookie refresh, and Native MCP Server.
+          <h3 class="card-title"><a href="https://github.com/eminsk/avito-sdk" target="_blank" rel="noopener">avito-sdk (Avito SDK Pro)</a></h3>
+          <div class="card-subtitle">Windows Sniper GUI (.exe), Pure Chrome TLS SDK &amp; MCP</div>
+          <p class="card-desc" data-en="Standalone Windows Desktop GUI (~28MB .exe) and pure HTTP/Chrome TLS (curl_cffi) Avito scraping SDK with zero Chromium overhead, real-time price-drop sniping, spfa.pro cookie refresh, rotating 4G mobile proxy support, and Native MCP Server (also maintained as Playwright-based Avito Parser v3.2.29)."
+             data-ru="Автономное Windows-приложение (~28 МБ .exe) и быстрый HTTP/Chrome TLS SDK (curl_cffi) для мониторинга и снайпинга Avito без тяжёлого браузера: отслеживание снижения цен, spfa.pro, мобильные прокси, Telegram-изоляция и MCP-сервер (плюс отдельный релиз Avito Parser v3.2.29 с Playwright).">
+            Standalone Windows Desktop GUI (~28MB .exe) and pure HTTP/Chrome TLS (curl_cffi) Avito scraping SDK with zero Chromium overhead, real-time price-drop sniping, spfa.pro cookie refresh, rotating 4G mobile proxy support, and Native MCP Server (also maintained as Playwright-based Avito Parser v3.2.29).
           </p>
           <ul class="feature-list">
-            <li data-en="Real-time price drop tracking and historical price delta"
-                data-ru="Отслеживание падения цен и сохранение истории изменения">Real-time price drop tracking and historical price delta</li>
-            <li data-en="Complete parameter extraction: dimensions, tech specs, sellers"
-                data-ru="Глубокое извлечение характеристик, параметров и профилей продавцов">Complete parameter extraction: dimensions, tech specs, sellers</li>
-            <li data-en="Headless Playwright session refresh & TLS anti-bot handling"
-                data-ru="Обновление кук Playwright и защита от блокировок">Headless Playwright session refresh & TLS anti-bot handling</li>
-            <li data-en="Native MCP Server (avito-mcp)"
-                data-ru="Нативный MCP сервер (avito-mcp)">Native MCP Server (avito-mcp)</li>
+            <li data-en="Standalone Windows Desktop GUI (AvitoSDK_Pro.exe, ~28MB) with live feed &amp; Excel export"
+                data-ru="Готовый Windows GUI (AvitoSDK_Pro.exe, ~28 МБ) с живой лентой и экспортом в Excel">Standalone Windows Desktop GUI (AvitoSDK_Pro.exe, ~28MB) with live feed &amp; Excel export</li>
+            <li data-en="Bundled Chrome TLS (curl_cffi), spfa.pro cookie refresh, &amp; rotating proxy failover"
+                data-ru="Встроенный Chrome TLS (curl_cffi), автообновление spfa.pro и ротация мобильных прокси">Bundled Chrome TLS (curl_cffi), spfa.pro cookie refresh, &amp; rotating proxy failover</li>
+            <li data-en="Real-time SQLite price-drop tracking, deep item specs, &amp; dedicated Telegram proxy"
+                data-ru="Трекер снижения цен в SQLite, глубокий парсинг характеристик и отдельный прокси для Telegram">Real-time SQLite price-drop tracking, deep item specs, &amp; dedicated Telegram proxy</li>
+            <li data-en="Native MCP Server (avito-mcp) &amp; CLI (avito-sdk / avito-gui)"
+                data-ru="Нативный MCP-сервер (avito-mcp) и консольный интерфейс (avito-sdk / avito-gui)">Native MCP Server (avito-mcp) &amp; CLI (avito-sdk / avito-gui)</li>
           </ul>
 
           <div class="install-box">
             <div class="install-tabs">
-              <button class="install-tab active" onclick="switchInstall(this, 'pip install avito-sdk')">pip</button>
+              <button class="install-tab active" onclick="switchInstall(this, 'pip install &quot;avito-sdk[gui]&quot;')">pip</button>
+              <button class="install-tab" onclick="switchInstall(this, 'uv add &quot;avito-sdk[gui]&quot;')">uv</button>
               <button class="install-tab" onclick="switchInstall(this, 'conda install -c conda-forge avito-sdk')">conda</button>
               <button class="install-tab" onclick="switchInstall(this, 'sudo apt install python3-avito-sdk')">apt</button>
             </div>
             <div class="install-cmd-wrap">
-              <code class="install-cmd">pip install avito-sdk</code>
+              <code class="install-cmd">pip install "avito-sdk[gui]"</code>
               <button class="copy-btn" onclick="copyCmd(this)" title="Copy Command">📋</button>
             </div>
           </div>
@@ -1585,8 +1601,10 @@ C = nanogemm.matmul(A, B)</code></pre>
 
         <div class="card-footer">
           <a href="https://github.com/eminsk/avito-sdk" target="_blank" class="link-pill" rel="noopener">GitHub</a>
+          <a href="https://github.com/eminsk/avito-sdk/releases/latest" target="_blank" class="link-pill" rel="noopener">Windows .exe</a>
           <a href="https://pypi.org/project/avito-sdk/" target="_blank" class="link-pill" rel="noopener">PyPI</a>
           <a href="https://anaconda.org/conda-forge/avito-sdk" target="_blank" class="link-pill" rel="noopener">Conda-Forge</a>
+          <a href="https://github.com/eminsk/parser_avito/releases/latest" target="_blank" class="link-pill" rel="noopener">Playwright Ed.</a>
         </div>
       </article>
 
@@ -1703,7 +1721,7 @@ C = nanogemm.matmul(A, B)</code></pre>
         </div>
         <div class="mcp-card">
           <strong>avito-mcp</strong>
-          <span>Avito price drops & ad parameter parser</span>
+          <span>Avito monitoring, price drops &amp; Chrome TLS parser</span>
         </div>
         <div class="mcp-card">
           <strong>screenvideo-mcp</strong>

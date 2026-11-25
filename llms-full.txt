@@ -143,16 +143,26 @@ Author Profile:
 
 ---
 
-### 9. avito-sdk
-- **Primary Package Name**: `avito-sdk` on PyPI, Conda-Forge, Debian/Ubuntu PPA
+### 9. avito-sdk (Avito SDK Pro v0.4.4)
+- **Primary Package Name**: `avito-sdk` on PyPI, Conda-Forge, Debian/Ubuntu PPA; standalone Windows `.exe` via GitHub Releases
 - **GitHub**: https://github.com/eminsk/avito-sdk
-- **Architecture**: Asynchronous Avito API & web scraping SDK with TLS fingerprint spoofing.
+- **Windows Release**: https://github.com/eminsk/avito-sdk/releases/latest
+- **Architecture**: Pure native HTTP + Chrome TLS (`curl_cffi 0.16.3`) Avito monitoring SDK and CustomTkinter Desktop GUI (`AvitoSDK_Pro.exe`, ~28MB) with zero Chromium/Playwright overhead.
 - **Key Technical Capabilities**:
-  1. Real-time price drop detection with historical delta tracking.
-  2. Deep extraction of item parameters, seller reputation, and geo coordinates.
-  3. Headless Playwright cookie refresh and session maintenance.
-  4. Integrated Telegram and VK bot notification integrations.
-  5. Native MCP Server `avito-mcp`.
+  1. Standalone Windows `.exe` sniping GUI with live listing feed, labeled filters, and Excel export.
+  2. Real-time SQLite price-drop detection (`seen_prices` / `price_drop`) and deep item parameter extraction.
+  3. Built-in `curl_cffi` Chrome TLS impersonation, optional `spfa.pro` API cookie refresh, and rotating 4G mobile proxy support (`mobileproxy.rent`).
+  4. Dedicated Telegram proxy isolation, VK notifications, CLI (`avito-sdk`, `avito-gui`), and Native MCP Server (`avito-mcp`).
+
+---
+
+### 9b. parser_avito (Avito Parser Community Edition v3.2.29)
+- **GitHub**: https://github.com/eminsk/parser_avito
+- **Windows Release**: https://github.com/eminsk/parser_avito/releases/latest
+- **Architecture**: Flet Desktop GUI Avito parser combining `curl_cffi` HTTP transport with Playwright Chromium browser automation.
+- **Key Technical Capabilities**:
+  1. Interactive Playwright browser account login saving `storage/own_cookies.json` alongside Playwright anti-bot fallback.
+  2. Deep parameter parsing, geo filtering, seller blacklist, phone parsing via `spfa.pro`, and SQLite price-change alerts.
 
 ---
 

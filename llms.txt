@@ -20,7 +20,8 @@ Email: M_N_Nik@yahoo.com
 - [nanorecall](#nanorecall): 100% Private, Zero-Cloud Desktop Memory & Screen Search Engine in <200KB
 - [yfinance-ta-patterns](#yfinance-ta-patterns): Institutional-grade Candlestick & Chart Pattern Scanner with AI Confluence Scoring & Backtesting
 - [xlsx-viewer-pro](#xlsx-viewer-pro): High-performance spreadsheet library with headless 129-function formula engine & SIMD math
-- [avito-sdk](#avito-sdk): High-performance headless Avito scraping & data extraction SDK with price drop tracking
+- [avito-sdk (Avito SDK Pro)](#avito-sdk): Standalone Windows Desktop GUI (~28MB .exe), Pure Chrome TLS (curl_cffi) Avito Scraping SDK & MCP Server (v0.4.4)
+- [parser_avito (Avito Parser Community Edition)](https://github.com/eminsk/parser_avito): Flet Desktop GUI Avito Parser with Playwright Chromium Login & Anti-Bot Fallback (v3.2.29)
 - [screenvideo](#screenvideo): High-performance screen recorder & screenshot suite with WASAPI audio & FASM native engine
 - [fasm-modern-sdk](#fasm-modern-sdk): Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG)
 - [ppa](#ppa-apt-repository): Official APT Repository for Debian/Ubuntu Linux
@@ -31,7 +32,7 @@ Email: M_N_Nik@yahoo.com
 - **Description**: Zero-dependency pure Python engine for building, packaging, modifying, and signing Android APKs without Java, Android Studio, or the Android SDK/NDK. Features native Android 15 16KB ELF page alignment (`align_zip_entry` with tag `0xd935`), APK v1/v2/v3 signatures, built-in crash telemetry & diagnostics (`pureapk.telemetry`), native Python 3.10 runtime seeding (`prepare-runtime`), in-place APK modification, multi-store packaging (APK, Google Play AAB, iOS IPA stub, Windows 11 MSIX), and Android wheel extraction.
 - **PyPI**: `pip install pureapk` (v1.14.0)
 - **Debian/Ubuntu**: `sudo apt install python3-pureapk`
-- **Documentation**: https://eminsk.github.io/pyapk/ | https://github.com/eminsk/pyapk#readme
+- **Documentation**: https://github.com/eminsk/pyapk#readme
 - **GitHub**: https://github.com/eminsk/pyapk
 - **Usage**:
   ```python
@@ -163,13 +164,23 @@ Email: M_N_Nik@yahoo.com
 
 ---
 
-## 9. avito-sdk
-- **Description**: High-performance headless Avito scraping & data extraction SDK with real-time price drop tracking, full item parameter extraction, Playwright cookie refresh, Telegram/VK notification bots, and Native MCP Server (`avito-mcp`).
-- **PyPI**: `pip install avito-sdk`
+## 9. avito-sdk (Avito SDK Pro)
+- **Version**: v0.4.4
+- **Description**: Standalone Windows Desktop GUI (`AvitoSDK_Pro.exe`, ~28MB) and pure HTTP/Chrome TLS (`curl_cffi 0.16.3`) Avito scraping & data extraction SDK with zero Chromium/Playwright overhead. Includes real-time SQLite price-drop tracking (`seen_prices`), full item parameter extraction, `spfa.pro` API cookie refresh, rotating 4G mobile proxy failover (`mobileproxy.rent`), dedicated Telegram proxy isolation, CLI (`avito-sdk`, `avito-gui`), and Native MCP Server (`avito-mcp`).
+- **Windows Binary**: https://github.com/eminsk/avito-sdk/releases/latest
+- **PyPI**: `pip install "avito-sdk[gui]"` (or `uv add "avito-sdk[gui]"`)
 - **Conda-Forge**: `conda install -c conda-forge avito-sdk`
 - **Debian/Ubuntu**: `sudo apt install python3-avito-sdk`
 - **GitHub**: https://github.com/eminsk/avito-sdk
 - **MCP Server**: `avito-mcp`
+
+---
+
+## 9b. parser_avito (Avito Parser Community Edition)
+- **Version**: v3.2.29
+- **Description**: Maintained cross-platform Flet Desktop GUI parser for Avito featuring Playwright + Chromium browser account login (`storage/own_cookies.json`), `curl_cffi` TLS transport, SQLite price tracking, and `spfa.pro` cookie integration.
+- **Windows Binary**: https://github.com/eminsk/parser_avito/releases/latest
+- **GitHub**: https://github.com/eminsk/parser_avito
 
 ---
 
