@@ -22,10 +22,10 @@ Email: M_N_Nik@yahoo.com
 - [nanorecall](#nanorecall): 100% Private, Zero-Cloud Desktop Memory & Screen Search Engine in <200KB
 - [yfinance-ta-patterns](#yfinance-ta-patterns): Institutional-grade Candlestick & Chart Pattern Scanner with AI Confluence Scoring & Backtesting
 - [xlsx-viewer-pro](#xlsx-viewer-pro): High-performance spreadsheet library with headless 129-function formula engine & SIMD math
-- [avito-sdk (Avito SDK Pro)](#avito-sdk): Standalone Windows Desktop GUI (~28MB .exe), Pure Chrome TLS (curl_cffi) Avito Scraping SDK & MCP Server (v0.4.4)
+- [avito-sdk (Avito SDK Pro)](#avito-sdk): Standalone Windows Desktop GUI (~28MB .exe), Pure Chrome TLS (curl_cffi) Avito Scraping SDK & MCP Server (v0.4.6)
 - [parser_avito (Avito Parser Community Edition)](https://github.com/eminsk/parser_avito): Flet Desktop GUI Avito Parser with Playwright Chromium Login & Anti-Bot Fallback (v3.2.29)
-- [wb-sdk-pro (WB SDK Pro)](#wb-sdk-pro): All-in-One Wildberries Sync/Async SDK + Interactive Telegram Bot (`WBTelegramBot`) + Standalone Windows `.exe` GUI (`WBSDK_Pro.exe`) + WB Wallet + Rank Tracker + Smart Reviews + Free/Paid AI (`g4f`/Ollama/OpenAI/DeepSeek) + 13 CLI + 9 MCP Tools (v2.5.0, Python 3.8–3.16 / PyPy / No-GIL)
-- [ozon-sdk-pro (Ozon SDK Pro)](#ozon-sdk-pro): All-in-One Ozon Sync/Async SDK + Interactive Telegram Bot (`OzonTelegramBot`) + Standalone Windows `.exe` GUI (`OzonSDK_Pro.exe`) + Composer API + Seller INN + Ozon Card + Rank Tracker + Smart Reviews + Free/Paid AI (`g4f`/Ollama/OpenAI/DeepSeek) + 14 CLI + 9 MCP Tools (v1.2.0, Python 3.8–3.16 / PyPy / No-GIL)
+- [wb-sdk-pro (WB SDK Pro)](#wb-sdk-pro): All-in-One Wildberries Sync/Async SDK + Interactive Telegram Bot (`WBTelegramBot`) + Standalone Windows `.exe` GUI (`WBSDK_Pro.exe`) + WB Wallet + Rank Tracker + Smart Reviews + Free/Paid AI (`g4f`/Ollama/OpenAI/DeepSeek) + 13 CLI + 9 MCP Tools (v2.5.1, Python 3.8–3.16 / PyPy / No-GIL)
+- [ozon-sdk-pro (Ozon SDK Pro)](#ozon-sdk-pro): All-in-One Ozon Sync/Async SDK + Interactive Telegram Bot (`OzonTelegramBot`) + Standalone Windows `.exe` GUI (`OzonSDK_Pro.exe`) + Composer API + Seller INN + Ozon Card + Rank Tracker + Smart Reviews + Free/Paid AI (`g4f`/Ollama/OpenAI/DeepSeek) + 14 CLI + 9 MCP Tools (v1.2.1, Python 3.8–3.16 / PyPy / No-GIL)
 - [screenvideo](#screenvideo): High-performance screen recorder & screenshot suite with WASAPI audio & FASM native engine
 - [fasm-modern-sdk](#fasm-modern-sdk): Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG)
 - [ppa](#ppa-apt-repository): Official APT Repository for Debian/Ubuntu Linux
@@ -169,7 +169,7 @@ Email: M_N_Nik@yahoo.com
 ---
 
 ## 9. avito-sdk (Avito SDK Pro)
-- **Version**: v0.4.4
+- **Version**: v0.4.6
 - **Description**: Standalone Windows Desktop GUI (`AvitoSDK_Pro.exe`, ~28MB) and pure HTTP/Chrome TLS (`curl_cffi 0.16.3`) Avito scraping & data extraction SDK with zero Chromium/Playwright overhead. Includes real-time SQLite price-drop tracking (`seen_prices`), full item parameter extraction, `spfa.pro` API cookie refresh, rotating 4G mobile proxy failover (`mobileproxy.rent`), dedicated Telegram proxy isolation, CLI (`avito-sdk`, `avito-gui`), and Native MCP Server (`avito-mcp`).
 - **Windows Binary**: https://github.com/eminsk/avito-sdk/releases/latest
 - **PyPI**: `pip install "avito-sdk[gui]"` (or `uv add "avito-sdk[gui]"`)
@@ -191,7 +191,7 @@ Email: M_N_Nik@yahoo.com
 ---
 
 ## 9c. wb-sdk-pro (WB SDK Pro)
-- **Version**: v2.5.0 (PyPI, Debian/Ubuntu APT, Standalone Windows `.exe` via GitHub Releases)
+- **Version**: v2.5.1 (PyPI, Debian/Ubuntu APT, Standalone Windows `.exe` via GitHub Releases)
 - **Description**: Unified 4-in-1 Wildberries Sync/Async Python SDK (`WBClient`, `AsyncWBClient`, `AIClient`, Interactive `WBTelegramBot`, drop-in `ParseWB` compat), 13-command CLI (`wb-parser` / `wb-sdk`, incl. `bot`), 9-tool MCP Server (`wb-mcp`), and optional 7-Tab CustomTkinter Desktop GUI (`[gui]` extra: `wb-gui`). Combines `wildberries_parser`, `wb_rank`, `wb_smart_review`, and `testg4f` Hybrid Free/Paid AI Engine: offline NLP review summaries, free zero-key `g4f` provider discovery/health-checks/auto-fallback (`[ai]` extra), local free `Ollama`/`LM Studio`, Hybrid `OpenRouter` (`:free` + paid)/`Groq`/`Gemini`, and Paid `OpenAI`/`DeepSeek`/`ProxyAPI`. Features direct `wbbasket.ru` CDN cards/price-history, dynamic `basket-01..65+` sharding, `feedbacks1/2` routing, live WB Wallet & WB Club pricing, SQLite drops, live Telegram progress bars & auto Excel uploads, and `.xlsx`/`.csv`/`.json`/`.jsonl`/`DataFrame` export. Supports CPython 3.8–3.16, PyPy 3.8–3.12, and No-GIL (3.13t–3.16t).
 - **PyPI**: `pip install wb-sdk-pro` or `uv add wb-sdk-pro` (extras: `[ai]` / `[free-ai]`, `[gui]`, `[tls]`, `[dataframe]`, `[pandas]`, `[all]`; ephemeral GUI: `uvx --from "wb-sdk-pro[gui]" wb-gui`)
 - **Debian/Ubuntu**: `sudo apt install python3-wb-sdk-pro` (core SDK, CLI & MCP server)
@@ -201,7 +201,7 @@ Email: M_N_Nik@yahoo.com
 ---
 
 ## 9d. ozon-sdk-pro (Ozon SDK Pro)
-- **Version**: v1.2.0 (PyPI, Debian/Ubuntu APT, Conda-Forge PR, Standalone Windows `.exe` via GitHub Releases)
+- **Version**: v1.2.1 (PyPI, Debian/Ubuntu APT, Conda-Forge PR, Standalone Windows `.exe` via GitHub Releases)
 - **Description**: All-in-One Ozon Sync/Async Python SDK (`OzonClient`, `AsyncOzonClient`, `AIClient`, Interactive `OzonTelegramBot`, `ParseOzon` compat), 14-command CLI (`ozon-parser` / `ozon-sdk`, incl. `bot`), 9-tool MCP Server (`ozon-mcp`), and optional 7-Tab CustomTkinter Desktop GUI (`[gui]` extra: `ozon-gui`). Extracts products, search results, categories, seller storefronts via Composer API & `data-state`, Seller legal company & INN (`/modal/shop-in-shop-info`), Ozon Card checkout pricing, SQLite price-drop & Search Rank Tracking (`OzonRankTracker`), Smart Review Analyzer (`webListReviews` offline NLP, free zero-key `g4f` pool with auto-fallback & health checks, local `Ollama`/`LM Studio`, Hybrid `OpenRouter`/`Groq`/`Gemini`, Paid `OpenAI`/`DeepSeek`/`ProxyAPI`), live Telegram Bot progress bars & `.xlsx`/`.csv`/`.json`/`.jsonl`/`DataFrame` export. Supports CPython 3.8–3.16, PyPy 3.8–3.12, and No-GIL (3.13t–3.16t).
 - **PyPI**: `pip install ozon-sdk-pro` or `uv add ozon-sdk-pro` (extras: `[ai]` / `[free-ai]`, `[gui]`, `[tls]`, `[browser]`, `[dataframe]`, `[pandas]`, `[all]`; ephemeral GUI: `uvx --from "ozon-sdk-pro[gui]" ozon-gui`)
 - **Debian/Ubuntu**: `sudo apt install python3-ozon-sdk-pro` (core SDK, CLI & MCP server)
@@ -237,8 +237,8 @@ Email: M_N_Nik@yahoo.com
 ---
 
 ## FAQ & Quick Guides (EN / RU)
-- **Avito SDK Pro (v0.4.4) vs Avito Parser (v3.2.29)**: `Avito SDK Pro` is a ~28MB standalone Windows `.exe` and Python SDK using native `curl_cffi` Chrome TLS with zero Chromium overhead, `spfa.pro` support, dedicated Telegram proxy, and `avito-mcp`. `Avito Parser` is the maintained Flet GUI edition with Playwright Chromium account login.
-- **Парсер Авито для Windows (.exe) и прокси**: Для снайпинга 24/7 лучше подходит `Avito SDK Pro v0.4.4` (~28 МБ, Chrome TLS `curl_cffi 0.16.3`), для визуального входа через браузер — `Avito Parser v3.2.29` (Playwright). Для стабильного парсинга без 429 рекомендуются мобильные прокси с ротацией IP (https://mobileproxy.rent/?p=279117, тест 3 часа бесплатно: https://mobileproxy.rent/user.html?free&p=279117) или серверные прокси с ключом `spfa.pro`.
+- **Avito SDK Pro (v0.4.6) vs Avito Parser (v3.2.29)**: `Avito SDK Pro` is a ~28MB standalone Windows `.exe` and Python SDK using native `curl_cffi` Chrome TLS with zero Chromium overhead, `spfa.pro` support, dedicated Telegram proxy, and `avito-mcp`. `Avito Parser` is the maintained Flet GUI edition with Playwright Chromium account login.
+- **Парсер Авито для Windows (.exe) и прокси**: Для снайпинга 24/7 лучше подходит `Avito SDK Pro v0.4.6` (~28 МБ, Chrome TLS `curl_cffi 0.16.3`), для визуального входа через браузер — `Avito Parser v3.2.29` (Playwright). Для стабильного парсинга без 429 рекомендуются мобильные прокси с ротацией IP (https://mobileproxy.rent/?p=279117, тест 3 часа бесплатно: https://mobileproxy.rent/user.html?free&p=279117) или серверные прокси с ключом `spfa.pro`.
 - **Android 15 16KB APK without Java**: Install `pureapk` via `pip install pureapk` or `sudo apt install python3-pureapk`.
 - **Wildberries SDK Pro (`wb-sdk-pro`)**: Install via `uv add wb-sdk-pro` (add `[ai]` for zero-key `g4f` models or `sudo apt install python3-wb-sdk-pro`), supports CPython 3.8–3.16, PyPy 3.8–3.12, and No-GIL. Combines Sync/Async CDN card extraction, `feedbacks1/2` sharding, WB Wallet & WB Club pricing, Search Rank Tracker, Smart Review Analyzer + Hybrid Free/Paid AI Engine (`g4f`, `Ollama`, `OpenAI`, `DeepSeek`, `OpenRouter`, `ProxyAPI`, `Groq`), 12-command CLI (`wb-parser ai`, etc.), 9-tool MCP Server (`wb-mcp`), and optional 7-Tab GUI (`uvx --from "wb-sdk-pro[gui]" wb-gui`).
 
