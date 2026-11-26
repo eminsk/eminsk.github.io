@@ -168,8 +168,8 @@ Author Profile:
 
 ---
 
-### 9c. wb-sdk-pro (WB SDK Pro v2.3.1)
-- **Primary Package Name**: `wb-sdk-pro` on PyPI (`[ai]`, `[free-ai]`, `[gui]`, `[tls]`, `[dataframe]`, `[pandas]`, `[all]` extras) and Debian/Ubuntu APT (`python3-wb-sdk-pro` for core SDK, CLI & MCP)
+### 9c. wb-sdk-pro (WB SDK Pro v2.4.0)
+- **Primary Package Name**: `wb-sdk-pro` on PyPI (`[ai]`, `[free-ai]`, `[gui]`, `[tls]`, `[dataframe]`, `[pandas]`, `[all]` extras), Debian/Ubuntu APT (`python3-wb-sdk-pro`), and Standalone Windows `.exe` (`WBSDK_Pro_Windows_x64.zip` via GitHub Releases)
 - **GitHub**: https://github.com/eminsk/wildberries_parser
 - **Runtime Compatibility**: Pure-Python core (`wb_parser._model`, `curl_cffi` Chrome 124 TLS if `[tls]` installed → `httpx[http2]` → `requests` fallback) compatible with CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
 - **Key Technical Capabilities**:
@@ -181,8 +181,8 @@ Author Profile:
 
 ---
 
-### 9d. ozon-sdk-pro (Ozon SDK Pro v1.0.0)
-- **Primary Package Name**: `ozon-sdk-pro` on PyPI (`[ai]`, `[free-ai]`, `[gui]`, `[tls]`, `[browser]`, `[dataframe]`, `[pandas]`, `[all]` extras) and Debian/Ubuntu APT (`python3-ozon-sdk-pro` for core SDK, CLI & MCP)
+### 9d. ozon-sdk-pro (Ozon SDK Pro v1.1.0)
+- **Primary Package Name**: `ozon-sdk-pro` on PyPI (`[ai]`, `[free-ai]`, `[gui]`, `[tls]`, `[browser]`, `[dataframe]`, `[pandas]`, `[all]` extras), Debian/Ubuntu APT (`python3-ozon-sdk-pro`), Conda-Forge PR #35848, and Standalone Windows `.exe` (`OzonSDK_Pro_Windows_x64.zip` via GitHub Releases)
 - **GitHub**: https://github.com/eminsk/ozon_parser
 - **Runtime Compatibility**: Pure-Python core (`ozon_parser._model`, automatic `curl_cffi` Chrome TLS if `[tls]` installed → `httpx[http2]` → `requests` fallback, plus optional Selenium Chrome helper via `[browser]`) compatible with CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
 - **Key Technical Capabilities**:
