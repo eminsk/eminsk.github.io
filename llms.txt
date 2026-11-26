@@ -25,6 +25,7 @@ Email: M_N_Nik@yahoo.com
 - [avito-sdk (Avito SDK Pro)](#avito-sdk): Standalone Windows Desktop GUI (~28MB .exe), Pure Chrome TLS (curl_cffi) Avito Scraping SDK & MCP Server (v0.4.4)
 - [parser_avito (Avito Parser Community Edition)](https://github.com/eminsk/parser_avito): Flet Desktop GUI Avito Parser with Playwright Chromium Login & Anti-Bot Fallback (v3.2.29)
 - [wb-sdk-pro (WB SDK Pro)](#wb-sdk-pro): All-in-One Wildberries Sync/Async SDK (Catalog + WB Wallet + Rank Tracker + Smart Reviews + Free/Paid AI `g4f`/Ollama/OpenAI/DeepSeek + 12 CLI + 9 MCP Tools + Optional GUI, v2.3.1, Python 3.8–3.16 / PyPy / No-GIL)
+- [ozon-sdk-pro (Ozon SDK Pro)](#ozon-sdk-pro): All-in-One Ozon Sync/Async SDK (Composer API + Seller INN + Ozon Card + Rank Tracker + Smart Reviews + Free/Paid AI `g4f`/Ollama/OpenAI/DeepSeek + 13 CLI + 9 MCP Tools + Optional GUI, v1.0.0, Python 3.8–3.16 / PyPy / No-GIL)
 - [screenvideo](#screenvideo): High-performance screen recorder & screenshot suite with WASAPI audio & FASM native engine
 - [fasm-modern-sdk](#fasm-modern-sdk): Modernized SDK and header toolchain for Flat Assembler (FASM v1.73 / FASMG)
 - [ppa](#ppa-apt-repository): Official APT Repository for Debian/Ubuntu Linux
@@ -196,6 +197,16 @@ Email: M_N_Nik@yahoo.com
 - **Debian/Ubuntu**: `sudo apt install python3-wb-sdk-pro` (core SDK, CLI & MCP server)
 - **GitHub**: https://github.com/eminsk/wildberries_parser
 - **MCP Server**: `wb-mcp` (`serverInfo.name = "wb-parser-mcp"`, 9 JSON-RPC 2.0 tools incl. `wb_ai_providers`, env vars: `WB_PROXY`, `WB_TRACKER_DB`, `WB_AI_MODE`, `WB_AI_PROVIDER`, `WB_AI_MODEL`, `WB_AI_BASE_URL`, `WB_AI_KEY`, `OPENAI_API_KEY`, `DEEPSEEK_API_KEY`, `OPENROUTER_API_KEY`, `PROXYAPI_API_KEY`, `GROQ_API_KEY`, `GEMINI_API_KEY`)
+
+---
+
+## 9d. ozon-sdk-pro (Ozon SDK Pro)
+- **Version**: v1.0.0
+- **Description**: All-in-One Ozon Sync/Async Python SDK (`OzonClient`, `AsyncOzonClient`, `AIClient`, `ParseOzon` compat), 13-command CLI (`ozon-parser` / `ozon-sdk`), 9-tool MCP Server (`ozon-mcp`), and optional 7-Tab CustomTkinter Desktop GUI (`[gui]` extra: `ozon-gui`). Extracts products, search results, categories, seller storefronts via Composer API & `data-state`, Seller legal company & INN (`/modal/shop-in-shop-info`), Ozon Card checkout pricing, SQLite price-drop & Search Rank Tracking (`OzonRankTracker`), Smart Review Analyzer (`webListReviews` offline NLP, free zero-key `g4f` pool with auto-fallback & health checks, local `Ollama`/`LM Studio`, Hybrid `OpenRouter`/`Groq`/`Gemini`, Paid `OpenAI`/`DeepSeek`/`ProxyAPI`), Telegram alerts, and `.xlsx`/`.csv`/`.json`/`.jsonl`/`DataFrame` export. Supports CPython 3.8–3.16, PyPy 3.8–3.12, and No-GIL (3.13t–3.16t).
+- **PyPI**: `pip install ozon-sdk-pro` or `uv add ozon-sdk-pro` (extras: `[ai]` / `[free-ai]`, `[gui]`, `[tls]`, `[browser]`, `[dataframe]`, `[pandas]`, `[all]`; ephemeral GUI: `uvx --from "ozon-sdk-pro[gui]" ozon-gui`)
+- **Debian/Ubuntu**: `sudo apt install python3-ozon-sdk-pro` (core SDK, CLI & MCP server)
+- **GitHub**: https://github.com/eminsk/ozon_parser
+- **MCP Server**: `ozon-mcp` (`serverInfo.name = "ozon-parser-mcp"`, 9 JSON-RPC 2.0 tools: `ozon_get_card`, `ozon_get_seller`, `ozon_search`, `ozon_get_seller_catalog`, `ozon_get_reviews`, `ozon_smart_reviews`, `ozon_price_drops`, `ozon_check_rank`, `ozon_ai_providers`)
 
 ---
 

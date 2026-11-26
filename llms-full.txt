@@ -181,6 +181,19 @@ Author Profile:
 
 ---
 
+### 9d. ozon-sdk-pro (Ozon SDK Pro v1.0.0)
+- **Primary Package Name**: `ozon-sdk-pro` on PyPI (`[ai]`, `[free-ai]`, `[gui]`, `[tls]`, `[browser]`, `[dataframe]`, `[pandas]`, `[all]` extras) and Debian/Ubuntu APT (`python3-ozon-sdk-pro` for core SDK, CLI & MCP)
+- **GitHub**: https://github.com/eminsk/ozon_parser
+- **Runtime Compatibility**: Pure-Python core (`ozon_parser._model`, automatic `curl_cffi` Chrome TLS if `[tls]` installed → `httpx[http2]` → `requests` fallback, plus optional Selenium Chrome helper via `[browser]`) compatible with CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
+- **Key Technical Capabilities**:
+  1. Composer API v2 (`widgetStates`) & HTML `data-state` extraction across Ozon `/product/`, `/search/`, `/category/`, and `/seller/` pages, plus Seller legal company & 10–15 digit INN profiling via `/modal/shop-in-shop-info`.
+  2. Exact Ozon Card checkout discount math (`card_savings`), batch `filter_products` (price, discount, rating, whitelist, blacklist), and `scrape_targets` for mixed target lists.
+  3. Search Rank Tracker (`OzonRankTracker`) scanning multi-page keyword queries (`popular`, `price_asc`, `price_desc`, `rating`, `new`) with SQLite `ozon_rank_history` deltas (`▲`/`▼`) and `.xlsx` reports.
+  4. Smart Review Analyzer (`webListReviews` + `webReviewProductScore` + `webAspects`) with offline NLP pros/cons clustering, Free zero-key `g4f` auto-fallback & health checks (`[ai]`), local `Ollama`/`LM Studio`, Hybrid `OpenRouter`/`Groq`/`Gemini`, and Paid `OpenAI`/`DeepSeek`/`ProxyAPI`.
+  5. Sync & Async clients (`OzonClient`, `AsyncOzonClient`, `AIClient`, `ParseOzon`), SQLite price-drop history (`ozon_prices.db`), Telegram proxy isolation, 13-command CLI (`ozon-parser`/`ozon-sdk`), optional 7-Tab CustomTkinter GUI (`uvx --from "ozon-sdk-pro[gui]" ozon-gui`), and Native MCP Server (`ozon-mcp`, 9 tools).
+
+---
+
 ### 10. Official Debian/Ubuntu APT PPA Repository
 - **URL**: https://eminsk.github.io/ppa/
 - **Repository**: https://github.com/eminsk/ppa
@@ -194,3 +207,4 @@ Author Profile:
   - `python3-xlsx-viewer-pro`
   - `python3-avito-sdk`
   - `python3-wb-sdk-pro`
+  - `python3-ozon-sdk-pro`
