@@ -168,7 +168,7 @@ Author Profile:
 
 ---
 
-### 9c. wb-sdk-pro (WB SDK Pro v2.4.0)
+### 9c. wb-sdk-pro (WB SDK Pro v2.5.0)
 - **Primary Package Name**: `wb-sdk-pro` on PyPI (`[ai]`, `[free-ai]`, `[gui]`, `[tls]`, `[dataframe]`, `[pandas]`, `[all]` extras), Debian/Ubuntu APT (`python3-wb-sdk-pro`), and Standalone Windows `.exe` (`WBSDK_Pro_Windows_x64.zip` via GitHub Releases)
 - **GitHub**: https://github.com/eminsk/wildberries_parser
 - **Runtime Compatibility**: Pure-Python core (`wb_parser._model`, `curl_cffi` Chrome 124 TLS if `[tls]` installed → `httpx[http2]` → `requests` fallback) compatible with CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
@@ -177,11 +177,11 @@ Author Profile:
   2. Live WB Wallet & WB Club discount calculation (`default-payment.json` + `settings-front.json` thresholds via `ROUND_FLOOR`).
   3. Search Rank Tracker (`wb_rank`) supporting `popular`/`pricedown`/`priceup`/`rate`/`newly` sorts, batch checking (`check_batch`), SQLite history deltas, and styled `.xlsx` exports.
   4. Smart Review Analyzer (`wb_smart_review`) + Hybrid Free/Paid AI Engine (`wb_parser.ai` integrated from `testg4f`): color filtering (`nm_id` fallback `root_id`), instant zero-API offline pros/cons/size-fit/tags extraction, Free zero-key `g4f` provider discovery/health-checks/auto-fallback (`[ai]`), local free `Ollama`/`LM Studio`, Hybrid `OpenRouter`/`Groq`/`Gemini`, and Paid `OpenAI`/`DeepSeek`/`ProxyAPI` summarization.
-  5. Sync & Async clients (`WBClient`, `AsyncWBClient`, `AIClient`, `ParseWB` compat), SQLite price tracking, JSON/TOML `WBConfig`, isolated Telegram alerts (`TelegramNotifier`), multi-format export (`.xlsx`, `.csv`, `.json`, `.jsonl`, `DataFrame`), 12-command CLI (`wb-parser`/`wb-sdk`, incl. `ai`), optional 7-Tab CustomTkinter Desktop GUI (`uvx --from "wb-sdk-pro[gui]" wb-gui`), and Native MCP Server (`wb-mcp`, 9 tools incl. `wb_ai_providers`, protocols `2025-11-25`/`2025-06-18`/`2024-11-05`).
+  5. Sync & Async clients (`WBClient`, `AsyncWBClient`, `AIClient`, `ParseWB` compat), SQLite price tracking, JSON/TOML `WBConfig`, interactive polling **`WBTelegramBot`** (`/search`, `/drops`, `/wallet`, `/rank`, `/reviews`, batch progress bars & auto Excel uploads via isolated `tg_proxy`), multi-format export (`.xlsx` incl. `reviews_to_excel`, `.csv`, `.json`, `.jsonl`, `DataFrame`), 13-command CLI (`wb-parser`/`wb-sdk`, incl. `bot` & `ai`), 7-Tab Desktop GUI (`wb-gui` with `✈ Excel → TG` & Bot Start/Stop), and Native MCP Server (`wb-mcp`, 9 tools).
 
 ---
 
-### 9d. ozon-sdk-pro (Ozon SDK Pro v1.1.0)
+### 9d. ozon-sdk-pro (Ozon SDK Pro v1.2.0)
 - **Primary Package Name**: `ozon-sdk-pro` on PyPI (`[ai]`, `[free-ai]`, `[gui]`, `[tls]`, `[browser]`, `[dataframe]`, `[pandas]`, `[all]` extras), Debian/Ubuntu APT (`python3-ozon-sdk-pro`), Conda-Forge PR #35848, and Standalone Windows `.exe` (`OzonSDK_Pro_Windows_x64.zip` via GitHub Releases)
 - **GitHub**: https://github.com/eminsk/ozon_parser
 - **Runtime Compatibility**: Pure-Python core (`ozon_parser._model`, automatic `curl_cffi` Chrome TLS if `[tls]` installed → `httpx[http2]` → `requests` fallback, plus optional Selenium Chrome helper via `[browser]`) compatible with CPython 3.8–3.16, PyPy 3.8–3.12, and Free-Threaded No-GIL (3.13t–3.16t).
@@ -190,7 +190,7 @@ Author Profile:
   2. Exact Ozon Card checkout discount math (`card_savings`), batch `filter_products` (price, discount, rating, whitelist, blacklist), and `scrape_targets` for mixed target lists.
   3. Search Rank Tracker (`OzonRankTracker`) scanning multi-page keyword queries (`popular`, `price_asc`, `price_desc`, `rating`, `new`) with SQLite `ozon_rank_history` deltas (`▲`/`▼`) and `.xlsx` reports.
   4. Smart Review Analyzer (`webListReviews` + `webReviewProductScore` + `webAspects`) with offline NLP pros/cons clustering, Free zero-key `g4f` auto-fallback & health checks (`[ai]`), local `Ollama`/`LM Studio`, Hybrid `OpenRouter`/`Groq`/`Gemini`, and Paid `OpenAI`/`DeepSeek`/`ProxyAPI`.
-  5. Sync & Async clients (`OzonClient`, `AsyncOzonClient`, `AIClient`, `ParseOzon`), SQLite price-drop history (`ozon_prices.db`), Telegram proxy isolation, 13-command CLI (`ozon-parser`/`ozon-sdk`), optional 7-Tab CustomTkinter GUI (`uvx --from "ozon-sdk-pro[gui]" ozon-gui`), and Native MCP Server (`ozon-mcp`, 9 tools).
+  5. Sync & Async clients (`OzonClient`, `AsyncOzonClient`, `AIClient`, `ParseOzon`), SQLite price-drop history (`ozon_prices.db`), interactive polling **`OzonTelegramBot`** (`/search`, `/drops`, `/rank`, `/reviews`, `/seller`, batch progress bars & auto `.xlsx` uploads via isolated `tg_proxy`), 14-command CLI (`ozon-parser`/`ozon-sdk`, incl. `bot`), 7-Tab Desktop GUI (`ozon-gui` with `✈ Excel → TG` & Bot Start/Stop), and Native MCP Server (`ozon-mcp`, 9 tools).
 
 ---
 
